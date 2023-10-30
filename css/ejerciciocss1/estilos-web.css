@@ -1,9 +1,38 @@
+/* Estilos a etiquetas */
 body{
     font-family: "Open Sans", "sans-serif"; /* Definimos las propiedades de todo el documento */
     font-size: 14px;
     color: black;
     background-color: white;
 }
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Bree Serif", "serif";
+    color: #00acdd;
+}
+
+a:link{
+    text-decoration: none;
+    color: #00acdd;
+}
+
+a:visited{
+    color: #ea2126;
+}
+
+a:hover{
+    cursor: pointer;
+    color: #f58a1e;
+}
+/* Fin de estilo a etiquetas */
+
+/* Estilos de clase */
+.news-art{
+    border: 5px solid #e6e7e8;
+    border-radius: 10px;    
+    width: 50%;     
+}
+/* Fin de estilos de clase */
 
 header, footer{
     background-color: #e6e7e8;
@@ -16,14 +45,9 @@ footer{
     height: 4.35rem;
 }
 
-header > #logo{
+header img#logo{
     width: 5rem;
     height: 4.35rem;
-}
-
-h1, h2, h3, h4, h5, h6{
-    font-family: "Bree Serif", "serif";
-    color: #00acdd;
 }
 
 header h1{
@@ -31,73 +55,46 @@ header h1{
     font-weight: bold;
 }
 
-#subject{
+header h1 span#subject{
     color: #96bc33;
 }
 
-a{
-    text-decoration: none;    
-}
-
-a:link{
-    color: #00acdd;
-}
-
-a:visited{
-    color: #ea2126;
-}
-
-a:hover{
-    cursor: pointer;
-    color: #f58a1e;
-}
-
-nav > ul > li{
-    list-style-type: none;
-}
-
-#main-menu{
+nav ul#main-menu{
     background-color: #004166;
     font-weight: bold;
     border: 2px solid #e6e7e8;
     border-radius: 5px;
 }
 
-main{
-    border: 2px solid #004166;
-    border-radius: 4px;
+nav ul li{
+    list-style-type: none;
 }
 
-section{
+main, section#principal{
     border: 2px solid #004166;
     border-radius: 5px;
 }
 
-main > section > h2{
+main section#principal h2{
     text-align: center;
 }
 
-/* Clase de todas las noticias (articles) */
-.news-art{
-    border: 5px solid #e6e7e8;
-    border-radius: 10px;    
-    width: 50%;     
+/* El primer articulo va a ser diferente */
+main section article:nth-child(2){
+    background-color: #e6e7e8;
+    border: 3px solid #f58a1e;
 }
 
-main > section > article > img{
+main section#principal article img{
     width: 30%;
     height: auto;
 }
 
-main > section > article > p{
+main section#principal article p{
     width: 70%;
     height: auto;
     text-align: justify;
 }
 
-/* El primer articulo va a ser diferente */
-#primer-articulo{
-    background-color: #e6e7e8;
-    border: 1px solid #f58a1e;
-}
+
 
