@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #686868;
+    font-family: Arial, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1.25rem;
+}
+
+ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+ul.menu{
+    background-color: #ACACAC;
+    border: 1px solid #FFF;
+    display: flex;
+    flex-direction: row; /* Es el predeterminado (eje principal) */
+    flex-wrap: wrap; /* Para que no se salga del contenedor */
+    /* flex-flow: row wrap -> Es lo mismo que hacer el direction y el wrap */
+    justify-content: space-between;
+    align-items: center; /* Con respecto al eje transversal (altura) */
+    height: 50vh;
+    align-content: center;
+}
+
+ul.menu > li {
+    background-color: #C9830A;
+    margin: 0.62rem;
+    border: 1px solid #FFF;
+    padding: 0.62rem;
+}

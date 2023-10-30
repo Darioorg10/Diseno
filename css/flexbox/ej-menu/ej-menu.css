@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li{
+    color: white;
+    background-color: deepskyblue;
+}
+
+/* Primera opción la de movil */
+@media (min-width:1000px){
+    nav ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    li{
+        border-bottom: 1px solid rgb(0, 89, 119);
+    }
+}
