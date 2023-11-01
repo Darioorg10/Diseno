@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT';
+    background-color: rgb(4, 54, 74);
+}
+
+a{
+    text-decoration: none;
+    color: black;        
+}
+
+form{
+    display: flex;
+    flex-direction: column;   
+    justify-content: center;
+    align-items: center;
+}
+
+form h1{        
+    color: rgb(23, 107, 135);
+}
+
+/* Hacemos la opción para móvil */
+@media (min-width:320px){
+    form input[type="email"]{
+        width: 60%;
+        height: 2.5em;
+        margin-top: 1em;
+        border: 1px solid black;
+        border-radius: 0.2em;     
+    }
+    
+    form input[type="password"]{
+        width: 60%;
+        height: 2.5em;
+        margin-top: 2em;
+        border: 1px solid black;
+    }
+    
+    form a {    
+        margin-top: 1em;
+        color: rgb(100, 204, 197);
+    }
+    
+    form input[type="button"]{
+        width: 15em;
+        height: 4em;
+        color: black;
+        background-color: rgb(100, 204, 197);
+        border-radius: 1.5em;
+        border: 1px solid rgb(23, 107, 135);
+        font-weight: bold;
+        margin-top: 1em;    
+    }
+}
+
+/* Tablet */
+@media (min-width:768px){
+    form h1{
+        font-size: 40px;
+    }
+
+    form input[type="email"]{
+        width: 60%;
+        height: 4em;
+        margin-top: 1em;
+        border: 1px solid black;
+        border-radius: 0.2em;        
+    }
+    
+    form input[type="password"]{
+        width: 60%;
+        height: 4em;
+        margin-top: 2em;
+        border: 1px solid black;        
+    }
+    
+    form a {    
+        margin-top: 1em;
+        color: rgb(100, 204, 197);
+        font-size: 1.5em;
+    }
+    
+    form input[type="button"]{
+        width: 15em;
+        height: 4em;
+        color: black;
+        background-color: rgb(100, 204, 197);
+        border-radius: 1.5em;
+        border: 1px solid rgb(23, 107, 135);
+        font-weight: bold;
+        font-size: 1.25em;
+        margin-top: 1em;    
+    }
+}
+
+/* Ordenador */
+@media (min-width:1050px){
+    form h1{
+        font-size: 40px;
+    }
+
+    form input[type="email"]{
+        width: 50%;
+        height: 4em;
+        margin-top: 1em;
+        border: 1px solid black;
+        border-radius: 0.2em;        
+    }
+    
+    form input[type="password"]{
+        width: 50%;
+        height: 4em;
+        margin-top: 2em;
+        border: 1px solid black;        
+    }
+    
+    form a {    
+        margin-top: 1em;
+        color: rgb(100, 204, 197);
+        font-size: 1.5em;
+    }
+
+    form a:hover{
+        color: rgb(23, 107, 135);
+    }
+    
+    form input[type="button"]{
+        width: 15em;
+        height: 4em;
+        color: black;
+        background-color: rgb(100, 204, 197);
+        border-radius: 1.5em;
+        border: 1px solid rgb(23, 107, 135);
+        font-weight: bold;
+        font-size: 1.25em;
+        margin-top: 1em;    
+    }
+
+    form input[type="button"]:hover{
+        background-color: rgb(23, 107, 135);
+        color: black;
+        cursor: pointer;
+    }
+}
