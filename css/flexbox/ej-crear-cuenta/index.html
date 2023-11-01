@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+
+    </style>
+</head>
+
+<body>
+    <form action="ejercicio5.html" method="post">
+
+        <div class="sexo">
+            <input type="radio" name="sexo" id="sr" autofocus>
+            <label for="sr"><strong>Sr.</strong></label>
+            <input type="radio" name="sexo" id="sra">
+            <label for="sra"><strong>Sra.</strong></label>
+        </div>        
+
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre / Razón Social*"
+            aria-label="Nombre o razón social" maxlength="40" required title="Indica el nombre o razón social">
+
+        <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos*" aria-label="Apellidos"
+            maxlength="60" required title="Escribe tus apellidos">
+
+        <input type="email" name="correo" id="correo" placeholder="Email*" aria-label="Email" maxlength="60" required
+            pattern="^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$" title="Escribe tu correo electrónico">
+
+        <input type="password" name="pwd" id="pwd" placeholder="Contraseña*" aria-label="Contraseña" maxlength="20"
+            pattern="^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{6,})\S$" required title="Escribe tu contraseña">
+
+        <h4>FECHA DE NACIMIENTO</h4>
+        <input type="date" name="fecha" id="fecha">
+        <input type="text" name="dni" id="dni" placeholder="DNI/NIF/NIE*" aria-label="dni" pattern="^[0-9]{8}[a-zA-Z]{1}" required title="Escribe tu dni">
+        <input type="text" name="direccion" id="direccion" placeholder="Dirección*" aria-label="dirección" required title="Escribe tu dirección">
+        <input type="number" name="cp" id="cp" placeholder="Código postal*" aria-label="código postal" min="0" max="99999" required title="Escribe tu código postal">
+        <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad*" aria-label="ciudad" required>
+
+        <input list="pais" placeholder="País*" required id="pais-input">
+            <datalist id="pais">
+                <option value="España">España</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Alemania">Alemania</option>
+            </datalist>
+            
+        <input list="provincia" placeholder="Provincia*" required id="provincia-input">
+            <datalist id="provincia">
+                <option value="Málaga">Málaga</option>
+                <option value="Granada">Granada</option>
+                <option value="Cádiz">Cádiz</option>
+            </datalist>        
+
+        <input type="tel" name="telefono" id="telefono" placeholder="Teléfono móvil*" aria-label="teléfono móvil" required maxlength="9" title="Escribe tu número de teléfono">
+        <div class="datosPersonales">
+            <input type="checkbox" name="datosP" id="datosP" checked>
+                <label for="datosP" id="label-datos-p">
+                    Estos datos personales se utilizarán para responder a sus búsquedas,
+                    procesar sus pedidos o autorizar el acceso.        
+                </label>
+        </div>
+        <div id="botonRegistro">
+            <button type="submit" name="btnRegistrar" id="btnRegistrar">Registrarse</button>
+        </div>        
+
+    </form>
+</body>
+</html>

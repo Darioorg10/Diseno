@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;    
+}
+
+body{
+    background-color: rgb(238, 238, 238);
+    color: rgb(34, 40, 49);
+    /* font-family: 'Gill Sans', 'Gill Sans MT', sans-serif; */
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+form{
+    display: flex;
+    align-items: center;    
+    flex-direction: column;    
+}
+
+input[name="sexo"]{
+    flex-direction: row;
+}
+
+::placeholder{
+    color: rgb(57, 62, 70);
+}
+
+form #nombre, #apellidos, #correo, #pwd, #fecha, #dni, #direccion, #cp, #ciudad, #pais-input, #provincia-input, #telefono{
+    margin-top: 1.5em;
+    border: none;    
+    border-bottom: 1px solid rgb(0, 173, 181);
+    width: 60%;
+    height: 3em;
+    background-color: rgb(238, 238, 238);
+}
+
+form #datosP{
+    margin-top: 1em;    
+}
+
+#botonRegistro{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    border: none;    
+    margin-top: 2em;
+    background-color: rgb(31, 23, 23);
+    color: rgb(0, 173, 181);
+    border-radius: 1.5em;
+    height: 3.5em;
+    width: 12em;    
+    font-family: 'Franklin Gothic Medium';   
+    font-size: 1em;             
+}  
+
+/* Añadimos el hover del botón para ordenador */
+@media (min-width:1050px){
+    form h4{
+        font-size: 20px;
+    }
+
+    button:hover{
+        background-color: rgb(94, 91, 91);
+        cursor: pointer;
+    }
+}
