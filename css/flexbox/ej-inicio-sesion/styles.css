@@ -3,8 +3,7 @@
 }
 
 body{
-    font-family: 'Gill Sans', 'Gill Sans MT';
-    background-color: rgb(4, 54, 74);
+    font-family: 'Gill Sans', 'Gill Sans MT';    
 }
 
 a{
@@ -20,7 +19,7 @@ form{
 }
 
 form h1{        
-    color: rgb(23, 107, 135);
+    color: black;
 }
 
 /* Hacemos la opción para móvil */
@@ -42,16 +41,16 @@ form h1{
     
     form a {    
         margin-top: 1em;
-        color: rgb(100, 204, 197);
+        color: black;
     }
     
     form input[type="button"]{
         width: 15em;
         height: 4em;
-        color: black;
-        background-color: rgb(100, 204, 197);
+        color: white;
+        background-color: rgb(0, 0, 0);
         border-radius: 1.5em;
-        border: 1px solid rgb(23, 107, 135);
+        border: 1px solid white;
         font-weight: bold;
         margin-top: 1em;    
     }
@@ -80,17 +79,17 @@ form h1{
     
     form a {    
         margin-top: 1em;
-        color: rgb(100, 204, 197);
+        color: rgb(0, 0, 0);
         font-size: 1.5em;
     }
     
     form input[type="button"]{
         width: 15em;
         height: 4em;
-        color: black;
-        background-color: rgb(100, 204, 197);
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
         border-radius: 1.5em;
-        border: 1px solid rgb(23, 107, 135);
+        border: 1px solid rgb(255, 255, 255);
         font-weight: bold;
         font-size: 1.25em;
         margin-top: 1em;    
@@ -120,29 +119,29 @@ form h1{
     
     form a {    
         margin-top: 1em;
-        color: rgb(100, 204, 197);
+        color: rgb(0, 0, 0);
         font-size: 1.5em;
     }
 
     form a:hover{
-        color: rgb(23, 107, 135);
+        color: rgb(36, 36, 36);
     }
     
     form input[type="button"]{
         width: 15em;
         height: 4em;
-        color: black;
-        background-color: rgb(100, 204, 197);
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
         border-radius: 1.5em;
-        border: 1px solid rgb(23, 107, 135);
+        border: 1px solid rgb(255, 255, 255);
         font-weight: bold;
         font-size: 1.25em;
         margin-top: 1em;    
     }
 
     form input[type="button"]:hover{
-        background-color: rgb(23, 107, 135);
-        color: black;
+        background-color: rgb(39, 39, 39);
+        color: white;
         cursor: pointer;
     }
 }
