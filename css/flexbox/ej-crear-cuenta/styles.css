@@ -27,8 +27,8 @@ form #nombre, #apellidos, #correo, #pwd, #fecha, #dni, #direccion, #cp, #ciudad,
     margin-top: 1.5em;
     border: none;    
     border-bottom: 1px solid rgb(0, 173, 181);
-    width: 60%;
-    height: 3em;
+    width: 20rem;
+    height: 2.5rem;
     background-color: rgb(238, 238, 238);
 }
 
@@ -47,8 +47,8 @@ button{
     background-color: rgb(31, 23, 23);
     color: rgb(255, 255, 255);
     border-radius: 1.5em;
-    height: 3.5em;
-    width: 12em;    
+    height: 3.5rem;
+    width: 12rem;    
     font-family: 'Franklin Gothic Medium';   
     font-size: 1em;             
 }  
