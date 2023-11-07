@@ -56,16 +56,16 @@ footer{
     }
 
     nav{
-        flex-basis: 20%;
+        flex-grow: 1
     }
 
     article{
-        flex-basis: 60%;
+        flex-grow: 4;
         margin-left: 0.5rem;
     }
     
     aside{
-        flex-basis: 20%;
+        flex-grow: 1;
         margin-left: 0.5rem;
     }
 }
