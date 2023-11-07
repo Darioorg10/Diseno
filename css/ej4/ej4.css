@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    color: black;
+    font-weight: bold;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header{
+    background-color: rgb(252, 131, 131);
+    padding: 0.65rem;
+}
+
+.main{
+    background-color: rgb(51, 180, 255);    
+}
+
+.aside-1{
+    background-color: rgb(230, 230, 1);
+    padding: 0.65rem;
+}
+
+.aside-2{
+    background-color: rgb(255, 136, 229);
+    padding: 0.65rem;
+}
+
+.footer{
+    background-color: rgb(145, 255, 145);
+    padding: 0.65rem;
+}
+
+/* Diseño tablet */
+@media (min-width:600px){    
+    .wrapper{        
+        flex-flow: row wrap; /* El wrap para que se ponga cada uno debajo del otro */
+    }
+
+    .header, .main, .footer{
+        flex-basis: 100%;
+    }
+
+    .aside{
+        flex-basis: 50%;
+    }
+}
+
+/* Diseño ordenador */
+@media (min-width:850px){     
+    .header{
+        order: 1;
+    }
+
+    .main{
+        flex: 50%; /* Mejor poner solo el flex en vez de flex-basis */
+        order: 3;
+    }   
+    
+    .aside{
+        flex: 15%;
+    }
+
+    .aside-1{        
+        order: 2;
+    }
+
+    .aside-2{
+        order: 4;
+    }
+
+    .footer{
+        order: 5;
+    }
+
+}
