@@ -1,0 +1,101 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,300);
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+@font-face {
+  font-family: 'Queens Park';
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/queens-park.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/* Ponemos las imágenes que puedan ocupar como máximo
+el 100% del contenedor */
+img{
+    width: 100%;
+    height: auto;
+}
+
+body{
+    font-family: "Queens Park", "serif";    
+}
+
+/* No poner por ejemplo body > section */
+
+section{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;   
+}
+
+section > h2{
+    font-size: 3rem;
+    text-align: center;
+}
+
+article h3, article h4, article h5{
+    font-family: "Oswald", "Serif";
+}
+
+/* Como lo siguiente después del section con contenido
+es el article, le ponemos el display flex */
+section > article{
+    display: flex;
+    flex-direction: column;
+}
+
+section > article > h3{
+    font-size: 2rem;
+}
+
+section > article > h4{    
+    font-size: 1.1rem;
+    font-weight: lighter;
+    align-self: flex-end;
+    margin: 0;
+}
+
+section > article > h5{
+    font-size: 1rem;
+    font-weight: lighter;
+    align-self: flex-end;
+    margin: 0;
+}
+
+section > article > p{
+    font-family: "Merriweather";
+    line-height: 1.5rem;
+}
+
+@media (min-width:752px){
+    section{
+        /* El display flex no hace falta porque se mantiene */        
+        flex-flow: row;
+        flex-wrap: wrap;        
+    }
+
+    section > h2{        
+        flex: 100%;
+        font-size: 3.85rem;
+    }
+
+    article{
+        flex: 1;
+        padding: 1rem;
+    }
+
+    article > h4{
+        text-align: right;
+    }
+
+    .breaking{
+        flex: 2; /* Le ponemos un grow de 2 */
+        /* Podríamos haber puesto un 50% a este
+        y un 25% a los demás */
+    }        
+}
+
+
+
