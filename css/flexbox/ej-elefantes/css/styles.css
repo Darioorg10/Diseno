@@ -1,0 +1,163 @@
+*{box-sizing: border-box;}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: black;
+  background-color: white;
+}
+
+#content{
+  display: flex;
+  flex-direction: column;
+}
+
+header, footer{
+  background-color: #e6e7e8;
+  border: 2px solid #3f3f3f;
+  border-radius: 5px;
+}
+
+header{
+  display: flex;
+}
+
+footer{
+  color: #3f3f3f;
+  height: 2rem;
+}
+
+header img#logo{
+  width: 5rem;
+  height: 4.35rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Bree Serif', serif;
+  color: #00acdd;
+}
+
+h2, h3{
+  text-align: center;
+}
+
+header h1{
+  color: #004166;
+  font-weight: bold;
+}
+
+header h1 span#subject{
+  color: #96bc33;
+}
+
+a{
+  text-decoration: none;
+  cursor:pointer;
+}
+
+a:link{
+  color: #00acdd;
+}
+
+a:visited{
+  color: #ea2126;
+}
+
+a:hover{
+  cursor: pointer;
+  color: #f58a1e;
+}
+
+nav ul li{
+  list-style-type: none;
+}
+nav ul{
+	padding-left: 0;
+}
+
+nav#main-menu{
+  display: flex;
+  flex-direction: column;
+  background-color: #004166;
+  font-weight: bold;
+  border: 2px solid #e6e7e8;
+  border-radius: 5px;
+}
+
+nav#main-menu > #hamburger{  
+  display: none;  
+}
+
+nav#main-menu > label{
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+nav#main-menu > ul{
+  text-align: center;
+  display: none;
+}
+
+main section#principal{
+  border: 2px solid #004166;
+  border-radius: 5px;
+}
+
+main section article.news-art{
+  display: flex;
+  flex-direction: column;
+  border: 5px solid #e6e7e8;
+  border-radius: 0.8rem;
+}
+div#content main section#principal article#primerElemento{
+  background-color: #e6e7e8;
+  border-color: #f58a1e;
+}
+
+div#content main section article.news-art img{
+  width: 20rem;
+  height: auto;
+}
+
+div#content main section article.news-art p{
+  padding: 0 1rem;
+}
+
+@media (min-width: 752px){    
+  .news-art > h3{
+    text-align: left;
+    flex: 100%;
+  }      
+
+  main section article.news-art{
+    flex-flow: row wrap;
+  }
+
+  .news-art > p{
+    flex-basis: 50%;
+  }
+
+}
+
+@media (min-width: 1052px){
+  nav#main-menu > label{
+    display: none;
+  }
+
+  nav#main-menu > ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #primerElemento{
+    flex-basis: 100%;
+  }
+
+  .news-art{
+    flex-basis: 40%;
+  }
+
+}
