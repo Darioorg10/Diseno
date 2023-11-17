@@ -100,6 +100,10 @@ nav#main-menu > ul{
   display: none;
 }
 
+nav#main-menu #hamburger:checked + ul{
+	display: block;
+}
+
 main section#principal{
   border: 2px solid #004166;
   border-radius: 5px;
@@ -152,12 +156,17 @@ div#content main section article.news-art p{
     justify-content: space-around;
   }
 
+  main > section{
+  	display:flex;
+	flex-flow: row wrap;
+}
+
   #primerElemento{
-    flex-basis: 100%;
+    flex: 100%;
   }
 
-  .news-art{
-    flex-basis: 40%;
+  main > section > article.news-art{
+    flex: 40%;
   }
 
 }
