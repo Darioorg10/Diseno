@@ -100,6 +100,7 @@ nav#main-menu > ul{
   display: none;
 }
 
+/* PARA CAMBIARLO CUANDO SE HACE CLICK EN EL CHECKBOX (#hamburger) */
 nav#main-menu #hamburger:checked + ul{
 	display: block;
 }
@@ -158,7 +159,7 @@ div#content main section article.news-art p{
 
   main > section{
   	display:flex;
-	flex-flow: row wrap;
+	  flex-flow: row wrap;
 }
 
   #primerElemento{
@@ -167,6 +168,10 @@ div#content main section article.news-art p{
 
   main > section > article.news-art{
     flex: 40%;
+  }
+
+  main > section > article.news-art > p{
+    flex: 1;
   }
 
 }
