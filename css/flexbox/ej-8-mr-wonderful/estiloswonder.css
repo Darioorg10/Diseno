@@ -96,7 +96,7 @@ main{
 
 main > article.item {
 	display: flex;
-	flex-direction: column;		
+	flex-direction: column;
 	margin-bottom:0.5rem;
 	flex: 40%;
 	padding: 1rem;
@@ -182,48 +182,66 @@ footer > small {
 
 
 /* VERSIÓN DE ESCRITORIO */
-@media (min-width: 1000px){	
-	header {
-		flex-flow: row wrap;
-	}
-
+@media (min-width: 1052px){			
+	/*En la cabecera va logo e iconos en la misma línea y debajo el menú*/	
 	header > nav#menu-principal > label > span{
 		display: none;
 	}
-	
-	header > nav#search,
-	header > nav#bag,
-	header > nav#login {
-		order: 1;
-		flex: 100%;
-		padding: 0.5rem;
-	}	
-	header > a#logo {
-		order: -1;
-		flex: 100%;
-	}
-	
-	header > nav#menu-principal {
-		flex: 100%;
+
+	header > nav#menu-principal{		
+		flex: 100%; /* Ocupa su propia fila */
 	}
 
-	header > nav#menu-principal > ul#menu {
+	header > nav#menu-principal > ul#menu{
 		display: flex;
-		justify-content: space-between;
-	}
-	
-	header > nav#menu-principal > ul#menu > li {
-		margin-right: 1rem;
-	}
-	
-	footer > nav#menu-social-adicional > ul {
-		order: 2;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		padding-left: 1rem;
 	}
 
-	footer > nav > ul#menu-adicional {
-		order: 1;
+	header > a#logo {
+		order: -2;
+		margin-right: auto;
 	}
 
+	header > nav#search, header > nav#login, header > nav#bag{
+		order: -2;
+		padding-right: 2rem;
+	}	
+
+	/*Hay 4 artículos por fila*/
+	main > article.item {		
+		flex: 25%;		
+	}
+
+	main > article.item > input{
+		margin-top: auto; /* MARGIN-TOP: AUTO PARA QUE SE PONGA TODO A LA MISMA ALTURA */
+	}
+
+	/*La barra social y el menú adicional están uno al lado del otro*/	
+	footer > nav#menu-social-adicional{				
+		flex: 50%;
+		align-self: center;
+	}
+
+	footer > nav#menu-social-adicional > ul{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;					
+	}
+
+	footer > nav#menu-social-adicional > ul > li{
+		align-self: center;		
+	}	
+
+	footer > nav > ul#menu-adicional > li > a{
+		flex: 40%;
+	}
+
+	footer > small{
+		flex: 100%;
+		text-align: center;
+	}	
 
 }
 
