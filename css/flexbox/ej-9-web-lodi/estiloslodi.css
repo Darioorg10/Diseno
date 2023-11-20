@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Estilos para los enlaces */
+a{
+    color: black;
+    text-decoration: none;    
+}
+
+ul{
+    list-style-type: none;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+/* CABECERA */
+
+header{
+    display: flex;
+    align-items: center;    
+}
+
+header > nav#menu-principal{
+    display: flex;
+}
+
+/* Ordenamos todo */
+header > nav#menu-principal > label{
+    order: 1;    
+}
+
+header > picture{
+    order: 3;
+    text-align: center;
+    flex: 1; /* El grow para que se coma el espacio que hay */
+}
+
+header > nav#buscador{
+    order: 2;
+}
+
+header > nav#compra{
+    order: 4;
+}
+
+/* Le damos un tamaño fijo a la imagen */
+header > picture > img#logo{
+    width: 100px;      
+}
+
+/* Ocultamos el checkbox */
+header > nav#menu-principal > input{
+    display: none;
+}
+
+/* Ocultamos el menú */
+header > nav#menu-principal > ul#menu{
+    display: none;
+}
+
+/* CONTENIDO */
+
+main{
+    display: flex;
+    flex-flow: row wrap; /* Si no le ponemos el wrap no se ponen uno debajo de otro */
+}
+
+main > article.item{
+    flex: 0 49%; /* Para que quede vacío si no hay nada y haya 2 por fila */
+    display: flex;    
+    flex-flow: column;
+    margin-left: 0.25rem;
+}
+
+main > article.item > a:nth-child(3){
+    order: 1;
+}
+
+main > article.item > a:nth-child(1){
+    order: 2;
+    text-align: center;
+}
+
+main > article.item > p{
+    order: 3;
+    text-align: center;
+}
+
+/* FOOTER */
+footer{
+    display: flex;
+    flex-flow: column;    
+}
+
+footer > nav#menu-adicional > ul{
+    padding: 0; /* Las ul vienen con un padding de por sí así que se lo quitamos */    
+}
+
+footer > nav#menu-adicional > ul > li{
+    border-bottom: 1px solid #CCC;
+    margin-top: 0.5rem;
+}
+
+footer > nav#iconos-sociales > ul{
+    display: flex;    
+    justify-content: space-evenly;        
+}
+
+footer > nav#iconos-sociales > ul > li > a > i{
+    color: #888888;    
+}

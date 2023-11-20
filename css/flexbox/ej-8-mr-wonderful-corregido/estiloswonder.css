@@ -1,0 +1,278 @@
+*{
+	box-sizing:border-box;
+}
+/*Comenzamos con la versión móvil*/
+
+body{
+	/*Hacemos el cuerpo de la web flexible*/
+	display: flex;
+	flex-direction: column;
+	font-size: 16px;
+	color:grey;
+}
+
+/*Estilo para todos los enlaces de la web*/
+a{
+	color:grey;
+	text-decoration: none;
+}
+a:hover{
+	cursor:pointer;
+	text-decoration: underline;
+}
+ul{
+	list-style: none;
+	padding-left: 0;
+}
+
+header{
+	/*Hacemos la cabecera flexible*/
+	display: flex;
+	flex-flow: row wrap;
+	/*La cabecera ocupa todo el ancho de la página*/
+	flex: 100%;
+	justify-content: space-around;
+	align-items: center;
+}
+
+header > nav#menu-principal{
+	/*La hamburguesa la colocamos al principio*/
+	order: 0;
+	padding-right: 0.5rem;
+}
+header > nav#menu-principal > label > span{
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+header > nav#menu-principal > input#hamburguesa{
+	/*El input de la hamburguesa tiene que estar oculto*/
+	display: none;
+}
+
+header > nav#menu-principal > ul#menu{
+	/*El menu principal es flexible*/
+	display: flex;
+	flex-flow: column;
+	display: none;
+	padding: 0.3rem 0;
+	border-bottom: 1px solid grey;
+}
+
+header > nav#search{
+	font-size: 1.4rem;
+	/*En segunda posición está el buscador*/
+	order: 1;
+}
+
+header > a#logo{
+	font-size: 1.4rem;
+	/*En tercera posición se encuentra el logo*/
+	order: 2;	
+}
+
+header > a#logo > picture > img#wonder{
+	/*El logo de la cabecera tiene un tamaño fijo*/
+	width: 200px;
+	height: auto;
+}
+
+header > nav#login{
+	font-size: 1.4rem;
+	/*En cuarta posición está el icono del usuario de login*/
+	order: 3;
+}
+
+header > nav#bag{
+	/*Por último, en quinta posición se encuentra la bolsa de la compra*/
+	order: 4;
+	padding-right: 0.5rem;
+	font-size: 1.4rem;
+}
+
+main{
+	/*Hacemos flexible el cuerpo principal*/
+	display: flex;
+	flex-flow: row wrap;
+}
+
+main > article.item {
+	/*Los artículos tienen que ser flexibles*/
+	display: flex;
+	flex-direction: column;
+	margin-bottom:0.5rem;
+	/*En la versión de móvil se muestran en filas de 2*/
+	flex: 0 50%; /* El 0 es para el grow para que el último artículo no ocupe todo el espacio (por defecto es de 1) */
+	padding: 1rem;
+}
+
+main > article.item > p {
+	/*El párrafo con la descripción del artículo va en segundo lugar*/
+	order: 1;
+	text-align: center;
+}
+
+main > article.item > picture{ /* Lo ponemos en el picture porque es lo que es flexobñe */
+	/*La imagen del artículo aparece en primer lugar*/
+	order: 0;
+}
+
+main > article.item > picture > img{
+	/*Las imágenes de los articulos tienen una anchura relativa*/
+	width: 100%;	
+}
+
+main > article.item > span {
+	/*El precio va en tercera posición*/
+    order: 3;
+	text-align: center; /* El margin: 0 auto también funciona en este caso */
+	padding-bottom: 1rem;
+}
+
+main > article.item > input{
+	/*El botón lo colocamos en última posición*/
+	order: 4;
+	border:0;
+	background-color: #92d1c8;
+	border-radius: 0.2rem;
+	padding:1rem;
+	color: white;
+	font-weight: bold;
+}
+
+main > article.item > input:hover{
+	cursor:pointer;
+	background-color: #88c3ba;
+}
+
+footer{
+	/*Hacemos el pie flexible*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgb(235, 235, 235);
+	padding: 1rem;
+}
+
+/*El menú adicional es flexible y va en segunda posición*/
+footer > nav:nth-child(3){ /* El tercer hijo del footer */
+	order: 2;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+/* Centramos el menú adicional */
+footer > nav > ul#menu-adicional{
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+footer > nav#menu-social-adicional{
+	/* lo colocamos en primer lugar dentro del pie*/
+	order: 1;
+	text-align: center; /* Esto o también:
+	display:flex;
+	flex-flow:column;
+	align-items:center;
+	*/
+}
+
+footer > nav#menu-social-adicional > ul{
+	/*El menú social hay que hacerlo flexible*/
+	display: flex;
+}
+
+footer > nav#menu-social-adicional > ul > li i{
+	font-size:1.5rem;
+	color: #cda194;
+	padding:0 0.5rem;
+}
+
+footer > small {
+	/*El texto del pie va al final*/
+	order: 3;
+}
+
+/* VERSIÓN DE ESCRITORIO */
+@media (min-width: 1200px){			
+
+	/* CABECERA */
+	header{
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+
+	header > a#logo{
+		order: 1;
+		flex: 10%;
+	}
+
+	header > nav#search{
+		order: 2;
+		flex: 0 5%; /* Ponemos para que no crezcan porque si no se comerían el espacio libre */
+	}	
+
+	header > nav#login{
+		order: 3;
+		flex: 0 5%;
+	}
+
+	header > nav#bag{
+		order: 4;
+		flex: 0 5%;
+	}
+
+	header > nav#menu-principal{
+		order: 5;
+		flex: 100%;
+	}
+
+	header > nav#menu-principal > ul#menu{
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-around;
+	}
+	
+	/* Ocultamos la hamburgesa */
+	header > nav#menu-principal > label > span{
+		display: none;
+	}
+
+	/* CONTENIDO */
+	main > article.item {
+		/*Hay 4 artículos por fila*/
+		flex: 0 25%;
+	}
+
+	main > article.item > input{
+		margin-top: auto; /* MARGIN-TOP: AUTO PARA QUE SE PONGA TODO A LA MISMA ALTURA */
+	}
+
+	/* PIE */
+	footer{
+		flex-flow: row wrap;
+	}
+
+	footer > nav{
+		flex: 50%;
+	}
+
+	footer > nav > span{
+		border-bottom: 1px solid #CCC;
+	}
+
+	footer > nav#menu-social-adicional > ul{
+		display: flex;
+		justify-content: center;
+	}
+
+	footer > small{
+		flex: 100%;
+		text-align: center;
+	}	
+
+}
+
+
