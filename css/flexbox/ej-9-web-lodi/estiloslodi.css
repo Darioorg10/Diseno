@@ -1,4 +1,4 @@
-*{
+ *{
     box-sizing: border-box;
 }
 
@@ -62,6 +62,14 @@ header > nav#menu-principal > ul#menu{
     display: none;
 }
 
+header > nav#menu-principal > input:checked + ul#menu{
+    display: block;
+    position: absolute;
+    top: 2rem;    
+    padding: 1rem;
+    background-color: white;    
+}
+
 /* CONTENIDO */
 
 main{
@@ -106,8 +114,12 @@ footer > nav#menu-adicional > ul > li{
 }
 
 footer > nav#iconos-sociales > ul{
-    display: flex;    
-    justify-content: space-evenly;        
+    display: flex;
+    justify-content: center;
+}
+
+footer > nav#iconos-sociales > ul > li{
+    padding: 0 0.25rem;
 }
 
 footer > nav#iconos-sociales > ul > li > a > i{
