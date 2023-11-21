@@ -24,32 +24,27 @@ header{
     align-items: center;    
 }
 
+header > picture{
+    order: 3;
+    text-align: center;
+    flex: 1; /* El grow para que se coma el espacio que hay */
+    /* También podría haber puesto un justify content en el header */
+}
+
+/* Le damos un tamaño fijo a la imagen */
+header > picture > img#logo{
+    width: 6.25rem; /* 100px se divide entre 16 para sacar los rem */
+    height: auto; /* Siempre que le demos un width, darle un height auto */
+}
+
 header > nav#menu-principal{
     display: flex;
 }
 
 /* Ordenamos todo */
 header > nav#menu-principal > label{
-    order: 1;    
-}
-
-header > picture{
-    order: 3;
-    text-align: center;
-    flex: 1; /* El grow para que se coma el espacio que hay */
-}
-
-header > nav#buscador{
-    order: 2;
-}
-
-header > nav#compra{
-    order: 4;
-}
-
-/* Le damos un tamaño fijo a la imagen */
-header > picture > img#logo{
-    width: 100px;      
+    order: 1;
+    cursor: pointer;
 }
 
 /* Ocultamos el checkbox */
@@ -62,12 +57,23 @@ header > nav#menu-principal > ul#menu{
     display: none;
 }
 
+/* Ponemos el menú al hacer click */
 header > nav#menu-principal > input:checked + ul#menu{
-    display: block;
+    display: flex;
+    flex-flow: column;
     position: absolute;
     top: 2rem;    
     padding: 1rem;
-    background-color: white;    
+    background-color: white;
+    width: 50%;
+}
+
+header > nav#buscador{
+    order: 2;
+}
+
+header > nav#compra{
+    order: 4;
 }
 
 /* CONTENIDO */

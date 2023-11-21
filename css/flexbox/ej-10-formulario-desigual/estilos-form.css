@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Open Sans Condensed";
+    font-size: 16px;
+}
+
+/* Cambiamos los enlaces */
+a{
+    color: black;
+    text-decoration: none;
+}
+
+/* Cambiamos las listas */
+ul{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+/* Hacemos flexible el contenido */
+#contenido{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* CABECERA */
+
+header{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;    
+    flex: 100%;
+}
+header > picture#logo-cabecera {
+    flex: 1;
+}
+header > picture#logo-cabecera > img{
+    width: 9rem;
+}
+
+header > nav#bloque-iconos > ul{
+    display: flex; /* Los ponemos uno al lado del otro */
+}
+
+header > nav#bloque-iconos > ul > li{
+    padding-left: 2rem;
+}
+
+header > nav#bloque-iconos > ul > li > a > i{
+    font-size: 2rem;
+}
+
+header > nav#menu-principal{
+    display: flex;    
+    flex: 100%;
+    color: white;
+    background-color: black;    
+    justify-content: center;
+}
+
+header > nav#menu-principal > div#hamburguesa{
+    display: flex;    
+    flex-flow: column;
+    align-items: center;
+}
+
+header > nav#menu-principal > div#hamburguesa > span:nth-child(1){
+    font-size: 2rem;
+}
+
+/* Ocultamos el menú */
+header > nav#menu-principal > ul#menu{
+    display: none;
+}
+
+/* CONTENIDO */
+
+/* No hay que ponerle flex al main porque solo tiene un hijo */
+main{
+    flex: 100%;
+}
+
+main > section{
+    width: 18rem;
+    margin: 0 auto;
+}
+
+main > section#form-contacto > h2{    
+    text-align: center;
+}
+
+main > section#form-contacto > form#contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > section#form-contacto > form#contacto > input,
+main > section#form-contacto > form#contacto > select{
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+main > section#form-contacto > form#contacto > select{
+    background-color: #CCC;
+    color: grey;
+}
+
+main > section#form-contacto > form#contacto > input,
+main > section#form-contacto > form#contacto > select,
+main > section#form-contacto > form#contacto > textarea {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+main > section#form-contacto > form#contacto > label{
+    display: none;
+}
+
+main > section#form-contacto > form#contacto > span#caracteres{
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+main > section#form-contacto > form#contacto > input[type="button"]{
+        
+}
+
+
+/* PIE */
+footer{
+    display: none;
+}
