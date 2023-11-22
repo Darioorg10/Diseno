@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+section#inicio-sesion{
+    display: flex;
+    flex-flow: column;
+}
+
+section#inicio-sesion > h1{
+    font-size: 2.5rem;
+}
+
+section#inicio-sesion > form{
+    display: flex;
+    flex-flow: column;
+}
+
+section#inicio-sesion > form > input{
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: none;
+    border-bottom: 1px solid #CCC;
+}
+
+section#inicio-sesion > form > input::placeholder{
+    color: black;
+}
+
+section#inicio-sesion > form > a{
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: black;
+    font-size: 0.9rem;
+    padding: 1rem;
+}
+
+section#inicio-sesion > form > input[type="button"]{
+    background-color: black;
+    color: rgb(218, 165, 96);
+    font-weight: bold;
+    width: 10rem;
+    border-radius: 2rem;
+}
+
+section#inicio-sesion > form > input[type="button"]:hover{
+    background-color: #303030;
+    cursor: pointer;
+}

@@ -74,9 +74,26 @@ header > nav#menu-principal > div#hamburguesa > span:nth-child(1){
     font-size: 2rem;
 }
 
-/* Ocultamos el menú */
-header > nav#menu-principal > ul#menu{
-    display: none;
+
+header > nav#menu-principal > ul#menu {
+    display: none; /* Ocultamos el menú */
+    position: absolute;
+    top: 55px;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+}
+
+header > nav#menu-principal > ul#menu > li > a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Al hacer hover mostramos el menú principal */
+header > nav#menu-principal:hover > ul#menu {
+    display: block;
 }
 
 /* CONTENIDO */
@@ -99,6 +116,12 @@ main > section#form-contacto > form#contacto{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+main > section#form-contacto > form#contacto > input:focus{
+    border: 5px solid #CCC;
+    background-color: black;
+    color: white;
 }
 
 main > section#form-contacto > form#contacto > input,
@@ -129,7 +152,13 @@ main > section#form-contacto > form#contacto > span#caracteres{
 }
 
 main > section#form-contacto > form#contacto > input[type="button"]{
-        
+    background-color: black;
+    color: white;
+}
+
+main > section#form-contacto > form#contacto > input[type="button"]:hover{
+    background-color: grey;    
+    cursor: pointer;
 }
 
 

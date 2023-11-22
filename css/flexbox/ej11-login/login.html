@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <section id="inicio-sesion">
+        <h1>Iniciar sesión</h1>
+        <form action="login.html" method="post">            
+            <input type="email" name="correo" id="correo" placeholder="Email" aria-label="Email" required pattern="^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$">            
+            <input type="password" name="pwd" id="pwd" placeholder="Contraseña" aria-label="Contraseña" required pattern="^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{6,})\S$"> <!-- Mínimo 6 carácteres, una minúscula, una mayúscula y un número, sin espacios -->            
+            <a href="#">Recuperar contraseña</a>            
+            <input type="button" value="Iniciar Sesión" name="btnEnviar"  id="btnEnviar">            
+        </form>   
+    </section>
+</body>
+</html>
