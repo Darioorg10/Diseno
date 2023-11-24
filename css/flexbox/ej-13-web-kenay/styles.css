@@ -1,0 +1,154 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+a{
+    color: black;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+#contenido{
+    display: flex;
+    flex-flow: row wrap;    
+}
+
+/* CABECERA */
+#contenido > header{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    justify-content: space-between;      
+}
+
+#contenido > header > div#buscador{
+    display: flex;
+    flex: 100%;
+}
+
+#contenido > header > div#buscador{
+    display: flex;
+    flex: 100%;
+    padding: 1rem;
+    justify-content: center;
+}
+
+#contenido > header > div#buscador > input{
+    width: 100%;
+    background-color: #e6e5e5;
+    border: none;
+    padding: 0.60rem;
+    text-align: center;
+}
+
+#contenido > header > div#buscador > input::placeholder{
+    color: black;
+}
+
+/* Metemos la lupa dentro del input */
+#contenido > header > div#buscador > img{
+    position: absolute;
+    z-index: 1;
+    margin-right: 12rem;
+    top: 6.65%;
+}
+
+/* CONTENIDO */
+#contenido > main{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#contenido > main > section{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#contenido > main > section > h2{
+    text-align: center;
+    flex: 100%;
+}
+
+/* Que haya dos artículos por columna */
+#contenido > main > section > article{
+    display: flex;
+    flex-flow: column;
+    flex: 50%;
+    padding: 0.25rem;
+    align-items: center;        
+}
+
+/* Ajustamos la posición de la información de los artículos */
+#contenido > main > section > article > h3,
+#contenido > main > section > article > p{
+    margin: 0;
+    padding: 0.21rem;
+}
+
+#contenido > main > section > article > h3{
+    padding-top: 0.7rem;
+}
+
+/* Definimos el tamaño para la imagen */
+#contenido > main > section > article > img{
+    width: 100%;
+    height: auto;
+}
+
+/* Ponemos el corazón dentro de la imagen */
+#contenido > main > section > article > a{
+    position: absolute;    
+    top: 21%;    
+    background-color: white;
+    border-radius: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 12rem;
+}
+
+/* PIE */
+footer{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-color: rgb(223,218,206);    
+    flex: 100%;    
+}
+
+footer > nav#redes-sociales > ul{
+    display: flex;
+    margin: 0; /* Ponemos margin: 0 para unir los elementos */
+    padding: 0.5rem;
+}
+
+footer > h4 {    
+    margin: 0;       
+}
+
+/* Separamos los iconos de redes sociales */
+footer > nav#redes-sociales > ul > li{
+    padding: 0 0.4rem;
+}
+
+footer > h4{
+    padding: 0.75rem;
+}
+
+footer > nav#menu-adicional-footer{
+    padding: 1rem;
+    
+}
+
+footer > nav#menu-adicional-footer > ul {
+    margin: 0;
+}
+
+footer > nav#menu-adicional-footer > ul > li{
+    padding: 1rem;    
+    border-bottom: 1px solid rgb(49, 49, 49);
+}
