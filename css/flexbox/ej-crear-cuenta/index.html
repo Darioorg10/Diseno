@@ -5,16 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 5</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        
-
-    </style>
 </head>
 
 <body>
     <form action="ejercicio5.html" method="post">
 
-        <div class="sexo">
+        <div id="sexo">
             <input type="radio" name="sexo" id="sr" autofocus>
             <label for="sr"><strong>Sr.</strong></label>
             <input type="radio" name="sexo" id="sra">
@@ -27,7 +23,7 @@
         <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos*" aria-label="Apellidos"
             maxlength="60" required title="Escribe tus apellidos">
 
-        <input type="email" name="correo" id="correo" placeholder="Email*" aria-label="Email" maxlength="60" required
+        <input type="email" name="email" id="email" placeholder="Email*" aria-label="Email" maxlength="60" required
             pattern="^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$" title="Escribe tu correo electrónico">
 
         <input type="password" name="pwd" id="pwd" placeholder="Contraseña*" aria-label="Contraseña" maxlength="20"
@@ -55,16 +51,15 @@
             </datalist>        
 
         <input type="tel" name="telefono" id="telefono" placeholder="Teléfono móvil*" aria-label="teléfono móvil" required maxlength="9" title="Escribe tu número de teléfono">
-        <div class="datosPersonales">
+        <div id="datosPersonales">
             <input type="checkbox" name="datosP" id="datosP" checked>
                 <label for="datosP" id="label-datos-p">
                     Estos datos personales se utilizarán para responder a sus búsquedas,
                     procesar sus pedidos o autorizar el acceso.        
                 </label>
         </div>
-        <div id="botonRegistro">
-            <button type="submit" name="btnRegistrar" id="btnRegistrar">Registrarse</button>
-        </div>        
+        
+        <button type="submit" name="btnRegistrar" id="btnRegistrar">Registrarse</button>
 
     </form>
 </body>
