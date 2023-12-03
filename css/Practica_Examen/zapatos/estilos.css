@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    max-width: 35rem;
+}
+
+div#contenido{
+    display: flex;
+    flex-flow: column;
+}
+
+main > section#ofertas{
+    display: flex;
+    flex-flow: column;
+}
+
+main > section#ofertas > article.item-oferta{
+    display: flex;
+    flex-flow: column;
+    border: 1px solid #CCC;
+    border-radius: 2rem;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+main > section#ofertas > article.item-oferta > img{
+    order: 0;    
+}
+
+main > section#ofertas > article.item-oferta > p{
+    order: 1;
+}
+
+main > section#ofertas > article.item-oferta > ul{
+    order: 2;
+}
+
+main > section#ofertas > article.item-oferta > button{
+    order: 3;
+    background-color: orange;
+    padding: 1rem;
+    width: 14rem;
+    color: white;
+    font-weight: bold;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+/* Media querie */
+@media(min-width:700px){
+
+    main > section#ofertas{
+        display: flex;
+        flex-flow: row;
+    }
+
+    main > section#ofertas > article.item-oferta{                      
+        margin-left: 1rem;
+        flex: 0 30%;
+    }
+
+    main > section#ofertas > article.item-oferta > button{
+        margin-top: auto;
+    }    
+
+    
+}
