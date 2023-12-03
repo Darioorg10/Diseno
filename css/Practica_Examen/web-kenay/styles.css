@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+a{
+    color: black;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilos específicos */
+div#contenido{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+div#contenido > header{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    justify-content: space-between;
+}
+
+div#contenido > header > div#buscador{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+}
+
+div#contenido > header > div#buscador > input{
+    background-color: #ebebeb;
+    flex: 70%;    
+    text-align: center;
+    border: none;
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+
+div#contenido > header > div#buscador > img{
+    position: relative;
+    top: 20%;
+    right: 70%;
+}
+
+/* Cuerpo */
+main{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main > section{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main > section > h2{
+    text-align: center;
+    flex: 100%;
+}
+
+main > section > article{
+    display: flex;
+    flex-flow: column;
+    padding: 0.14rem;
+    flex: 50%;
+    text-align: center;
+}
+
+/* Corazoncito */
+main > section > article > a{
+    order: -1;
+    position: relative;
+    top: 10%;
+    right: 40%;    
+}
+
+main > section > article > img{
+    width: 100%;
+    height: auto;
+}
+
+main > section > article > h3, main > section > article > p{
+    margin: 0;    
+    margin-bottom: 0.4rem;
+}
+
+/* Pie */
+
+footer{
+    display: flex;
+    flex-flow: column;
+    background-color: beige;
+    flex: 100%;    
+}
+
+footer > nav#redes-sociales{
+    display: flex;
+    flex-flow: row wrap;    
+}
+
+footer > nav#redes-sociales > ul{
+    display: flex;
+    flex-flow: row wrap;    
+}
+
+footer > nav#redes-sociales > ul > li{
+    margin-left: 0.5rem;
+}
+
+footer > h4{
+    padding: 0 1rem;
+    margin: 0;    
+}
+
+footer > nav#menu-adicional-footer > ul{
+    padding: 1rem;
+    margin: 0;
+}
+
+footer > nav#menu-adicional-footer > ul > li{
+    margin-top: 1rem;
+    padding: 0.25rem;
+    border-bottom: 1px solid #CCC;
+}
+
+
+
+
+
+
+
+
+

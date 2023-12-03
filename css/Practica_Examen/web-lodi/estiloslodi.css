@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+a{
+    color: black;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos específicos */
+
+/* Cabecera */
+header{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;    
+    align-items: center;
+    justify-content: space-between;
+}
+
+header > nav#menu-principal{
+    order: 1;
+    flex: 0 20%;
+}
+
+header > nav#buscador{
+    order: 2;
+    flex: 0 20%;
+}
+
+header > picture{    
+    order: 3;
+    flex: 1;
+}
+
+header > picture > img{
+    width: 100px;    
+}
+
+header > nav#compra{
+    order: 4;    
+    justify-self: flex-end;
+}
+
+header > nav#menu-principal > label > span{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Ocultamos el checkbox */
+header > nav#menu-principal > input#menu-hamburger{
+    display: none;
+}
+
+/* Ocultamos el menú */
+header > nav#menu-principal > ul#menu{
+    display: none;
+}
+
+/* Mostramos el menú si se pulsa el checkbox */
+header > nav#menu-principal > input#menu-hamburger:checked + ul#menu{
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 4.7%;
+}
+
+/* Cuerpo */
+
+main{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main > article.item{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    flex: 0 50%;
+    padding: 0.14rem;
+}
+
+main > article.item > a:nth-child(3){
+    order: 1;
+}
+
+main > article.item > a:nth-child(1){
+    order: 2;
+    font-size: 12px;
+}
+
+main > article.item > p{
+    order: 3;
+    font-size: 11px;
+}
+
+/* Pie */
+footer{
+    display: flex;
+    flex-flow: column;
+    flex: 100%;
+}
+
+footer > nav#menu-adicional > ul > li{
+    display: flex;
+    padding: 0.25rem;    
+    border-bottom: 1px solid #CCC;
+}
+
+footer > nav#iconos-sociales{
+    display: flex;
+    flex-flow: row wrap;    
+    justify-content: space-around;
+}
+
+footer > nav#iconos-sociales > ul{
+    display: flex;
+    flex-flow: row wrap;    
+}
+
+footer > nav#iconos-sociales > ul > li{
+    margin-left: 1rem;
+}
+
+footer > nav#iconos-sociales > ul > li > a > i{
+    color: grey;
+}
+

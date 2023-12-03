@@ -1,0 +1,182 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+a{
+    color: black;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* Estilos específicos */
+div#contenido{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* Cabecera */
+header{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%; 
+}
+
+header > picture#logo-cabecera{    
+    flex: 1;
+}
+
+header > picture#logo-cabecera > img{
+    width: 200px;    
+}
+
+header > nav#bloque-iconos{
+    display: flex;
+    flex-flow: row wrap;    
+}
+
+header > nav#bloque-iconos > ul{
+    display: flex;
+    flex-flow: row wrap;    
+}
+
+header > nav#bloque-iconos > ul > li{
+    margin-right: 1rem;
+}
+
+header > nav#bloque-iconos > ul > li > a > i{
+    font-size: 30px;    
+}
+
+header > nav#menu-principal{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    background-color: black;
+}
+
+header > nav#menu-principal > div#hamburguesa{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    flex: 100%; 
+}
+
+header > nav#menu-principal > div#hamburguesa > label > span{
+    font-size: 23px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+header > nav#menu-principal > div#hamburguesa > label, header > nav#menu-principal > div#hamburguesa > span{
+    color: white;
+}
+
+/* Ocultamos el menú */
+header > nav#menu-principal > ul#menu{
+    display: none;
+}
+
+header > nav#menu-principal > ul#menu > li{
+    display: none;
+}
+
+/* Ocultamos el checkbox */
+header > nav#menu-principal > input#input-h{
+    display: none;
+}
+
+/* Mostramos el menú si se da click al checkbox */
+header > nav#menu-principal > input#input-h:checked + ul#menu > li{
+    display: block;    
+}
+
+header > nav#menu-principal > ul#menu{
+    display: flex;
+    flex-flow: column;
+    padding: 0;
+    flex: 100%;
+}
+
+header > nav#menu-principal > ul#menu > li{    
+    text-align: center;
+}
+
+header > nav#menu-principal > ul#menu > li > a{
+    color: white;    
+}
+
+/* Cuerpo */
+main{
+    flex: 100%;
+}
+
+main > section#form-contacto{
+    display: flex;
+    flex-flow: row wrap;        
+    justify-content: center;
+    padding: 1rem;
+}
+
+main > section#form-contacto > form#contacto{
+    display: flex;
+    flex-flow: column;
+    flex: 100%;
+    align-items: center;    
+}
+
+main > section#form-contacto > form#contacto > input{
+    padding: 0.25rem;
+    height: 2rem;
+    margin-top: 1rem;
+    width: 50%;
+    max-width: 25rem;
+}
+
+main > section#form-contacto > form#contacto > select{
+    padding: 0.25rem;
+    height: 2rem;
+    margin-top: 1rem;
+    width: 50%;
+    background-color: #CCC;
+    max-width: 25rem;
+}
+
+span#caracteres{
+    color: #CCC;
+    margin-top: 1rem;
+    margin-right: 4rem;     
+}
+
+main > section#form-contacto > form#contacto > textarea{
+    padding: 0.25rem;    
+    margin-top: 1rem;
+    width: 50%;
+    max-width: 25rem;
+}
+
+main > section#form-contacto > form#contacto > textarea::placeholder{
+    font-size: 17px;
+}
+
+main > section#form-contacto > form#contacto > input:focus{
+    background-color: black;
+    border: 5px solid #CCC;
+}
+
+main > section#form-contacto > form#contacto > label{
+    display: none;
+}
+
+main > section#form-contacto > form#contacto > input[type="button"]{
+    background-color: black;
+    color: white;
+}
+
+/* Pie */
+footer{
+    display: none;
+}
