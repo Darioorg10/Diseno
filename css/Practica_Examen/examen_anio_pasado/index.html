@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title> Bolsos para mujer de MISAKO </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+		integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+
+<body>
+	<div id="content">
+		<header>
+			<nav id="main-menu">
+				<input type="checkbox" id="hamburger">
+				<label for="hamburger">
+					<!--Hamburguesa-->
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="30"
+						height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+						stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<line x1="4" y1="6" x2="20" y2="6" />
+						<line x1="4" y1="12" x2="20" y2="12" />
+						<line x1="4" y1="18" x2="20" y2="18" />
+					</svg>
+				</label>
+				<!--Menú que contiene el menú de idiomas y el menú principal-->
+				<div id="menu-toggle">
+					<ul id="op-idiomas">
+						<!-- Menú idiomas-->
+						<li><a href="#">EN</a></li>
+						<li><a href="#">ES</a></li>
+						<li><a href="#">FR</a></li>
+						<li><a href="#">PT</a></li>
+					</ul>
+					<ul id="op-menu">
+						<!-- Menú principal-->
+						<li><a href="#">NEW IN</a><span class="icon-sub">></span></li>
+						<li><a href="#">TOP VENTAS</a><span class="icon-sub">></span></li>
+						<li><a href="#">BOLSOS</a><span class="icon-sub">></span></li>
+						<li><a href="#">MOCHILAS</a><span class="icon-sub">></span></li>
+						<li><a href="#">MONEDEROS</a><span class="icon-sub">></span></li>
+						<li><a href="#">OFICINA</a><span class="icon-sub">></span></li>
+						<li><a href="#">VIAJE</a><span class="icon-sub">></span></li>
+						<li><a href="#">HOMBRE</a><span class="icon-sub">></span></li>
+						<li><a href="#">ACCESORIOS</a><span class="icon-sub">></span></li>
+						<li><a href="#">GIFT GUIDE</a><span class="icon-sub">></span></li>
+						<li><a href="#">EDITORIAL</a><span class="icon-sub">></span></li>
+					</ul>
+				</div>
+			</nav>
+			<!--Logotipo-->
+			<img id="logo" src="img/misako-logo.svg" alt="MISAKO">
+			<!--Login y Bolsa de la compra-->
+			<nav id="login-shop">
+				<ul>
+					<li><i class="far fa-user"></i></li>
+					<li><i class="fas fa-shopping-bag"></i></li>
+				</ul>
+			</nav>
+			<!--Buscador-->
+			<nav id="search">
+				<div id="searcher">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="40"
+						height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+						stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<circle cx="10" cy="10" r="7" />
+						<line x1="21" y1="21" x2="15" y2="15" />
+					</svg>
+					<input type="text" id="text-searcher" placeholder="BUSCAR" maxlength="50">
+				</div>
+			</nav>
+		</header>
+		<main>
+			<section id="section-giftguide">
+				<!--Sección principal-->
+				<div id="header-giftguide">
+					<!--Cabecera con el título y el icono de filtro-->
+					<h2>GIFT GUIDE</h2>
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-adjustments-horizontal"
+						width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+						stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<circle cx="14" cy="6" r="2" />
+						<line x1="4" y1="6" x2="12" y2="6" />
+						<line x1="16" y1="6" x2="20" y2="6" />
+						<circle cx="8" cy="12" r="2" />
+						<line x1="4" y1="12" x2="6" y2="12" />
+						<line x1="10" y1="12" x2="20" y2="12" />
+						<circle cx="17" cy="18" r="2" />
+						<line x1="4" y1="18" x2="15" y2="18" />
+						<line x1="19" y1="18" x2="20" y2="18" />
+					</svg>
+				</div>
+				<!-- Baner promocional de la sección-->
+				<picture id="head-giftguide">
+					<source media="(min-width:700px)" srcset="img/baner_gift_guide_desktop.webp">
+					<img src="img/gift_guide_banner_mobile.webp" alt="Baner Gift Guide">
+				</picture>
+
+				<!-- Artículos que muestran productos de la categoría gift guide-->
+				<article class="category">
+					<a href="#">
+						<img src="img/bolsovinafiestanegro.webp" alt="Vina bolso de fiesta">
+						<h3>Vina bolso de fiesta</h3>
+						<h4>25,99€</h4>
+						<ul class="menu-options">
+							<li><img src="img/bolsovinafiestanegro.webp" alt="Vina bolso de fiesta"></li>
+							<li><img src="img/bolsovinafiestasilver.webp" alt="Vina bolso de fiesta"></li>
+						</ul>
+					</a>
+				</article>
+				<article class="category">
+					<a href="#">
+						<img src="img/bolsoglamygolden.webp" alt="Glamy bolso de fiesta">
+						<h3>Glamy bolso de fiesta</h3>
+						<h4>26,99€</h4>
+						<ul class="menu-options">
+							<li><img src="img/bolsoglamygolden.webp" alt="Glamy bolso de fiesta"></li>
+							<li><img src="img/bolsoglamysilver.webp" alt="Glamy bolso de fiesta"></li>
+						</ul>
+					</a>
+				</article>
+				<article class="category">
+					<a href="#">
+						<img src="img/bolsovinafiestanegro.webp" alt="Vina bolso de fiesta">
+						<h3>Vina bolso de fiesta</h3>
+						<h4>25,99€</h4>
+						<ul class="menu-options">
+							<li><img src="img/bolsovinafiestanegro.webp" alt="Vina bolso de fiesta"></li>
+							<li><img src="img/bolsovinafiestasilver.webp" alt="Vina bolso de fiesta"></li>
+						</ul>
+					</a>
+				</article>
+				<article class="category">
+					<a href="#">
+						<img src="img/bolsoglamygolden.webp" alt="Glamy bolso de fiesta">
+						<h3>Glamy bolso de fiesta</h3>
+						<h4>26,99€</h4>
+						<ul class="menu-options">
+							<li><img src="img/bolsoglamygolden.webp" alt="Glamy bolso de fiesta"></li>
+							<li><img src="img/bolsoglamysilver.webp" alt="Glamy bolso de fiesta"></li>
+						</ul>
+					</a>
+				</article>
+				<article class="category">
+					<a href="#">
+						<img src="img/bolsovinafiestanegro.webp" alt="Vina bolso de fiesta">
+						<h3>Vina bolso de fiesta</h3>
+						<h4>25,99€</h4>
+						<ul class="menu-options">
+							<li><img src="img/bolsovinafiestanegro.webp" alt="Vina bolso de fiesta"></li>
+							<li><img src="img/bolsovinafiestasilver.webp" alt="Vina bolso de fiesta"></li>
+						</ul>
+					</a>
+				</article>
+				<article class="category">
+					<a href="#">
+						<img src="img/bolsoglamygolden.webp" alt="Glamy bolso de fiesta">
+						<h3>Glamy bolso de fiesta</h3>
+						<h4>26,99€</h4>
+						<ul class="menu-options">
+							<li><img src="img/bolsoglamygolden.webp" alt="Glamy bolso de fiesta"></li>
+							<li><img src="img/bolsoglamysilver.webp" alt="Glamy bolso de fiesta"></li>
+						</ul>
+					</a>
+				</article>
+				<article class="category">
+					<a href="#">
+						<img src="img/bolsovinafiestanegro.webp" alt="Vina bolso de fiesta">
+						<h3>Vina bolso de fiesta</h3>
+						<h4>25,99€</h4>
+						<ul class="menu-options">
+							<li><img src="img/bolsovinafiestanegro.webp" alt="Vina bolso de fiesta"></li>
+							<li><img src="img/bolsovinafiestasilver.webp" alt="Vina bolso de fiesta"></li>
+						</ul>
+					</a>
+				</article>
+				<article class="category">
+					<a href="#">
+						<img src="img/bolsoglamygolden.webp" alt="Glamy bolso de fiesta">
+						<h3>Glamy bolso de fiesta</h3>
+						<h4>26,99€</h4>
+						<ul class="menu-options">
+							<li><img src="img/bolsoglamygolden.webp" alt="Glamy bolso de fiesta"></li>
+							<li><img src="img/bolsoglamysilver.webp" alt="Glamy bolso de fiesta"></li>
+						</ul>
+					</a>
+				</article>
+			</section>
+		</main>
+		<footer>
+			<nav id="additional-menu1">
+				<!--Menú adicional del pie-->
+				<h5>Selección Misako</h5>
+				<span class="line-footer"></span>
+				<ul>
+					<li><a href="#">Ideas de regalo</a></li>
+					<li><a href="#">Irene Sorales por Misako</a></li>
+					<li><a href="#">Top ventas</a></li>
+					<li><a href="#">Misako blog</a></li>
+					<li><a href="#">Outlet Misako</a></li>
+				</ul>
+			</nav>
+			<nav id="additional-menu2">
+				<!--Menú 2 adicional del pie-->
+				<h5>Información</h5>
+				<span class="line-footer"></span>
+				<ul>
+					<li><a href="#">Nuestras tiendas</a></li>
+					<li><a href="#">Contacte con nosotros</a></li>
+					<li><a href="#">Política de privacidad</a></li>
+					<li><a href="#">Política de cookies</a></li>
+					<li><a href="#">Condiciones de envío y compra</a></li>
+					<li><a href="#">Devoluciones</a></li>
+					<li><a href="#">Trabaja con nosotros</a></li>
+				</ul>
+			</nav>
+			<nav id="apps-menu">
+				<!--Menú adicional del pie con las Apps-->
+				<h5>Descarga la App y disfruta de sus ventajas</h5>
+				<span class="line-footer"></span>
+				<ul>
+					<li><a href="#"><img src="img/AppleStore-App_Download-White.webp" alt="Dowload AppleStore App"></a>
+					</li>
+					<li><a href="#"><img src="img/GooglePlay-App_Download-White.webp" alt="Dowload AppleStore App"></a>
+					</li>
+				</ul>
+			</nav>
+			<small id="info-footer">
+				<!--Información de la empresa-->
+				<span>
+					<span>Misako</span>
+					<span>Crtra. C-55 km 1,8 ,08292 - Esparraguera Barcelona</span>
+					<span>(España)</span>
+				</span>
+				<span>
+					<span>E-mail: tiendavirtual@misako.com</span>
+					<span>Customer support: (+34) 91 060 87 85</span>
+					<span>Días: 9h-14h / 15h-18h</span>
+				</span>
+			</small>
+		</footer>
+	</div>
+</body>
+
+</html>

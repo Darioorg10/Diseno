@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+/* Estilos específicos */
+div#content{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* Cabecera */
+div#content > header{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Le ponemos un tamaño al logo */
+div#content > header > img#logo{
+    width: 200px;
+    height: auto;
+}
+
+/* El buscador está en una línea */
+div#content > header > nav#search{
+    flex: 100%;
+}
+
+/* Cambiamos el login y la bolsa de la compra */
+div#content > header > nav#login-shop{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+div#content > header > nav#login-shop > ul{
+    display: flex;
+    flex-flow: row wrap;    
+}
+
+div#content > header > nav#login-shop > ul > li{
+    padding-right: 1.5rem;    
+}
+
+div#content > header > nav#login-shop > ul > li > i{    
+    font-size: 30px;
+    height: auto;
+}
+
+/* Cambiamos el div del buscador */
+div#content > header > nav#search > div#searcher{
+    display: flex;
+}
+
+/* El input del buscador ocupa toda la página */
+div#content > header > nav#search > div#searcher > input#text-searcher{
+    flex: 100%;
+    background-color: black;
+    height: 3rem;
+}
+
+/* Cambiamos de color el placeholder del buscador */
+div#content > header > nav#search > div#searcher > input#text-searcher::placeholder{
+    color: white;
+    padding-left: 4rem;
+}
+
+/* Cambiamos la lupita */
+div#content > header > nav#search > div#searcher > svg{
+    color: white;
+    position: absolute;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    width: 30px;
+    height: auto;
+}
+
+/* Ocultamos el checkbox */
+div#content > header > nav#main-menu > input{
+    display: none;
+}
+
+/* Ocultamos el menú */
+div#content > header > nav#main-menu > div#menu-toggle{
+    display: none;
+}
+
+/* CUERPO */
+
+
+
+
+
+footer{
+    display: none;
+}
