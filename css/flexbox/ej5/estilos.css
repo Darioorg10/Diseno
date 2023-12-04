@@ -50,9 +50,9 @@ section > article > h3{
     font-size: 2rem;
 }
 
-section > article > h4{    
+section > article > h4{  
     font-size: 1.1rem;
-    font-weight: lighter;
+    font-weight: lighter; 
     align-self: flex-end;
     margin: 0;
 }
@@ -84,11 +84,7 @@ section > article > p{
     article{
         flex: 1;
         padding: 1rem;
-    }
-
-    article > h4{
-        text-align: right;
-    }
+    }    
 
     .breaking{
         flex: 2; /* Le ponemos un grow de 2 */

@@ -15,10 +15,11 @@ nav > ul{
 }
 
 nav > ul > li{
-    padding: 0.25rem;    
+    padding: 0.25rem;
 }
 
 nav > ul > li#login{
-    flex: 1;
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;    
 }

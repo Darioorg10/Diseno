@@ -13,6 +13,11 @@ a{
     text-decoration: none;
 }
 
+img{
+    width: 100%;
+    height: auto;
+}
+
 /* Estilos específicos */
 div#content{
     display: flex;
@@ -97,12 +102,117 @@ div#content > header > nav#main-menu > div#menu-toggle{
     display: none;
 }
 
+div#content > header > nav#main-menu > label > svg{
+    cursor: pointer;
+}
+
+/* Mostramos el menú al hacer click */
+div#content > header > nav#main-menu > input:checked ~ div#menu-toggle{
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    background-color: white;
+    left: 1%;
+}
+
 /* CUERPO */
+div#content > main{
+    display: flex;
+    flex-flow: row wrap;
+}
 
+div#content > main > section#section-giftguide{
+    display: flex;
+    flex-flow: row wrap;
+}
 
+div#content > main > section#section-giftguide > div#header-giftguide{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    flex: 100%;    
+}
 
+/* El texto de gift guide a la izquierda y el botón de filtrar a la derecha */
+div#content > main > section#section-giftguide > div#header-giftguide > h2{
+    flex: 90%;
+}
 
+div#content > main > section#section-giftguide > div#header-giftguide > svg{
+    flex: 10%;                
+}
+
+/* Los artículos (2 por fila) */
+div#content > main > section#section-giftguide > article.category{
+    display: flex;    
+    flex: 50%;
+    padding: 0.25rem;
+}
+
+div#content > main > section#section-giftguide > article.category > a > ul.menu-options{
+    display: flex;
+    padding: 1rem;
+}
+
+div#content > main > section#section-giftguide > article.category > a > ul.menu-options > li{
+    display: flex;
+    padding: 1rem;
+}
+
+div#content > main > section#section-giftguide > article.category > a > ul.menu-options > li > img{
+    max-width: 200px;
+}
+
+/* Footer */
 
 footer{
-    display: none;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;    
 }
+
+footer > nav{
+    background-color: rgb(221, 213, 202);
+}
+
+/* Ocupan la mitad cada uno de los dos nav */
+footer > nav#additional-menu1{
+    flex: 50%;
+    padding: 0 2rem;
+}
+
+footer > nav#additional-menu2{
+    flex: 50%;
+    padding: 0 1.25rem;
+}
+
+footer > nav#additional-menu1 > h5, footer > nav#additional-menu2 > h5{
+    font-size: 20px;    
+    border-bottom: 2px solid black;    
+}
+
+footer > nav#apps-menu{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+footer > nav#apps-menu > h5{
+    font-size: 20px;
+    border-bottom: 1px solid black;    
+}
+
+footer > nav#apps-menu > ul{
+    display: flex;
+}
+
+footer > small{
+    font-size: 20px;
+    color: grey;
+}
+
+@media(min-width:1000px){
+    
+}
+
+
