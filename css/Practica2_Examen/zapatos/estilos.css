@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+img{
+    width: 100%;
+    height: auto;
+    max-width: 35rem;
+}
+
+header{
+    display: flex;    
+}
+
+header > h1{
+    flex: 100%;    
+}
+
+main{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main > section#ofertas{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main > section#ofertas > article.item-oferta{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 2rem;
+    flex: 25%;
+}
+
+main > section#ofertas > article.item-oferta > h3{
+    order: 1;
+}
+
+main > section#ofertas > article.item-oferta > img{
+    order: 2;
+}
+
+main > section#ofertas > article.item-oferta > p{
+    order: 3;    
+}
+
+main > section#ofertas > article.item-oferta > ul{
+    order: 4;
+    margin-top: auto;
+}
+
+main > section#ofertas > article.item-oferta > button{
+    order: 5;
+    padding: 0.5rem;
+    width: 12rem;
+    background-color: orange;
+    color: white;
+    border: 1px solid #CCC;
+    margin-top: auto;
+}
+
+@media(min-width:600px){
+    main > section#ofertas > article.item-oferta{
+        margin-left: 1rem;
+    }
+}

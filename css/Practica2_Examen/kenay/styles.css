@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+a{
+    color: black;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+div#contenido{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* Estilos específicos */
+
+/* Cabecera */
+header{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex: 100%;
+}
+
+header > div#buscador{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    justify-content: center;
+}
+
+header > div#buscador > input{
+    margin-top: 1rem;
+    width: 90%;
+    background-color: #ebebeb;
+    height: 2rem;    
+}
+
+header > div#buscador > input::placeholder{
+    text-align: center;
+}
+
+header > div#buscador > img{
+    position: absolute;
+    top: 6.2%;
+    left: 28%;
+}
+
+/* Cuerpo */
+main{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main > section{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main > section > h2{
+    text-align: center;
+    flex: 100%;
+}
+
+main > section > article{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    flex: 50%;
+    padding: 0.1rem;
+}
+
+main > section > article > a{
+    position: absolute;
+    top: 17%;
+    margin-right: 10rem;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+main > section > article > img{
+    width: 100%;
+    height: auto;
+}
+
+main > section > article > h3,
+main > section > article > p{
+    margin: 0.3rem 0;
+}
+
+/* Pie */
+footer{
+    background-color: blanchedalmond;
+    display: flex;
+    flex-flow: column;
+    flex: 100%;    
+}
+
+footer > nav#redes-sociales{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+footer > nav#redes-sociales > ul{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+footer > nav#redes-sociales > ul > li{
+    margin-left: 1rem;
+}
+
+footer > h4{
+    margin-left: 1rem;
+}
+
+footer > nav#menu-adicional-footer{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+footer > nav#menu-adicional-footer > ul{
+    display: flex;
+    flex-flow: column;
+    width: 95%;
+    padding: 0 0 0 1rem;
+}
+
+footer > nav#menu-adicional-footer > ul > li{
+    border-bottom: 1px solid black;
+    margin-top: 1rem;
+}

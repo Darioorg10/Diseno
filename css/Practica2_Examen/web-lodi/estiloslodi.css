@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;    
+}
+
+/* Estilos generales */
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos específicos */
+
+/* Cabecera */
+header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > picture{
+    order: 3;
+    flex: 1 50%;
+}
+
+header > nav#buscador{
+    order: 2;
+    flex: 0 20%;
+}
+
+/* Le damos un tamaño fijo al logo */
+header > picture > img#logo{
+    width: 125px;
+}
+
+header > nav#menu-principal{
+    order: 1;
+    flex: 0 15%;
+}
+
+header > nav#menu-principal > label > span{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+header > nav#compra{
+    order: 4;    
+}
+
+/* Ocultamos el checkbox y el menú */
+header > nav#menu-principal > input{
+    display: none;
+}
+
+header > nav#menu-principal > ul#menu{
+    display: none;
+}
+
+/* Mostramos el menú cuando se da click */
+header > nav#menu-principal > input:checked + ul#menu{
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+}
+
+/* Cuerpo */
+main{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main > article.item{
+    display: flex;
+    flex-flow: column;
+    flex: 0 50%;
+    padding: 0.1rem;
+    text-align: center;
+}
+
+main > article.item > p{
+    order: 3;
+    font-size: 0.75rem;
+}
+
+main > article.item > a:nth-child(1){
+    order: 2;
+}
+
+main > article.item > a > h3{
+    font-size: 1rem;
+}
+
+/* Pie */
+footer{
+    display: flex;
+    flex-flow: column;
+}
+
+footer > nav#menu-adicional > ul{
+    display: flex;
+    flex-flow: column;    
+}
+
+footer > nav#menu-adicional > ul > li{
+    padding: 0.25rem;
+    border-bottom: 1px solid #CCC;
+}
+
+footer > nav#iconos-sociales > ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+footer > nav#iconos-sociales > ul > li{
+    margin-right: 1rem;
+    font-size: 1.25rem;
+}
+
+footer > nav#iconos-sociales > ul > li > a > i{
+    color: grey;
+}
