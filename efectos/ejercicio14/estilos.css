@@ -1,0 +1,75 @@
+/* Le damos un tamaño y fondo al label */
+label{
+    display: inline-block;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    background: lightblue;
+    cursor: pointer;
+}
+
+/* Ocultamos el checkbox */
+label > input#hamburguer-icon{
+    display: none;
+}
+
+/* Pintamos las lineas */
+label > span.hamburguer-line:nth-child(2){
+    transition: top 0.5s, transform 0.5s;
+    position: absolute;
+    top: 1.2rem;
+    left: 0.5rem;
+    width: 4rem;
+    height: 0.4rem;
+    background: white;
+}
+
+label > span.hamburguer-line:nth-child(3){
+    transition: background 1s;
+    position: absolute;
+    top: 2.4rem;
+    left: 0.5rem;
+    width: 4rem;
+    height: 0.4rem;
+    background: white;
+}
+
+label > span.hamburguer-line:nth-child(4){
+    transition: top 0.5s, transform 0.5s;
+    position: absolute;
+    top: 3.6rem;
+    left: 0.5rem;
+    width: 4rem;
+    height: 0.4rem;
+    background: white;
+}
+
+/* Cuando se hace click */
+
+/* La línea de arriba y de abajo se van al centro */
+label > input#hamburguer-icon:checked + span.hamburguer-line:nth-child(2){
+    transition: top 1s, transform 1s;
+    top: 2.4rem;
+    transform: rotate(40deg);
+    transition-delay: 0s, 0.5s;
+}
+
+label > input#hamburguer-icon:checked ~ span:nth-child(4){
+    transition: top 1s, transform 1s;
+    top: 2.4rem;
+    transform: rotate(-40deg);
+    transition-delay: 0s, 0.5s;
+}
+
+/* La línea del medio desaparece */
+label > input#hamburguer-icon:checked ~ span.hamburguer-line:nth-child(3){
+    transition: background 1s;
+    background: none;
+}
+
+
+
+
+
+
+
