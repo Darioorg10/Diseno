@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightblue;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+a:hover{
+    background-color: black;
+}
+
+/* Ocultamos el checkbox */ 
+input[type="checkbox"]{
+    display: none;
+}
+
+/* Ocultamos el menú */
+nav.main-menu{
+    transition: left 1s ease;
+    position: absolute;
+    top: 0;
+    left: -220px;
+    background-color: rgb(22, 22, 22);
+    display: flex;
+    flex-flow: column;
+    width: 200px;
+    height: 100vh;
+}
+
+nav.main-menu > a{
+    padding: 0.5rem;
+    text-align: center;    
+    border-bottom: 0.2px solid white;
+}
+
+nav.main-menu > a:nth-child(1){
+    border-top: 0.2px solid white;
+    margin-top: 3rem;
+}
+
+/* El label del menú */
+label.menu-toogle{
+    transition: left 1s ease;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    left: 1rem;
+    background-color: rgb(22, 22, 22);
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+/* Pintamos las líneas */
+span.hamburguer-line{
+    display: inline-block;
+    position: absolute;    
+    width:2rem;
+    height: 0.2rem;
+    background-color: white;    
+}
+
+span.hamburguer-line:nth-child(1){
+    top: 0.75rem;
+    left: 0.5rem;
+}
+
+span.hamburguer-line:nth-child(2){
+    top: 1.425rem;
+    left: 0.5rem;
+}
+
+span.hamburguer-line:nth-child(3){
+    top: 2.1rem;
+    left: 0.5rem;
+}
+
+/* Desplegamos el menú al hacer click */
+input#hamburger:checked ~ nav.main-menu{
+    transition: left 1s ease;
+    left: 0;
+}
+
+input#hamburger:checked ~ label.menu-toogle{
+    transition: left 1s ease;
+    left: 14rem;
+}
+
+main.main-container{
+    transition: margin-left 1s ease;
+    margin-left: 4rem;    
+}
+
+input#hamburger:checked ~ main.main-container{
+    transition: margin-left 1s ease;
+    margin-left: 17rem;
+}
