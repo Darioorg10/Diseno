@@ -3,6 +3,73 @@
 }
 
 body{
-    background-image: url(images/fondo.jpg); /* Ponemos la imagen de fondo */
-    background-size: contain;    
+    background-image: url(images/fondo.jpg); /* Ponemos la imagen de fondo */    
+    font-family: 'Arial';
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+div#contenido{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+div#contenido > div#lista-con-imagenes{
+    display: flex;
+    flex-flow: row wrap;    
+}
+
+div#contenido > div#lista-con-imagenes > ul#polaroids{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+div#contenido > div#lista-con-imagenes > ul#polaroids > li{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 0 20%;
+    margin: 1rem;
+    background-color: white;    
+    justify-content: center; 
+}
+
+/* Giramos las imágenes impares */
+div#contenido > div#lista-con-imagenes > ul#polaroids > li:nth-child(even){
+    rotate: 3deg;
+}
+
+/* Giramos las imágenes pares */
+div#contenido > div#lista-con-imagenes > ul#polaroids > li:nth-child(odd){
+    rotate: -3deg;
+}
+
+/* Al ponerte encima de las imágenes */
+div#contenido > div#lista-con-imagenes > ul#polaroids > li:hover{
+    transition-delay: 0.15s; /* Ponemos un delay para que no empiece automáticamente */
+    transition-duration: 0.3s;
+    rotate: 0deg; /* Le ponemos 0 grados de rotación */
+}
+
+/* Y agrandamos la imagen */
+div#contenido > div#lista-con-imagenes > ul#polaroids > li:hover > a{
+    transition-delay: 0.15s;
+    transition-duration: 0.3s;
+    transform: scale(1.05); /* Le aumentamos el tamaño */
+}
+
+/* Las imágenes */
+div#contenido > div#lista-con-imagenes > ul#polaroids > li > a{
+    padding: 1rem;
+}
+
+/* El texto */
+div#contenido > div#lista-con-imagenes > ul#polaroids > li > span{
+    flex: 100%;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 1rem;
 }

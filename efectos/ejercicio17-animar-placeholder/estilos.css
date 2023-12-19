@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT';    
+}
+
+a{
+    text-decoration: none;
+    color: black;        
+}
+
+form{
+    display: flex;
+    flex-direction: column;           
+}
+
+form h1{        
+    color: black;    
+}
+
+form input[type="text"]{
+    width: 20rem;
+    height: 2.5rem;
+    margin-top: 1em;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+form input[type="password"]{
+    width: 20rem;
+    height: 2.5rem;
+    margin-top: 1.8rem;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+form a {    
+    margin-top: 1em;
+    color: black;
+}
+
+form input[type="button"]{
+    width: 10rem;
+    height: 3rem;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border-radius: 1.5em;
+    border: 1px solid white;
+    font-weight: bold;
+    margin-top: 1em;    
+}
+
+form input[type="button"]:hover{
+    background-color: rgb(39, 39, 39);
+    color: white;
+    cursor: pointer;
+}
+
+form > label#label-correo{
+    position: absolute;
+    color: gray;
+    top: 7rem;    
+}
+
+form > input[type="text"]:focus ~ label#label-correo,
+form > input[type="text"]:valid ~ label#label-correo{
+    display: block;
+    transition: all 0.1s; 
+    top: 6.4rem;
+    left: 0.3rem;
+    transform: scale(0.7);
+}
+
+form > label#label-clave{
+    position: absolute;
+    color: gray;
+    top: 11.5rem;  
+}
+
+form > input[type="password"]:focus ~ label#label-clave,
+form > input[type="password"]:valid ~ label#label-clave{
+    transition: all 0.1s; 
+    top: 10.7rem;
+    left: 0;
+    transform: scale(0.7);
+}

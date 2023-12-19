@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>    
+    <form>
+        <h1>Iniciar sesión</h1>        
+        <input type="text" name="correo" id="correo" aria-label="Email" maxlength="40" required>                
+        <label id="label-correo" for="correo">Email</label>
+        <input type="password" name="pwd" id="pwd" aria-label="Contraseña" maxlength="14" required> <!-- Mínimo 6 carácteres, una minúscula, una mayúscula y un número, sin espacios -->        
+        <label id="label-clave" for="pwd">Contraseña</label>
+        <a href="#">Recuperar contraseña</a>
+        <p>
+            <input type="button" value="Iniciar Sesión" name="btnEnviar"  id="btnEnviar">
+        </p>
+    </form>    
+</body>
+</html>
