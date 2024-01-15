@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+
+div#reproductor{
+    width: 40rem;
+    height: 2rem;
+    background-color: #1b1b1b;
+    display: flex;
+    align-items: center;
+}
+
+button#play, button#pausa{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+input.barra{
+    background-color: orange;
+}
