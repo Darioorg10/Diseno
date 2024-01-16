@@ -3,19 +3,20 @@
 }
 
 div#reproductor{
-    width: 40rem;
+    width: 25rem;
     height: 2rem;
     background-color: #1b1b1b;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 }
 
-button#play, button#pausa{
+button{
     border: none;
     background: none;
     cursor: pointer;
 }
 
-input.barra{
+input#volumen{
     background-color: orange;
 }
