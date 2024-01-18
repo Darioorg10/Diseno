@@ -13,8 +13,15 @@ let barraVolumen = document.getElementById("volumen");
 let svgPlay = document.getElementById("svgPlay");
 
 // Añadimos los escuchadores de eventos a los distintos botones
-botonPlay.addEventListener("click", () => {audio.play()})
-botonPausa.addEventListener("click", () => {audio.pause()})
+botonPlay.addEventListener("click", () => {
+    if (botonPlay.className == "play") {
+            audio.pause();
+            botonPlay.className = "pausa";
+    } else {
+        audio.play();
+        botonPlay.className = "play";
+    }    
+})
 botonReload.addEventListener("click", () => {audio.currentTime = 0})
 
 botonMute.addEventListener("click", () => {

@@ -3,12 +3,21 @@
 }
 
 div#reproductor{
+    border-radius: 1rem;
     width: 25rem;
     height: 2rem;
     background-color: #1b1b1b;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+}
+
+div#reproductor button.pausa #svgPausa{
+    display: none;
+}
+
+div#reproductor button.play #svgPlay{
+    display: none;
 }
 
 button{
