@@ -12,11 +12,20 @@ div#reproductor{
     justify-content: space-evenly;
 }
 
+/* Cambiamos los iconos de play y pausa */
 div#reproductor button.pausa #svgPausa{
     display: none;
 }
 
 div#reproductor button.play #svgPlay{
+    display: none;
+}
+
+div#reproductor button.unmuted #svgMuted{
+    display: none;
+}
+
+div#reproductor button.muted #svgUnmuted{
     display: none;
 }
 
