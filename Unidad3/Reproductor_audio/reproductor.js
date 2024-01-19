@@ -36,10 +36,14 @@ barraVolumen.onchange = (e) => {
     audio.volume = vol;
 }
 
-/*
-barraProgreso.max = audio.duration; // Hacemos que el valor máximo de la barra de progreso sea la duración de la canción
-if (audio.currentTime > 0) {
-    barraProgreso.value = audio.currentTime;
-}
-*/
+barraProgreso.setAttribute("max", audio.duration) // Hacemos que el valor máximo de la barra de progreso sea la duración de la canción
+
+audio.addEventListener("durationchange", () => {
+    barraProgreso.setAttribute("max", audio.duration) // Hacemos que el valor máximo de la barra de progreso sea la duración de la canción
+})
+
+audio.addEventListener("timeupdate", () => {
+    barraProgreso.setAttribute("value", audio.currentTime);
+})
+
 

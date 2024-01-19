@@ -4,7 +4,7 @@
 
 div#reproductor{
     border-radius: 1rem;
-    width: 25rem;
+    width: 30rem;
     height: 2rem;
     background-color: #1b1b1b;
     display: flex;
@@ -21,6 +21,7 @@ div#reproductor button.play #svgPlay{
 }
 
 button{
+    width: 2rem;
     border: none;
     background: none;
     cursor: pointer;
