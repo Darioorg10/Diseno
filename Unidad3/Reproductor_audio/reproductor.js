@@ -39,7 +39,7 @@ botonStop.addEventListener("click", () => {
 botonReload.addEventListener("click", () => {audio.currentTime = 0})
 
 // Función para mutear
-botonMute.addEventListener("click", () => {                
+botonMute.addEventListener("click", () => {
         if (botonMute.className == "unmuted") {
             barraVolumen.value = 0;
             audio.muted = true;
