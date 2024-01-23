@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;    
+}
+
+/* Estilos generales */
+video{
+    width: 50rem;    
+}
+
+button{
+    width: 2rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Estilos específicos */
+div#reproductor{       
+    width: 50rem;
+    height: 2rem;
+    background-color: #1b1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* Cambiamos los iconos de play y pausa */
+div#reproductor button.pausa #svgPausa{
+    display: none;
+}
+
+div#reproductor button.play #svgPlay{
+    display: none;
+}
+
+div#reproductor button.unmuted #svgMuted{
+    display: none;
+}
+
+div#reproductor button.muted #svgUnmuted{
+    display: none;
+}
+
+#tiempoReproducido, #tiempoRestante{
+    color: white;
+}
