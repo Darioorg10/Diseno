@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <style>
+        div.cuadro {
+            margin-top: 10rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+        }
+
+        #texto {
+            position: relative;
+            left: 0;
+            transition: left 4s;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#boton").click(function (evento) {
+                $("#texto").html("Hola");
+            })
+
+            $("#cambiar").click(function (evento) {
+                    $("#texto").css("color", "red").css("text-align", "center");
+                })
+
+            $("#mueve").mouseover(function (e) {
+                $("#texto").css("left", "500px")
+            })
+
+            $("#mueve").mouseleave(function (e) {
+                $("#texto").css("left", "0")
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <p id="texto">Texto normal</p>
+    <button id="boton">Pulsa!</button>
+    <button id="cambiar">Cambia color!</button>
+    <div id="mueve" class="cuadro">
+        Metete para mover el texto
+    </div>
+</body>
+
+</html>
