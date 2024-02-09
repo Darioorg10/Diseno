@@ -4,16 +4,25 @@
 		<title>TAREA PRÁCTICA SOBRE EVENTOS DE RATÓN</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/estilos.css">
-		<script src="jquery-3.1.1.min.js" type="text/javascript"></script>
+		<script src="../jquery-3.1.1.min.js" type="text/javascript"></script>
 		<script>
 			$(document).ready(function(){
 				$("img").mouseenter(function(){
-					$(this).next("h3").css("display", "block");
+					$(this).next("h3").toggle("fast"); // El toggle lo muestra y te mete una animación
 				})
 
 				$("img").mouseleave(function(){
-					$(this).next("h3").css("display", "none");
+					$(this).next().css("display", "none"); // También podemos modificar el css directamente, y especificar la etiqueta del next no es necesario. Aquí podríamos hacer el toggle también, ya que se activa y desactiva
 				})
+
+				// Si tenemos el mismo selector, en este caso img, no hace falta ponerlo dos veces, podemos ponerlo así:
+				/*
+				$("img").mouseenter(function(){
+					$(this).next().toggle("fast");
+				}).mouseleave(function(){
+					$(this).next().toggle("fast");
+				})
+				*/
 			});
 		</script>
 	</head>

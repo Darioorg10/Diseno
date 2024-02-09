@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>TAREA PRÁCTICA SOBRE EVENTOS DE TECLADO</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+		<script src="../../jquery-3.1.1.min.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(function(){
+
+				$("input").focusin(function(){
+					$(this).css("background-color", "cyan");
+				}).focusout(function() {
+                    $(this).css("background-color", "white");
+                })
+				
+			});
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>PRÁCTICANDO CON LOS EVENTOS DE TECLADO</h1>
+		</header>
+		<section>
+			<form action="tareaForm.html" method="post">
+                <input type="text" id="texto" placeholder="Usuario"><br>
+                <input type="password" id="clave" placeholder="Contraseña"><br>
+                <button type="submit">Iniciar sesión</button>
+            </form>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2. Menú</title>
+    <link rel="stylesheet" href="ej-menu.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            color: white;
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul{
+            display: flex;
+            color: white;
+            background-color: deepskyblue;
+            padding: 0.5em;
+            list-style-type: none;
+        }
+
+        /* Primera opción la de movil */
+        @media (min-width:0px) and (max-width:767px){
+            nav ul{        
+                justify-content: center;
+                flex-direction: column;      
+                text-align: center;            
+            }
+            li{
+                border-bottom: 1px solid lightblue;
+                padding: 0.5em;
+            }
+            li#contacto{
+                border: none;
+            }
+        }
+
+        @media (min-width:768px) and (max-width:1049px){
+            nav ul{                
+                flex-direction: row;
+                justify-content: space-around;      
+            }
+            li{
+                border: none;
+            }
+        }
+
+        @media (min-width:1050px){
+            nav ul{           
+                /* No hace falta poner el flex-direction:row */
+                justify-content: flex-end;
+            }
+            li{
+                padding-right: 2em;
+            }
+        }
+    </style>
+    <script src="../jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+            $("a").on("mouseenter", function() {
+                $(this).css({"font-weight":"bold", "color":"black"}) // Podemos meter varias propiedades como un objeto en el css
+            }).on("mouseleave", function() {
+                $(this).css({"font-weight":"normal", "color":"white"})
+            })
+        })
+    </script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li id="contacto"><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
