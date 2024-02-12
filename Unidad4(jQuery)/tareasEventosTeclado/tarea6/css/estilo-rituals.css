@@ -1,0 +1,414 @@
+*{
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+img{
+    width: 100%;
+    height: auto;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilos específicos */
+body{
+    background-color: #efedeb;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+div#content{
+    display: flex;
+    flex-flow: row wrap;    
+}
+
+/* Cabecera */
+div#content > header#header-web{
+    background-color: #1a191a;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    align-items: center;
+    padding: 1rem;    
+}
+
+/* Ponemos el menú flex y ordenamos los elementos */
+div#content > header#header-web > nav#menu-principal{
+    display: flex;
+    flex-flow: row wrap;    
+}
+
+/* La hamburguesa */
+div#content > header#header-web > nav#menu-principal > label{
+    order: 1;
+}
+
+/* El logo */
+div#content > header#header-web > a{
+    order: 2;
+    flex: 1;
+    padding-left: 1rem;
+}
+
+/* El bloque de iconos */
+div#content > header#header-web > nav#bloque-iconos{
+    order: 3;
+}
+
+/* Ocultamos el checkbox y el menú */
+div#content > header#header-web > nav#menu-principal > input{
+    display: none;
+}
+
+/* El menú */
+div#content > header#header-web > nav#menu-principal > ul{
+    display: none;
+}
+
+div#content > header#header-web > nav#menu-principal > ul > li{
+    padding: 1rem 1rem;    
+    flex: 100%;
+}
+
+div#content > header#header-web > nav#menu-principal > ul > li > a{
+    color: white;
+    display: flex;
+}
+
+/* Flechita al final */
+div#content > header#header-web > nav#menu-principal > ul > li > a > span:nth-child(1){
+    flex: 1;    
+}
+
+/* La hamburguesa */
+div#content > header#header-web > nav#menu-principal > label > span{
+    color: white; /* Cambiamos de color el menú */
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Al hacer click en la hamburguesa mostramos el menú */
+div#content > header#header-web > nav#menu-principal > input:checked + ul{
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    top: 4.9%;
+    left: 0%;
+    background-color: black;
+    width: 100%;
+}
+
+/* Cuerpo */
+div#content > main{
+    display: flex;
+    flex-flow: row wrap;    
+}
+
+/* La sección de texto de geles de ducha */
+div#content > main > section#sec-gelducha{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #f5f4f3;
+}
+
+div#content > main > section#sec-gelducha > h2,
+div#content > main > section#sec-gelducha > div{
+    background-color: black;    
+}
+
+div#content > main > section#sec-gelducha > h2{
+    text-align: center;
+    flex: 100%;
+    margin: 0;
+    padding-top: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+div#content > main > section#sec-gelducha > div{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    margin: 0;
+}
+
+div#content > main > section#sec-gelducha > div > p{
+    text-align: center;
+    flex: 100%;    
+}
+
+/* Ponemos las letras blancas */
+div#content > main > section#sec-gelducha > h2,
+div#content > main > section#sec-gelducha > div > p{
+    color: white;
+}
+
+/* Los artículos */
+div#content > main > section#sec-gelducha > article.item-sec{
+    background: white;
+    color: #515152; 
+    border: 2px solid #eeedec;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 0 50%; /* Hay dos por fila */
+    justify-content: center;
+    align-items: center;    
+}
+
+/* Ordenamos los elementos */
+div#content > main > section#sec-gelducha > article.item-sec > picture{
+    order: -5; /* La imagen del gel lo primero */
+}
+
+div#content > main > section#sec-gelducha > article.item-sec > span{
+    flex: 1;
+    justify-self: flex-start;    
+}
+
+/* La imagen de la cesta de la compra */
+div#content > main > section#sec-gelducha > article.item-sec > img{
+    width: 50px;      
+    justify-self: flex-end;      
+}
+
+div#content > main > section#sec-gelducha > article.item-sec > p{
+    margin-top: auto;
+    flex: 100%;
+    text-align: center;
+}
+
+/* Le damos un padding a los elementos de texto de los artículos */
+div#content > main > section#sec-gelducha > article.item-sec > p,
+div#content > main > section#sec-gelducha > article.item-sec > span{
+    padding: 1rem;
+}
+
+
+/* Ocultamos el botón de añadir a la cesta en la versión para móvil */
+div#content > main > section#sec-gelducha > article.item-sec > input{
+    display: none;
+}
+
+/* Pie */
+footer{
+    background-color: black;
+    display: flex;
+    flex-flow: column;
+    color: white;
+    flex: 100%;
+}
+
+/* Todo lo del menú adicional */
+footer > nav#menu-adicional{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+footer > nav#menu-adicional > ul{
+    padding: 1rem 1rem 0 1rem;    
+    flex: 100%;
+}
+
+footer > nav#menu-adicional > ul > li{
+    border-bottom: 1px solid white;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+}
+
+/* LA FLECHITA AL FINAL */
+footer > nav#menu-adicional> ul > li > span:nth-child(1){
+    flex: 1;
+    padding-bottom: 1rem;
+}
+
+footer > nav#menu-adicional > ul > li:nth-child(2),
+footer > nav#menu-adicional > ul > li:nth-child(3),
+footer > nav#menu-adicional > ul > li:nth-child(4){
+    padding-top: 2rem;
+}
+
+/* Ocultamos el submenú */
+footer > nav#menu-adicional > ul > li > ul{
+    display: none;
+}
+
+/* Menú social */
+footer > nav#menu-social{
+    display: flex;
+    flex-flow: row wrap;    
+}
+
+footer > nav#menu-social > ul{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    justify-content: center;
+}
+
+/* Separamos un poco las fotos entre sí y le damos un tamaño fijo */
+footer > nav#menu-social > ul > li > a > img{
+    width: 50px;
+    padding-right: 0.35rem;
+}
+
+footer > picture{
+    width: 50px;
+    flex: 100%;
+    align-self: center;
+}
+
+footer > small{
+    text-align: center;
+    padding-top: 1rem;
+}
+
+main > section > article > picture > img{
+    background-color: #faf9f8
+}
+
+/* VERSIÓN DE TABLET */
+@media(min-width:800px){
+    div#content > main > section#sec-gelducha > article.item-sec{
+        flex: 0 33.3%; /* Hay 3 artículos por fila */
+    }
+}
+
+/* VERSIÓN DE ESCRITORIO */
+@media(min-width:1048px){
+
+    /* Cabecera */
+
+    /* Ocultamos la hamburguesa */
+    div#content > header#header-web > nav#menu-principal > label > span{
+        display: none;
+    }
+
+    /* El logo */
+    div#content > header#header-web > a{
+        flex: 0 15%;
+        padding-left: 0;
+        order: -3;
+    }    
+
+    /* El menú */
+    div#content > header#header-web > nav#menu-principal > ul{
+        display: flex;                
+        flex: 1 70%;
+        justify-content: space-around;    
+    }
+
+    div#content > header#header-web > nav#menu-principal > ul > li{
+        font-size: 0.8rem;        
+    }
+
+    /* El bloque de iconos */
+    div#content > header#header-web > nav#bloque-iconos{
+        display: flex;
+        flex-flow: row wrap;
+        flex: 8%;
+        justify-content: flex-end;
+    }
+
+    div#content > header#header-web > nav#bloque-iconos > a{
+        padding-right: 0.25rem;
+    }
+
+    /* Quitamos la flechita */
+    div#content > header#header-web > nav#menu-principal > ul > li > a > span:nth-child(2){
+        display: none;
+    }
+
+    /* Cuerpo */
+    div#content > main > section#sec-gelducha > article.item-sec{
+        flex: 0 25%; /* Hay 4 artículos por fila */
+    }
+
+    div#content > main > section#sec-gelducha > article.item-sec > p{        
+        margin: 0;
+    }
+
+    /* Centramos el precio */
+    div#content > main > section#sec-gelducha > article.item-sec > span{
+        text-align: center;
+        margin: 0;
+        flex: 100%;
+    }
+
+    /* Quitamos el icono de la cesta */
+    div#content > main > section#sec-gelducha > article.item-sec > img{
+        display: none;
+    }
+
+    /* Mostramos el botón de añadir a la cesta */
+    div#content > main > section#sec-gelducha > article.item-sec > input{
+        display: flex;
+        padding: 1rem;
+        margin-bottom: 1rem;        
+        border: 1px solid #CCC;
+        background-color: white;
+        cursor: pointer;
+    }
+
+    div#content > main > section#sec-gelducha > article.item-sec > input:hover{
+        color: white;
+        background-color: black;        
+    }
+
+    /* Cambiamos el pie de página */
+    footer{
+        flex-flow: row wrap;
+    }
+
+    footer > nav#menu-adicional{
+        display: flex;
+        flex-flow: row wrap;
+        flex: 80%;
+    }
+
+    footer > nav#menu-adicional > ul{
+        justify-content: space-around;                
+    }
+
+    footer > nav#menu-adicional > ul > li{
+        border-bottom: none;
+        display: flex;
+        flex-flow: row wrap;  
+    }
+
+    footer > nav#menu-adicional > ul > li:nth-child(2),
+    footer > nav#menu-adicional > ul > li:nth-child(3),
+    footer > nav#menu-adicional > ul > li:nth-child(4){
+        padding-top: 0;
+    }
+
+    /* Quitamos la flechita */
+    footer > nav#menu-adicional> ul > li > span:nth-child(2){
+        display: none;
+    }
+
+    footer > picture{
+        flex: 100%;                
+        text-align: center;
+    }
+
+    footer > picture > img{
+        width: 50px;
+        height: auto;
+        flex: 100%;        
+    }
+
+    footer > small{
+        text-align: center;
+        flex: 100%;
+    }
+    
+
+}
