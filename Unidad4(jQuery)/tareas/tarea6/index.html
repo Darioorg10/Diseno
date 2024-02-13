@@ -16,19 +16,22 @@
 	<script src="../../jquery-3.1.1.min.js" type="text/javascript"></script>
 		<script>
 			$(document).ready(function(){
+				// Si hacemos scroll, ponemos la cabecera como fixed, y le bajamos la opacidad
 				$(document).scroll(function (e) {
 					let posicion = $(document).scrollTop(); // Guardamos la posición en la que estamos (0 si estamos arriba del todo)
 					$("header").css({"position":"fixed", "width":"100%", opacity:"0.8"})
-					$("main").css({"margin-top": "111px"})
+					$("main").css({"margin-top": "111px"}) // Para arreglar esto, se puede poner que cuando hay scrollTop > 111 nos aplique los cambios
 
+					// Si volvemos a arriba del todo (el scrollTop devuelve 0), volvemos a poner todo bien
 					if (posicion == 0) {
 						$("header").css({opacity:"1"})
 						$("main").css({"margin-top": "111px"})
 					}					
 				});				
 
+				// Si rescalamos la ventana, le quitamos el checked al checkbox
 				$(window).resize(function () {
-					$("input").prop("checked", false);
+					$("input[type='checkbox']").prop("checked", false);
 				});
 			});
 		</script>
