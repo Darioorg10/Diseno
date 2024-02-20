@@ -16,7 +16,7 @@ $(document).ready(function () {
 
     // Si le damos click al botón me va para arriba
     $("#volverarriba").on({
-        click: function(){            
+        click: function(){
             $('html').animate( { scrollTop : 0 }, 800 );
         }
     })
