@@ -44,6 +44,12 @@ $(document).ready(function () {
     // y se ocultan las demás, cambiamos el icono también
     $("#menu > li").on({
         click:function() {
+            $("#menu i").css( // Tenemos que volver a poner el icono bien al abrir otro submenú o al darle click al mismo
+                {   
+                    "transform":"rotate(0)",
+                }
+            )
+            $("#menu ul").slideUp() // Hacemos que se cierren todos los menús al principio
             $(this).find("i").css(
                 {   
                     "transform":"rotate(180deg)", 
