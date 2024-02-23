@@ -61,7 +61,6 @@ $(document).ready(function () {
             )            
 
             $(this).children("ul").slideToggle() // Mostramos el menú que se clickee
-
         }
     })
 
