@@ -75,6 +75,7 @@ $(document).ready(function () {
             if (posicion > 25 && $("#top").css("position") !== "fixed") {
                 $("#top").css({
                     "position":"fixed",
+                    "width":"100%",
                     "opacity":"50%",
                     "transition":"opacity .5s"
                 })
