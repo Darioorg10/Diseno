@@ -46,21 +46,37 @@ $(document).ready(function () {
 
     // Cada opción del submenú se muestra con un efecto
     // y se ocultan las demás, cambiamos el icono de la flechita también
-    $("#menu > li").on({
+    $("#menu li a").on({
         click:function() {
 
-            $("#menu ul").slideUp() // Hacemos que se cierren todos los menús al principio
-            // $("#menu ul").stop(true) // Si pongo esto se para bien sin poder hacerlo varias veces, pero se pueden abrir más de uno a la vez
+            // Si el submenú no está mostrado
+            if ($(this).parent("li").children("ul").css("display") == "none") {
+                $("#menu li").children("ul").slideUp() // Ocultamos los demás
+                $(this).siblings("ul").slideDown() // Lo mostramos                
 
-            // Ponemos la flecha mirando para arriba cuando se abra el submenú que sea
-            $(this).find("i").css(
-                {
+                // Ponemos todas las flechas en su posición original
+                $("#menu i").css({
+                    "transform":"rotate(0deg)",
+                    "transition":"transform .25s"
+                })
+
+                // Rotamos la flecha seleccionada
+                $(this).find("i").css({
                     "transform":"rotate(180deg)",
-                    "transition":"transform .15s"
-                }
-            )            
+                    "transition":"transform .25s"
+                })
 
-            $(this).children("ul").slideToggle() // Mostramos el menú que se clickee
+            } else { 
+                // Si está ya mostrado
+                $(this).siblings("ul").slideUp() // Lo ocultamos
+
+                // Ponemos la flecha seleccionada en su posición original
+                $(this).find("i").css({
+                    "transform":"rotate(0deg)",
+                    "transition":"transform .25s"
+                })
+            }
+
         }
     })
 
