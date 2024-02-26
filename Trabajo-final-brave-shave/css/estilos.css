@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;    
+}
+
+body{    
+    margin: 0;
+    color: white;
+}
+
+/* Colores principales
+
+#1b1b1b
+#D9701E
+white
+
+*/
+
+/* Estilos generales */
+
+img{
+    width: 100%;
+    height: auto;    
+}
+
+button{
+    background-color: #D9701E;
+    color: white;
+    border: none;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+h2{
+    font-weight: normal;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.puntitos-deco{
+    color: #D9701E;
+    font-weight: bold;
+}
+
+.linea-blanca-deco{
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 0.1px;
+}
+
+.linea-naranja-deco{
+    background-color: #D9701E;
+    position: relative;
+    width: 100%;
+    height: 30px;
+}
+
+.error{
+    color: red;
+}
+
+/* CABECERA */
+header.cabecera-general{
+    display: flex;
+    background-color: #1b1b1b;
+}
+
+header.cabecera-general > nav#menu-principal{
+    display: flex;
+    justify-content: space-around;    
+    flex: 100%;
+    align-items: center;
+    height: 100px;
+}
+
+
+header.cabecera-general > nav#menu-principal > svg#eh3w9mlIfbY1{
+    width: 300px;    
+}
+
+/* FOOTER */
+footer.footer-general{
+
+}
+
+footer.footer-general > nav#menu-adicional{
+    
+}
+
+/* Estilos específicos */
+
+/* MAIN PRINCIPAL */
+div#contenido-principal{
+
+    background-color: #1b1b1b;
+}
+
+div#contenido-principal > main{
+    
+
+}
+
+div#contenido-principal > main > picture#ima-fondo{
+    opacity: 60%;
+}
+
+div#cuadro-info{
+    background-color: #D9701E;    
+}
+
+section#section-precios > div#tit-sec-precios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#section-horario > div#tit-sec-horario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MAIN DE LOS ENLACES DE AVISO LEGAL, POLÍTICA DE COOKIES... */
+main.main-avisos{
+    color: #1b1b1b;
+    background-color: white;
+}
+
+/* MAIN INICIO DE SESIÓN */
+main#main-inicio-sesion{
+    color: #1b1b1b;
+    background-color: white;
+}
+
+main#main-inicio-sesion a{
+    color: black;
+    text-decoration: underline;
+}
+
+main#main-inicio-sesion > form > button#btn-iniciar-sesion{
+    background-color: #1b1b1b;
+}
+
+/* MAIN CREAR CUENTA */
+main#main-crear-cuenta{
+    color: #1b1b1b;
+    background-color: white;
+}
+
+main#main-crear-cuenta a{
+    color: black;
+    text-decoration: underline;
+}
+
+main#main-crear-cuenta > form > button#btn-crear-cuenta{
+    background-color: #1b1b1b;
+}
