@@ -5,7 +5,7 @@
 
 body{    
     margin: 0;
-    color: white;
+    color: white;    
 }
 
 /* Colores principales
@@ -22,6 +22,8 @@ img{
     width: 100%;
     height: auto;    
 }
+
+
 
 button{
     background-color: #D9701E;
@@ -52,11 +54,23 @@ a{
     height: 0.1px;
 }
 
+.linea-blanca-grande-deco{
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 10px;
+}
+
 .linea-naranja-deco{
     background-color: #D9701E;
     position: relative;
     width: 100%;
     height: 30px;
+}
+
+.cuadro-naranja-titulos{
+    color: white;
+    background-color: #D9701E;
 }
 
 .error{
@@ -77,9 +91,27 @@ header.cabecera-general > nav#menu-principal{
     height: 100px;
 }
 
+/* El icono de menú (luego tenemos que hacer que se despliegue) */
+header.cabecera-general > nav#menu-principal > svg:nth-child(1){
+    cursor: pointer;
+}
 
+/* Le damos un tamaño fijo al logo */
 header.cabecera-general > nav#menu-principal > svg#eh3w9mlIfbY1{
     width: 300px;    
+}
+
+header.cabecera-general > nav#menu-principal > ul#ul-menu{
+    list-style: none;
+    display: none;
+}
+
+header.cabecera-general > nav#menu-principal{
+    display: flex;
+    justify-content: space-around;    
+    flex: 100%;
+    align-items: center;
+    height: 100px;
 }
 
 /* FOOTER */
@@ -93,35 +125,58 @@ footer.footer-general > nav#menu-adicional{
 
 /* Estilos específicos */
 
-/* MAIN PRINCIPAL */
+/* MAIN PRINCIPAL (incluye cosas del principal con reserva completa y el principal sin cookies) */
 div#contenido-principal{
 
     background-color: #1b1b1b;
 }
 
-div#contenido-principal > main{
+div#contenido-principal > .main-principales{
     
 
 }
 
-div#contenido-principal > main > picture#ima-fondo{
+div#contenido-principal > .main-principales > picture#ima-fondo{
     opacity: 60%;
 }
 
-div#cuadro-info{
+div#contenido-principal > .main-principales > div#cuadro-info{
     background-color: #D9701E;    
 }
 
-section#section-precios > div#tit-sec-precios{
+div#contenido-principal > .main-principales > div#cuadro-info-reserva{
+    background-color: #D9701E;    
+}
+
+/* Sección precios */
+div#contenido-principal > .main-principales > section#section-precios > div#tit-sec-precios{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-section#section-horario > div#tit-sec-horario{
+/* Sección horarios */
+div#contenido-principal > .main-principales > section#section-horario > div#tit-sec-horario{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+div#contenido-principal > .main-principales > section#section-horario > div#horas{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 2rem;
+}
+
+div#contenido-principal > .main-principales > section#section-horario > div#horas > div.dia-horario{
+    flex: 40%; /* Mostramos dos por fila */
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: #2D2D2D;
+    border: 0.1px solid #D9701E;
+    font-size: 1.3rem;
 }
 
 /* MAIN DE LOS ENLACES DE AVISO LEGAL, POLÍTICA DE COOKIES... */
@@ -158,4 +213,31 @@ main#main-crear-cuenta a{
 
 main#main-crear-cuenta > form > button#btn-crear-cuenta{
     background-color: #1b1b1b;
+}
+
+/* MAIN RESERVA */
+main#main-reserva{
+    color: white;
+    background-color: white;
+}
+
+main#main-reserva > article.peluquero-reserva{
+    color: black;
+}
+
+/* MAIN FORMULARIO RESERVA */
+main#main-formulario-reserva{
+    color: white;
+    background-color: white;
+}
+
+main#main-formulario-reserva > div#fondo-formulario{    
+    background-color: #1b1b1b;
+    margin-bottom: 1rem;
+}
+
+/* MAIN DETALLES RESERVA */
+main#main-detalles-reserva{
+    color: black;
+    background-color: white;
 }
