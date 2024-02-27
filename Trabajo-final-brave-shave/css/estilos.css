@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    font-family: "Josefin Sans", sans-serif;    
+    font-family: "Josefin Sans", 'sans-serif';
 }
 
 body{    
@@ -165,7 +165,12 @@ div#contenido-principal > .main-principales > section#section-horario > div#tit-
 div#contenido-principal > .main-principales > section#section-horario > div#horas{
     display: flex;
     flex-flow: row wrap;
-    padding: 2rem;
+    padding: 2rem;    
+}
+
+div#contenido-principal > .main-principales > section#section-horario > p{
+    font-size: 1.7rem;
+    text-align: center;
 }
 
 div#contenido-principal > .main-principales > section#section-horario > div#horas > div.dia-horario{
@@ -173,10 +178,15 @@ div#contenido-principal > .main-principales > section#section-horario > div#hora
     display: flex;
     flex-flow: column;
     align-items: center;
-    padding: 1rem;
+    padding-bottom: 1rem;
     background-color: #2D2D2D;
     border: 0.1px solid #D9701E;
+    margin: 1rem 1rem;
     font-size: 1.3rem;
+}
+
+div#contenido-principal > .main-principales > section#section-horario > div#horas > div.dia-horario > p.dia{    
+    font-size: 1.5rem;
 }
 
 /* MAIN DE LOS ENLACES DE AVISO LEGAL, POLÍTICA DE COOKIES... */
