@@ -44,35 +44,45 @@
             <div id="fondo-formulario">
                 <form action="formulario-reserva.html" method="post">
                     
-                    <input type="text" placeholder="Nombre">               
-                    <span class="error">Campo obligatorio*</span>
+                    <div class="contenedor-inp">
+                        <input id="nom-form" type="text" placeholder="Nombre" aria-label="nombre">               
+                        <span class="error">Campo obligatorio*</span>
+                        <input id="ape-form" type="text" placeholder="Apellidos">                    
+                        <span class="error" id="span-apellido-mov">Campo obligatorio*</span>
+                    </div>
+
+                    <div class="contenedor-inp">
+                        <input type="email" placeholder="E-mail">
+                        <span class="error">Campo obligatorio*</span>
+                    </div>
+                    
+                    <div class="contenedor-inp">
+                        <input type="number" placeholder="Prefijo">
+                        <span class="error">Campo vacío*</span>
+                        <input type="tel" placeholder="Número de teléfono">
+                        <span class="error" id="span-tel-mov">Campo obligatorio*</span>
+                    </div>
     
-                    <input type="text" placeholder="Apellidos">                    
-                    <span class="error">Campo obligatorio*</span>
+                    <div class="contenedor-inp">
+                        <select name="fecha-reserva">
+                            <option>Fechas disponibles para reservar</option>
+                            <option value="28/2">28/2</option>
+                            <option value="29/2">29/2</option>                        
+                        </select>
+                        <span class="error">Campo obligatorio*</span>
+                    </div>
 
-                    <input type="email" placeholder="E-mail">
-                    <span class="error">Campo obligatorio*</span>
+                    
 
-                    <input type="number" placeholder="Prefijo">
-                    <span class="error">Campo vacío*</span>
-    
-                    <input type="tel" placeholder="Número de teléfono">
-                    <span class="error">Campo obligatorio*</span>
-
-                    <select name="fecha-reserva">
-                        <option>Fechas disponibles para reservar</option>
-                        <option value="28/2">28/2</option>
-                        <option value="29/2">29/2</option>                        
-                    </select>
-                    <span class="error">Campo obligatorio*</span>
-
-                    <select name="hora-reserva">
-                        <option>Hora reserva</option>
-                        <option value="9:00">9:00</option>
-                        <option value="10:00">10:00</option>
-                        <option value="11:00">11:00</option>
-                    </select>
-                    <span class="error">Campo obligatorio*</span>
+                    <div class="contenedor-inp">
+                        <select name="hora-reserva">
+                            <option>Hora reserva</option>
+                            <option value="9:00">9:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                        </select>
+                        <span class="error">Debes elegir una fecha*</span>
+                    </div>                    
     
                     <a href="detalles-reserva.html">ENVIAR DATOS</a>
                     

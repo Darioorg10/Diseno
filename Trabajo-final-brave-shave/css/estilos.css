@@ -826,43 +826,68 @@ main#main-formulario-reserva-fallido > div#fondo-formulario > form{
     flex: 100%;
 }
 
+main#main-formulario-reserva-fallido > div#fondo-formulario > form > div.contenedor-inp {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    position:relative;
+}
 
+main#main-formulario-reserva-fallido > div#fondo-formulario > form > div.contenedor-inp > span{
+    position: absolute;
+    top: 3.95rem;
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+}
 
-main#main-formulario-reserva-fallido > div#fondo-formulario > form > input,
-main#main-formulario-reserva-fallido > div#fondo-formulario > form > select {
+main#main-formulario-reserva-fallido > div#fondo-formulario > form > div.contenedor-inp > span#span-apellido-mov{
+    right: calc(55% - 105px);
+    margin-left: 1rem;
+}
+
+main#main-formulario-reserva-fallido > div#fondo-formulario > form > div.contenedor-inp > span#span-tel-mov{
+    left: 6rem;
+    margin-left: 1rem;
+    right: calc(60% - 105px);    
+}
+
+main#main-formulario-reserva-fallido > div#fondo-formulario > form >  div.contenedor-inp > input,
+main#main-formulario-reserva-fallido > div#fondo-formulario > form > div.contenedor-inp > select {
     height: 2.25rem;
-    margin-top: 1rem;    
+    margin-top: 2rem;    
     border: 1px solid red;
 }
 
 /* Nombre */
-main#main-formulario-reserva-fallido > div#fondo-formulario > form > input:nth-child(1) {    
+main#main-formulario-reserva-fallido > div#fondo-formulario > form > div.contenedor-inp > input#nom-form {
     flex: 40%;
 }
 
 /* Apellidos */
-main#main-formulario-reserva-fallido > div#fondo-formulario > form > input:nth-child(4) {
-    flex: 55%;    
+main#main-formulario-reserva-fallido > div#fondo-formulario > form > div.contenedor-inp > input#ape-form {
+    flex: 0 55%;    
     margin-left: 1rem;
 }
 
 /* Email */
-main#main-formulario-reserva-fallido > div#fondo-formulario > form > input:nth-child(5) {
+main#main-formulario-reserva-fallido > div#fondo-formulario > form > div.contenedor-inp > input[type="email"] {
     flex: 100%;
 }
 
 /* Prefijo */
-main#main-formulario-reserva-fallido > div#fondo-formulario > form > input:nth-child(7) {
-    flex: 30%;
+main#main-formulario-reserva-fallido > div#fondo-formulario > form > div.contenedor-inp > input[type="number"] {    
+    max-width: 6rem;
+    flex: 1 30%;
 }
 
 /* Número de teléfono */
-main#main-formulario-reserva-fallido > div#fondo-formulario > form > input:nth-child(9) {
+main#main-formulario-reserva-fallido > div#fondo-formulario > form > div.contenedor-inp > input[type="tel"] {
     margin-left: 1rem;
-    flex: 65%;
+    flex: 1 60%;
 }
 
-main#main-formulario-reserva-fallido > div#fondo-formulario > form > select{
+/* Los dos select */
+main#main-formulario-reserva-fallido > div#fondo-formulario > form > div.contenedor-inp > select{
     flex: 100%;
 }
 
