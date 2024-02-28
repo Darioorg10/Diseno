@@ -12,6 +12,7 @@ body{
 
 #1b1b1b
 #D9701E
+Hovers: #FFBF8D #606060
 white
 
 */
@@ -22,8 +23,6 @@ img{
     width: 100%;
     height: auto;    
 }
-
-
 
 button{
     background-color: #D9701E;
@@ -43,29 +42,11 @@ a{
 }
 
 .puntitos-deco{
-    color: #D9701E;
-    font-weight: bold;
-}
-
-.linea-blanca-deco{
-    background-color: white;
-    position: absolute;
-    width: 100%;
-    height: 0.1px;
-}
-
-.linea-blanca-grande-deco{
-    background-color: white;
-    position: absolute;
-    width: 100%;
-    height: 10px;
-}
-
-.linea-naranja-deco{
-    background-color: #D9701E;
-    position: relative;
-    width: 100%;
-    height: 30px;
+    flex: 1;
+    overflow: hidden;
+    background:repeat url("../images/punto.svg");
+    min-height: 3px;
+    max-height: 3px;
 }
 
 .cuadro-naranja-titulos{
@@ -78,86 +59,253 @@ a{
 }
 
 /* CABECERA */
-header.cabecera-general{
+div#contenido-principal > header.cabecera-general{
     display: flex;
-    background-color: #1b1b1b;
+    flex-flow: row wrap;
+    flex: 100%;    
+    background-color: #1b1b1b;    
 }
 
-header.cabecera-general > nav#menu-principal{
+div#contenido-principal > header.cabecera-general > nav#menu-principal{
     display: flex;
-    justify-content: space-around;    
+    justify-content: space-around;
     flex: 100%;
-    align-items: center;
-    height: 100px;
+    align-items: center;    
 }
 
 /* El icono de menú (luego tenemos que hacer que se despliegue) */
-header.cabecera-general > nav#menu-principal > svg:nth-child(1){
+div#contenido-principal > header.cabecera-general > nav#menu-principal > svg:nth-child(1){
     cursor: pointer;
 }
 
-/* Le damos un tamaño fijo al logo */
-header.cabecera-general > nav#menu-principal > svg#eh3w9mlIfbY1{
-    width: 300px;    
+div#contenido-principal > header.cabecera-general > nav#menu-principal > picture{
+    display: flex;
+    flex: 1;
+    justify-content: center;
 }
 
-header.cabecera-general > nav#menu-principal > ul#ul-menu{
+div#contenido-principal > header.cabecera-general > nav#menu-principal > a > svg#e0ZmoJGp8Tu1{
+    width: 100%;
+    height: auto;
+    max-width: 90px;
+}
+
+div#contenido-principal > header.cabecera-general > nav#menu-principal > ul#ul-menu{
     list-style: none;
     display: none;
 }
 
-header.cabecera-general > nav#menu-principal{
-    display: flex;
-    justify-content: space-around;    
-    flex: 100%;
-    align-items: center;
-    height: 100px;
-}
-
 /* FOOTER */
-footer.footer-general{
-
+div#contenido-principal > footer.footer-general{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;    
+    margin-top: 1rem;
 }
 
-footer.footer-general > nav#menu-adicional{
+/* Le damos un tamaño fijo a los svg */
+div#contenido-principal > footer.footer-general svg{
+    width: 50px;
+    height: 50px;    
+}
+
+div#contenido-principal > footer.footer-general > div#footer-info{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;        
+    border-bottom: 1px solid white; 
+}
+
+div#contenido-principal > footer.footer-general > div#footer-info > div{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    align-items: center;    
+}
+
+div#contenido-principal > footer.footer-general > div#footer-info > div > svg{
+    flex: 0 15%; 
+}
+
+div#contenido-principal > footer.footer-general > div#footer-info > div > span{
+    flex: 0 70%; 
+}
+
+div#contenido-principal > footer.footer-general > nav#menu-adicional{
+    margin-left: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;    
     
 }
+
+div#contenido-principal > footer.footer-general > nav#menu-adicional > p{
+    flex: 100%;    
+    font-size: 2rem;
+}
+
+div#contenido-principal > footer.footer-general > nav#menu-adicional > a{    
+    flex: 0 12.5%;
+    display: flex;
+    justify-content: center;
+}
+
+div#contenido-principal > footer.footer-general > nav#menu-adicional2{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1rem;
+    flex: 100%;
+    margin-top: 1rem;
+    border-top: 1px solid white;
+}
+
+div#contenido-principal > footer.footer-general > nav#menu-adicional2 > a{    
+    flex: 50%;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+div#contenido-principal > footer.footer-general > nav#menu-adicional2 > a:hover{
+    color: #D9701E;
+}
+
 
 /* Estilos específicos */
 
 /* MAIN PRINCIPAL (incluye cosas del principal con reserva completa y el principal sin cookies) */
 div#contenido-principal{
-
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
     background-color: #1b1b1b;
 }
 
 div#contenido-principal > .main-principales{
-    
-
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
 }
 
 div#contenido-principal > .main-principales > picture#ima-fondo{
+    display: flex;
     opacity: 60%;
+    flex: 100%;
+    max-width: 100%;
+}
+
+div#contenido-principal > .main-principales > picture#ima-fondo > img{
+    width: 100%;
+    max-width: 100%;
 }
 
 div#contenido-principal > .main-principales > div#cuadro-info{
-    background-color: #D9701E;    
+    background-color: #D9701E;
+    position: absolute;
+    width: 100%;
+    margin-top: 2rem;    
+    z-index: 2;
+    opacity: 90%;
 }
 
 div#contenido-principal > .main-principales > div#cuadro-info-reserva{
-    background-color: #D9701E;    
+    background-color: #D9701E;
 }
 
+div#contenido-principal > .main-principales > div#mensaje-cookies{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 45rem;
+    width: 100%;
+    padding-block: 1rem;
+    background-color: #1b1b1b;
+    z-index: 10;
+}
+
+div#contenido-principal > .main-principales > div#mensaje-cookies > span{    
+    flex: 40%;
+    margin-left: 1rem;
+}
+
+div#contenido-principal > .main-principales > div#mensaje-cookies > a{   
+    background-color: #D9701E;
+    color: white;
+    border: none;
+    padding: .5rem;
+    cursor: pointer; 
+    margin-right: 1rem;
+}
+
+div#contenido-principal > .main-principales > div#mensaje-cookies > a:hover{
+    background-color: #FFBF8D;
+}
+
+div#contenido-principal > .main-principales > div#mensaje-reserva-completa{
+    display: flex;
+    position: fixed;
+    top: 45rem;
+    width: 100%;
+    padding-block: 1rem;
+    background-color: #D9701E;
+    opacity: 80%;
+    z-index: 10;
+}
+
+div#contenido-principal > .main-principales > div#mensaje-reserva-completa > span{    
+    margin: 0 auto;        
+}
+
+
 /* Sección precios */
+div#contenido-principal > .main-principales > section#section-precios{
+    display: flex;
+    flex-flow: column;    
+    align-items: center;
+    flex: 100%;
+}
+
+
 div#contenido-principal > .main-principales > section#section-precios > div#tit-sec-precios{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+div#contenido-principal > .main-principales > section#section-precios > article{
+    display: flex;
+    flex-flow: column;
+    flex: 1 100%;
+    width: 100%;
+    align-items: center;    
+}
+
+div#contenido-principal > .main-principales > section#section-precios > article > p{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding-inline: 1rem;
+}
+
+div#contenido-principal > .main-principales > section#section-precios > article > p > span{
+    margin-inline: 0.5rem;
 }
 
 /* Sección horarios */
-div#contenido-principal > .main-principales > section#section-horario > div#tit-sec-horario{
+div#contenido-principal > .main-principales > section#section-horario{
     display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    justify-content: center;
+}
+
+div#contenido-principal > .main-principales > section#section-horario > div#tit-sec-horario{    
+    display: flex;
+    flex: 100%;
     justify-content: center;
     align-items: center;
 }
@@ -165,40 +313,69 @@ div#contenido-principal > .main-principales > section#section-horario > div#tit-
 div#contenido-principal > .main-principales > section#section-horario > div#horas{
     display: flex;
     flex-flow: row wrap;
-    padding: 2rem;    
+    justify-content: center;
+    padding: 2rem;        
 }
 
 div#contenido-principal > .main-principales > section#section-horario > p{
     font-size: 1.7rem;
+    flex: 100%;
     text-align: center;
 }
 
-div#contenido-principal > .main-principales > section#section-horario > div#horas > div.dia-horario{
-    flex: 40%; /* Mostramos dos por fila */
+div#contenido-principal > .main-principales > section#section-horario > div#horas > div.dia-horario{    
     display: flex;
     flex-flow: column;
+    justify-content: center;    
     align-items: center;
+    min-width: 150px;
+    width: 35%;
     padding-bottom: 1rem;
     background-color: #2D2D2D;
     border: 0.1px solid #D9701E;
     margin: 1rem 1rem;
-    font-size: 1.3rem;
+    font-size: 1.3rem;   
+    text-align: center;    
 }
 
 div#contenido-principal > .main-principales > section#section-horario > div#horas > div.dia-horario > p.dia{    
     font-size: 1.5rem;
+    width: 100%;
+}
+
+div#contenido-principal > .main-principales > section#section-horario > div#horas > div.dia-horario > span{    
+    width: 100%;
 }
 
 /* MAIN DE LOS ENLACES DE AVISO LEGAL, POLÍTICA DE COOKIES... */
 main.main-avisos{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     color: #1b1b1b;
     background-color: white;
+    border-bottom: 40px solid #D9701E;
+    padding-bottom: 3rem;
+}
+
+main.main-avisos > h1{
+    padding: 1rem;
+}
+
+main.main-avisos > p{
+    padding: 1rem;
 }
 
 /* MAIN INICIO DE SESIÓN */
 main#main-inicio-sesion{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    justify-content: center;
     color: #1b1b1b;
     background-color: white;
+    border-bottom: 40px solid #D9701E;
+    padding-bottom: 3rem;
 }
 
 main#main-inicio-sesion a{
@@ -206,14 +383,141 @@ main#main-inicio-sesion a{
     text-decoration: underline;
 }
 
-main#main-inicio-sesion > form > button#btn-iniciar-sesion{
+main#main-inicio-sesion > form{
+    display: flex;
+    flex-flow: column;
+    flex: 100%;
+    padding: 1rem;
+    align-items: center;
+}
+
+main#main-inicio-sesion > form > input[type="email"], 
+main#main-inicio-sesion > form > input[type="password"]{
+    width: 80%;
+    height: 2rem;
+    border: 1px solid #1b1b1b;
+    max-width: 40rem;
+}
+
+main#main-inicio-sesion > form > label:nth-child(1){    
+    width: 80%;
+    max-width: 40rem;
+}
+
+main#main-inicio-sesion > form > label:nth-child(3){
+    margin-top: 1.5rem;
+    width: 80%;
+    max-width: 40rem;
+}
+
+main#main-inicio-sesion > form > div#mantener-sesion input[type="checkbox"]{
+    margin-top: 2rem;
+}
+
+main#main-inicio-sesion > form > a{
     background-color: #1b1b1b;
+    text-align: center;
+    color: white;    
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    width: 80%;
+    max-width: 30rem;
+    margin-top: 2rem;
+}
+
+main#main-inicio-sesion > form > p{
+    margin-top: 2rem;
+}
+
+main#main-inicio-sesion > form > a:hover{
+    background-color: #606060;
+}
+
+/* MAIN INICIO SESIÓN FALLIDA (con jquery se haría en el mismo) */
+main#main-inicio-sesion-fallido{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    justify-content: center;
+    color: #1b1b1b;
+    background-color: white;
+    border-bottom: 40px solid #D9701E;
+    padding-bottom: 3rem;
+}
+
+main#main-inicio-sesion-fallido a{
+    color: black;
+    text-decoration: underline;
+}
+
+main#main-inicio-sesion-fallido > form{
+    display: flex;
+    flex-flow: column;
+    flex: 100%;
+    padding: 1rem;
+    align-items: center;
+}
+
+main#main-inicio-sesion-fallido > form > span{
+    width: 80%;
+    max-width: 40rem;
+    margin-top: 0.5rem;
+}
+
+main#main-inicio-sesion-fallido > form > input[type="email"],
+main#main-inicio-sesion-fallido > form > input[type="password"]{
+    width: 80%;
+    height: 2rem;
+    border: 1px solid red;
+    max-width: 40rem;
+}
+
+main#main-inicio-sesion-fallido > form > label:nth-child(1){    
+    width: 80%;
+    max-width: 40rem;
+}
+
+main#main-inicio-sesion-fallido > form > label:nth-child(4){
+    margin-top: 1.5rem;
+    width: 80%;
+    max-width: 40rem;
+}
+
+main#main-inicio-sesion-fallido > form > div#mantener-sesion input[type="checkbox"]{
+    margin-top: 2rem;
+}
+
+main#main-inicio-sesion-fallido > form > a{
+    background-color: #1b1b1b;
+    text-align: center;
+    color: white;    
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    width: 80%;
+    max-width: 30rem;
+    margin-top: 2rem;
+}
+
+main#main-inicio-sesion-fallido > form > p{
+    margin-top: 2rem;
+}
+
+main#main-inicio-sesion-fallido > form > a:hover{
+    background-color: #606060;
 }
 
 /* MAIN CREAR CUENTA */
 main#main-crear-cuenta{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    justify-content: center;
     color: #1b1b1b;
     background-color: white;
+    border-bottom: 40px solid #D9701E;
+    padding-bottom: 3rem;
 }
 
 main#main-crear-cuenta a{
@@ -221,33 +525,413 @@ main#main-crear-cuenta a{
     text-decoration: underline;
 }
 
-main#main-crear-cuenta > form > button#btn-crear-cuenta{
+main#main-crear-cuenta > form{
+    display: flex;
+    flex-flow: column;
+    flex: 100%;
+    padding: 1rem;
+    align-items: center;
+}
+
+main#main-crear-cuenta > form > input[type="email"], 
+main#main-crear-cuenta > form > input[type="password"],
+main#main-crear-cuenta > form > input[type="text"]{
+    width: 80%;
+    height: 2rem;
+    border: 1px solid #1b1b1b;
+    max-width: 40rem;
+}
+
+main#main-crear-cuenta > form > label:nth-child(1){    
+    width: 80%;
+    max-width: 40rem;
+}
+
+main#main-crear-cuenta > form > label:nth-child(3),
+main#main-crear-cuenta > form > label:nth-child(5),
+main#main-crear-cuenta > form > label:nth-child(7){
+    margin-top: 1.5rem;
+    width: 80%;
+    max-width: 40rem;
+}
+
+main#main-crear-cuenta > form > div#recibir-promociones > input[type="checkbox"]{
+    margin-top: 2rem;
+}
+
+main#main-crear-cuenta > form > a{
     background-color: #1b1b1b;
+    text-align: center;
+    color: white;    
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    width: 80%;
+    max-width: 30rem;
+    margin-top: 2rem;
+}
+
+main#main-crear-cuenta > form > p{
+    margin-top: 2rem;
+}
+
+main#main-crear-cuenta > form > a:hover{
+    background-color: #606060;
+}
+
+/* MAIN CREAR CUENTA FALLIDO */
+main#main-crear-cuenta-fallido{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    justify-content: center;
+    color: #1b1b1b;
+    background-color: white;
+    border-bottom: 40px solid #D9701E;
+    padding-bottom: 3rem;
+}
+
+main#main-crear-cuenta-fallido a{
+    color: black;
+    text-decoration: underline;
+}
+
+main#main-crear-cuenta-fallido > form{
+    display: flex;
+    flex-flow: column;
+    flex: 100%;
+    padding: 1rem;
+    align-items: center;
+}
+
+
+main#main-crear-cuenta-fallido > form > span{
+    width: 80%;
+    max-width: 40rem;
+    margin-top: 0.5rem;
+}
+
+main#main-crear-cuenta-fallido > form > input[type="email"], 
+main#main-crear-cuenta-fallido > form > input[type="password"],
+main#main-crear-cuenta-fallido > form > input[type="text"]{
+    width: 80%;
+    height: 2rem;
+    border: 1px solid red;
+    max-width: 40rem;
+}
+
+main#main-crear-cuenta-fallido > form > label:nth-child(1){    
+    width: 80%;
+    max-width: 40rem;
+}
+
+main#main-crear-cuenta-fallido > form > label:nth-child(4),
+main#main-crear-cuenta-fallido > form > label:nth-child(7),
+main#main-crear-cuenta-fallido > form > label:nth-child(10){
+    margin-top: 1.5rem;
+    width: 80%;
+    max-width: 40rem;
+}
+
+main#main-crear-cuenta-fallido > form > div#recibir-promociones > input[type="checkbox"]{
+    margin-top: 2rem;
+}
+
+main#main-crear-cuenta-fallido > form > a{
+    background-color: #1b1b1b;
+    text-align: center;
+    color: white;    
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    width: 80%;
+    max-width: 30rem;
+    margin-top: 2rem;
+}
+
+main#main-crear-cuenta-fallido > form > p{
+    margin-top: 2rem;
+}
+
+main#main-crear-cuenta-fallido > form > a:hover{
+    background-color: #606060;
 }
 
 /* MAIN RESERVA */
 main#main-reserva{
-    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
     background-color: white;
 }
 
+main#main-reserva > div.cuadro-naranja-titulos{
+    color: white;
+    text-align: center;
+    flex: 100%;
+}
+
 main#main-reserva > article.peluquero-reserva{
-    color: black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex: 100%;    
+    padding: 1rem;
+}
+
+main#main-reserva > article.peluquero-reserva > picture{
+    flex: 40%;
+    max-width: 500px;
+}
+
+main#main-reserva > article.peluquero-reserva > div.nombre-reserva{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+}
+
+main#main-reserva > article.peluquero-reserva > div.nombre-reserva > h2{    
+    color: black;    
+}
+
+main#main-reserva > article.peluquero-reserva > div.nombre-reserva > a{     
+    background-color: #D9701E;
+    color: white;
+    border: none;
+    padding: 1rem;    
+    text-align: center;    
+}
+
+main#main-reserva > article.peluquero-reserva > div.nombre-reserva > a:hover{    
+    background-color: #FFBF8D;
+}
+
+@media (min-width:850px) {
+    main#main-reserva > article.peluquero-reserva > picture{
+        margin-right: 10rem;
+    }
+
+    main#main-reserva > article.peluquero-reserva > div.nombre-reserva > a{
+        width: 18rem;
+    }
 }
 
 /* MAIN FORMULARIO RESERVA */
 main#main-formulario-reserva{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
     color: white;
     background-color: white;
 }
 
-main#main-formulario-reserva > div#fondo-formulario{    
-    background-color: #1b1b1b;
-    margin-bottom: 1rem;
+main#main-formulario-reserva > div.cuadro-naranja-titulos{
+    flex: 100%;
+    text-align: center;
 }
+
+main#main-formulario-reserva > div#fondo-formulario{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    background-color: #1b1b1b;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+main#main-formulario-reserva > div#fondo-formulario > form{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+}
+
+main#main-formulario-reserva > div#fondo-formulario > form > input,
+main#main-formulario-reserva > div#fondo-formulario > form > select {
+    height: 2.25rem;
+    margin-top: 1rem;    
+}
+
+/* Nombre */
+main#main-formulario-reserva > div#fondo-formulario > form > input:nth-child(1) {    
+    flex: 40%;
+}
+
+/* Apellidos */
+main#main-formulario-reserva > div#fondo-formulario > form > input:nth-child(2) {
+    flex: 55%;    
+    margin-left: 1rem;
+}
+
+/* Email */
+main#main-formulario-reserva > div#fondo-formulario > form > input:nth-child(3) {
+    flex: 100%;
+}
+
+/* Prefijo */
+main#main-formulario-reserva > div#fondo-formulario > form > input:nth-child(4) {
+    flex: 30%;
+}
+
+/* Número de teléfono */
+main#main-formulario-reserva > div#fondo-formulario > form > input:nth-child(5) {
+    margin-left: 1rem;
+    flex: 65%;
+}
+
+main#main-formulario-reserva > div#fondo-formulario > form > select{
+    flex: 100%;
+}
+
+main#main-formulario-reserva > div#fondo-formulario > form > a{    
+    background-color: #D9701E;
+    padding: 1rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+main#main-formulario-reserva > div#fondo-formulario > form > a:hover{
+    background-color: #FFBF8D;
+}
+
+/* MAIN FORMULARIO RESERVA FALLIDO */
+main#main-formulario-reserva-fallido{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    color: white;
+    background-color: white;
+}
+
+main#main-formulario-reserva-fallido > div.cuadro-naranja-titulos{
+    flex: 100%;
+    text-align: center;
+}
+
+main#main-formulario-reserva-fallido > div#fondo-formulario{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    background-color: #1b1b1b;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+main#main-formulario-reserva-fallido > div#fondo-formulario > form{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+}
+
+
+
+main#main-formulario-reserva-fallido > div#fondo-formulario > form > input,
+main#main-formulario-reserva-fallido > div#fondo-formulario > form > select {
+    height: 2.25rem;
+    margin-top: 1rem;    
+    border: 1px solid red;
+}
+
+/* Nombre */
+main#main-formulario-reserva-fallido > div#fondo-formulario > form > input:nth-child(1) {    
+    flex: 40%;
+}
+
+/* Apellidos */
+main#main-formulario-reserva-fallido > div#fondo-formulario > form > input:nth-child(4) {
+    flex: 55%;    
+    margin-left: 1rem;
+}
+
+/* Email */
+main#main-formulario-reserva-fallido > div#fondo-formulario > form > input:nth-child(5) {
+    flex: 100%;
+}
+
+/* Prefijo */
+main#main-formulario-reserva-fallido > div#fondo-formulario > form > input:nth-child(7) {
+    flex: 30%;
+}
+
+/* Número de teléfono */
+main#main-formulario-reserva-fallido > div#fondo-formulario > form > input:nth-child(9) {
+    margin-left: 1rem;
+    flex: 65%;
+}
+
+main#main-formulario-reserva-fallido > div#fondo-formulario > form > select{
+    flex: 100%;
+}
+
+main#main-formulario-reserva-fallido > div#fondo-formulario > form > a{    
+    background-color: #D9701E;
+    padding: 1rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+main#main-formulario-reserva-fallido > div#fondo-formulario > form > a:hover{
+    background-color: #FFBF8D;
+}
+
+
 
 /* MAIN DETALLES RESERVA */
 main#main-detalles-reserva{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    justify-content: center;    
     color: black;
-    background-color: white;
+    background-color: white;    
+}
+
+main#main-detalles-reserva > div.cuadro-naranja-titulos{
+    flex: 100%;
+    text-align: center;
+}
+
+main#main-detalles-reserva > p{
+    padding: 1rem;
+    flex: 100%;
+    text-align: center;
+}
+
+main#main-detalles-reserva > p:nth-child(4){
+    font-size: 1.5rem;
+}
+
+main#main-detalles-reserva > div#confirmar-y-volver{
+    display: flex;
+    flex-flow: column;    
+}
+
+main#main-detalles-reserva > div#confirmar-y-volver > a{     
+    background-color: #D9701E;
+    color: white;
+    border: none;
+    padding: 1rem;    
+    text-align: center;
+    cursor: pointer;    
+    margin-top: 1rem;
+}
+
+main#main-detalles-reserva > div#confirmar-y-volver > a:nth-child(2){
+    margin-bottom: 1rem
+}
+
+@media (min-width:850px) {
+    main#main-detalles-reserva > div#confirmar-y-volver > a{     
+        width: 30rem;
+    }
+    main#main-detalles-reserva > p{
+        font-size: 1.5rem;
+    }
+    
+    main#main-detalles-reserva > p:nth-child(4){
+        font-size: 2rem;
+    }
 }
