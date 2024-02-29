@@ -347,6 +347,15 @@ div#contenido-principal > .main-principales > section#section-horario > div#hora
     width: 100%;
 }
 
+
+@media (min-width:850px) {
+    
+}
+
+
+
+
+
 /* MAIN DE LOS ENLACES DE AVISO LEGAL, POLÍTICA DE COOKIES... */
 main.main-avisos{
     display: flex;
