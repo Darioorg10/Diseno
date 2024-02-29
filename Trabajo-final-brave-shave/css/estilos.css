@@ -52,6 +52,8 @@ a{
 .cuadro-naranja-titulos{
     color: white;
     background-color: #D9701E;
+    text-align: center;
+    flex: 100%;
 }
 
 .error{
@@ -113,6 +115,7 @@ div#contenido-principal > footer.footer-general > div#footer-info{
     display: flex;
     flex-flow: row wrap;
     flex: 100%;        
+    align-items: center;
     border-bottom: 1px solid white; 
 }
 
@@ -169,6 +172,31 @@ div#contenido-principal > footer.footer-general > nav#menu-adicional2 > a:hover{
     color: #D9701E;
 }
 
+@media (min-width:850px) {
+    /* Le damos un tamaño fijo a los svg */
+    div#contenido-principal > footer.footer-general svg{
+        width: 70px;
+        height: 70px;    
+    }
+
+    div#contenido-principal > footer.footer-general > div#footer-info{
+        font-size: 20px;
+    }
+
+    div#contenido-principal > footer.footer-general > nav#menu-adicional{
+        align-items: center;
+    }
+
+    div#contenido-principal > footer.footer-general > nav#menu-adicional > p{
+        margin-left: 2rem;
+        flex: 25%;
+    }
+
+    div#contenido-principal > footer.footer-general > nav#menu-adicional2 > a{    
+        flex: 25%;
+    }
+}
+
 
 /* Estilos específicos */
 
@@ -194,6 +222,7 @@ div#contenido-principal > .main-principales > picture#ima-fondo{
     opacity: 60%;
     flex: 100%;
     max-width: 100%;
+    max-height: 100%;
 }
 
 div#contenido-principal > .main-principales > picture#ima-fondo > img{
@@ -265,6 +294,10 @@ div#contenido-principal > .main-principales > section#section-precios{
     flex-flow: column;    
     align-items: center;
     flex: 100%;
+}
+
+div#contenido-principal > .main-principales > section#section-precios > picture{
+    display: none;
 }
 
 
@@ -347,12 +380,23 @@ div#contenido-principal > .main-principales > section#section-horario > div#hora
     width: 100%;
 }
 
-
 @media (min-width:850px) {
-    
+
+    div#contenido-principal > .main-principales > section#section-precios{
+        flex-flow: row wrap;
+        flex: 100%;
+    }
+
+    div#contenido-principal > .main-principales > section#section-precios > article{
+        flex: 80%;
+    }
+    div#contenido-principal > .main-principales > section#section-precios > picture{
+        display: flex;
+        margin-left: 1rem;
+        flex: 10%;        
+        width: 150px;
+    }
 }
-
-
 
 
 
@@ -674,12 +718,6 @@ main#main-reserva{
     background-color: white;
 }
 
-main#main-reserva > div.cuadro-naranja-titulos{
-    color: white;
-    text-align: center;
-    flex: 100%;
-}
-
 main#main-reserva > article.peluquero-reserva{
     display: flex;
     flex-flow: row wrap;
@@ -734,11 +772,6 @@ main#main-formulario-reserva{
     flex: 100%;
     color: white;
     background-color: white;
-}
-
-main#main-formulario-reserva > div.cuadro-naranja-titulos{
-    flex: 100%;
-    text-align: center;
 }
 
 main#main-formulario-reserva > div#fondo-formulario{
@@ -805,6 +838,10 @@ main#main-formulario-reserva > div#fondo-formulario > form > a:hover{
     background-color: #FFBF8D;
 }
 
+@media (min-width:850px) {
+    
+}
+
 /* MAIN FORMULARIO RESERVA FALLIDO */
 main#main-formulario-reserva-fallido{
     display: flex;
@@ -812,11 +849,6 @@ main#main-formulario-reserva-fallido{
     flex: 100%;
     color: white;
     background-color: white;
-}
-
-main#main-formulario-reserva-fallido > div.cuadro-naranja-titulos{
-    flex: 100%;
-    text-align: center;
 }
 
 main#main-formulario-reserva-fallido > div#fondo-formulario{
@@ -921,11 +953,6 @@ main#main-detalles-reserva{
     justify-content: center;    
     color: black;
     background-color: white;    
-}
-
-main#main-detalles-reserva > div.cuadro-naranja-titulos{
-    flex: 100%;
-    text-align: center;
 }
 
 main#main-detalles-reserva > p{
