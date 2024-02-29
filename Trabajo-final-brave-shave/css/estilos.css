@@ -782,6 +782,7 @@ main#main-formulario-reserva > div#fondo-formulario{
     padding: 1rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    justify-content: center;
 }
 
 main#main-formulario-reserva > div#fondo-formulario > form{
@@ -839,7 +840,9 @@ main#main-formulario-reserva > div#fondo-formulario > form > a:hover{
 }
 
 @media (min-width:850px) {
-    
+    main#main-formulario-reserva > div#fondo-formulario > form {        
+        max-width: 50rem;
+    }
 }
 
 /* MAIN FORMULARIO RESERVA FALLIDO */
@@ -855,6 +858,7 @@ main#main-formulario-reserva-fallido > div#fondo-formulario{
     display: flex;
     flex-flow: row wrap;
     flex: 100%;
+    justify-content: center;
     background-color: #1b1b1b;
     padding: 1rem;
     margin-top: 2rem;
@@ -943,7 +947,11 @@ main#main-formulario-reserva-fallido > div#fondo-formulario > form > a:hover{
     background-color: #FFBF8D;
 }
 
-
+@media (min-width:850px) {
+    main#main-formulario-reserva-fallido > div#fondo-formulario > form {
+        max-width: 50rem;        
+    }
+}
 
 /* MAIN DETALLES RESERVA */
 main#main-detalles-reserva{
