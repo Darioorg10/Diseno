@@ -16,7 +16,7 @@ div#slider{
 }
 
 div#desplazable {
-    position: absolute;
+    position: relative;    
 }
 
 div#oscuro {
@@ -227,6 +227,18 @@ header#top > p#promo > a {
 main {
     display: flex;
     flex-flow: row wrap;
+}
+
+/* Le damos css al slider */
+main .flexslider{
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+main .flexslider img{
+    max-width: 400px;
+    margin: 0 auto;    
 }
 
 main > article.item {

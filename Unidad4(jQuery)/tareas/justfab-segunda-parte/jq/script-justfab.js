@@ -1,7 +1,7 @@
-$(document).ready(function () {
-
-    // Metemos el slider
+$(document).ready(function () {    
     
+    // Metemos el slider
+    $('.flexslider').flexslider();
     
     // Si hacemos scroll nos aparece el botón de volver arriba
     $(document).on({
@@ -38,7 +38,7 @@ $(document).ready(function () {
             // Movemos la página a la derecha
             $("#desplazable").animate(
                 {"left":"288px"}, 500 // Movemos la página a la derecha (lo que ocupa el menú)
-            )
+            ).css("overflow", "hidden")
 
             // Ponemos la página oscura
             $("#oscuro").fadeIn()            

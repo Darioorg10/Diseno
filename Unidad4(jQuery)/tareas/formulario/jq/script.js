@@ -1,10 +1,6 @@
 $(document).ready(function () {
 
-    // Cuando los campos requeridos pierdan el foco se debe comprobar
-    // si la longitud del campo es 0, si lo es, debajo del campo aparece
-    // un mensaje en rojo indicando que no puede estar vacío, cuando
-    // haya un nuevo error no se pueden borrar los anteriores, y cuando
-    // la condición de error no se cumpla, se borra
+    // Control de campo vacío de los campos requeridos
     $("form input").on({
         focusout:function(){
             if ($(this).prop("required") == true) { // Cuando el input sea required
@@ -26,7 +22,6 @@ $(document).ready(function () {
             }
         }
     })
-
 
     // Cada vez que se pulse una tecla en el textarea ponemos el número de carácteres restantes
     $("form textarea").on({

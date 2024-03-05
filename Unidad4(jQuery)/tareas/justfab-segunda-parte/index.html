@@ -12,6 +12,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="flexslider/flexslider.css" type="text/css"> <!-- Cogemos el css del plugin -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -20,6 +21,7 @@
     <script src="jq/script-justfab.js"></script>
     <script src="inc/jquery.mb.CSSAnimate.js"></script>
     <script src="inc/jquery.mb.browser.min.js"></script>
+    <script src="flexslider/jquery.flexslider.js"></script> <!-- Importamos el plugin -->
 
 </head>
 
@@ -115,7 +117,6 @@
 
     <div id="desplazable">
 
-
         <header id="top">
             <div>
                 <a href="index.html">
@@ -158,6 +159,21 @@
 
         <!--Contenido principal con los productos -->
         <main>
+
+            <!-- Slider -->
+            <div class="flexslider">
+                <ul class="slides">
+                  <li>
+                    <img src="img/zapato1.jpg"/>
+                  </li>
+                  <li>
+                    <img src="img/zapato2.jpg"/>
+                  </li>
+                  <li>
+                    <img src="img/zapato3.jpg"/>
+                  </li>
+                </ul>
+            </div>
 
             <article class="item">
                 <a href="#">
@@ -268,7 +284,8 @@
                     <picture><img src="img/zapato3.jpg" alt="ZAPATO VALS" width="380" height="524"></picture>
                     <span class="comprar">COMPRAR</span>
                 </a>
-            </article>
+            </article>            
+
         </main>
         <!--Pie de página -->
         <footer>
