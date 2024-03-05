@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> <!-- Importamos el css del plugin -->
+    <script src="jq/jquery-3.1.1.min.js"></script>
+    <script src="jq/script.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> <!-- Importamos el plugin -->
+</head>
+<body>    
+    <form action="index.html" method="post">
+        <h1>Iniciar sesión</h1>        
+            <input type="email" name="correo" id="correo" placeholder="Email" aria-label="Email" maxlength="40" required pattern="^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$">
+            <span id="error-email"></span>
+            <input type="password" name="pwd" id="pwd" placeholder="Contraseña" aria-label="Contraseña" maxlength="14" required pattern="^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{6,})\S$"> <!-- Mínimo 6 carácteres, una minúscula, una mayúscula y un número, sin espacios -->
+            <span id="error-clave"></span>
+            <textarea name="t-area" id="t-area" rows="5" maxlength="100"></textarea>
+            <span id="info-t-area">Dispone de 100 carácteres</span>
+            <input type="text" id="datepicker" placeholder="Fecha">
+            <a href="#">Recuperar contraseña</a>
+
+        <button type="submit" name="btnEnviar" id="btnEnviar">Iniciar Sesión</button>
+    </form>    
+</body>
+</html>
