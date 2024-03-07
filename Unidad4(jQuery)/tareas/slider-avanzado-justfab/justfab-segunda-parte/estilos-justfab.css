@@ -1,0 +1,582 @@
+* {
+    box-sizing: border-box;
+}
+
+/*Comenzamos con la versión móvil*/
+/*Hacemos el cuerpo de la web flexible*/
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+div#desplazable {
+    position: relative;    
+}
+
+div#oscuro {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, .8);
+    display: none;
+}
+
+a > span.compra {
+    position: absolute;
+    bottom: 0;
+    z-index: 20;
+    background-color: #222222;
+    color: white;
+    border: 0;
+    padding: 1rem 0;
+    width: 100%;
+    display: none;
+    cursor: pointer;
+    transition: background-color .3s linear;
+}
+
+a > span.compra:hover {
+    background-color: black;
+    color: white;
+}
+
+/*Estilo para todos los enlaces de la web*/
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/*ESTILO DE LA CABECERA*/
+header#top {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    text-align: center;
+    z-index: 50;
+    background-color: white;
+}
+
+header#top > div {
+    order: 1;
+    flex: 100%;
+
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 1px 10px #888888;
+}
+
+header#top > div > nav#menu-principal {
+    order: 1;
+    flex: 10%;
+}
+
+header#top > div > nav#menu-principal > span {
+    font-size: 2.2rem;
+    color: #454545;
+    font-weight: bold;
+}
+
+header#top > div > nav#menu-principal > span:hover {
+    color: grey;
+    cursor: pointer;
+}
+
+ul#menu {
+    position: fixed;
+    top: 0;
+    left: -20rem;
+    min-height: 100vh;
+    margin: 0;
+    z-index: 200;
+    width: 18rem;
+    padding-left: 0.5rem;
+    border: 1px solid lightgrey;
+    background-color: white;
+    text-align: left;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+ul#menu > li {
+    padding: 0.5rem;
+}
+
+ul#menu > li > a {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul#menu > li > ul {
+    display: none;
+    padding-left: 1rem;
+}
+
+header#top > div > nav#buscador {
+    order: 2;
+    flex: 10%;
+}
+
+header#top > div > nav#buscador > ul i {
+    font-size: 1.6rem;
+    color: #454545;
+}
+
+header#top > div > nav#buscador > ul i:hover {
+    color: grey;
+}
+
+header#top > div > a {
+    order: 3;
+    flex: 60%;
+}
+
+header#top > div > a > picture > img#logo {
+    width: 10rem;
+}
+
+header#top > div > nav#deseos {
+    order: 4;
+    flex: 10%;
+}
+
+header#top > div > nav#deseos > ul i {
+    font-size: 1.5rem;
+    color: #454545;
+}
+
+header#top > div > nav#deseos > ul i:hover {
+    font-size: 1.5rem;
+    color: grey;
+}
+
+header#top > div > nav#compra {
+    order: 5;
+    flex: 10%;
+}
+
+header#top > div > nav#compra > ul {
+    padding-left: 0;
+}
+
+header#top > div > nav#compra > ul i {
+    font-size: 1.6rem;
+    color: #454545;
+}
+
+header#top > div > nav#compra > ul i:hover {
+    color: grey;
+}
+
+header#top > nav#menu-secundario {
+    order: 2;
+    flex: 100%;
+}
+
+header#top > nav#menu-secundario > ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+header#top > nav#menu-secundario > ul > li > a {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: black;
+    font-weight: bold;
+}
+
+header#top > nav#menu-secundario > ul > li > a:hover {
+    color: #454545;
+    text-decoration: none;
+}
+
+header#top > p#promo {
+    order: 3;
+    flex: 100%;
+    background-color: black;
+    padding: 0.5rem 0;
+    margin: 0;
+}
+
+header#top > p#promo:hover {
+    opacity: 0.8;
+}
+
+header#top > p#promo > a {
+    color: gold;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/* Le damos css al slider */
+main .flexslider{
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+main .flexslider img{
+    max-width: 400px;
+    margin: 0 auto;    
+}
+
+main > article.item {
+    flex: 0 1 50%;
+	position: relative; /* Al article le ponemos position:relative */
+    display: flex;
+    flex-flow: column;
+    padding: 0.8rem;
+}
+
+/* Añadimos el css del botón comprar */
+main > article.item > button{
+	display: none;
+	position: absolute;
+	align-self: center;	
+	top: 30px;
+	width: 150px;
+	height: 50px;	
+	z-index: 10;
+	cursor: pointer;
+}
+
+main > article.item > a:first-child {
+    order: 2;
+}
+
+main > article.item > a:first-child > h3 {
+    margin: 0;
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding-left: 1rem;
+}
+
+main > article.item > a {
+    position: relative;
+}
+
+main > article.item > a:last-child {
+    order: 1;
+}
+
+main > article.item > a:last-child > picture > img {
+    width: 100%;
+    height: auto;
+}
+
+main > article.item > p {
+    order: 3;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    padding-left: 1rem;
+}
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+footer > nav#menu-adicional {
+    flex: 100%;
+}
+
+footer > nav#menu-adicional > ul {
+    display: flex;
+    flex-flow: column;
+    padding: 0 1rem;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+footer > nav#menu-adicional > ul > li {
+    flex: 33.33%;
+    color: grey;
+    border-top: 1px solid grey;
+    padding: 0.5rem 0;
+}
+
+footer > nav#menu-adicional > ul > li > a {
+    padding-left: 1rem;
+}
+
+footer > nav#menu-adicional > ul > li:last-child {
+    border-bottom: 1px solid grey;
+}
+
+footer > nav#menu-adicional > ul > li:hover {
+    background-color: lightgrey;
+    border-radius: 0.2rem;
+}
+
+footer > nav#iconos-sociales {
+    flex: 100%;
+}
+
+footer > nav#iconos-sociales > ul {
+    display: flex;
+    justify-content: center;
+
+    list-style: none;
+    color: grey;
+}
+
+footer > nav#iconos-sociales > ul li {
+    padding-right: 1.2rem;
+    font-size: 1.9rem;
+}
+
+footer > nav#iconos-sociales > ul > li i {
+    color: grey;
+}
+
+footer > nav#iconos-sociales > ul > li i:hover {
+    color: black;
+}
+
+div#volverarriba {
+    color: #454545;
+    font-family: 'Open Sans Condensed', sans-serif;
+    width: 8rem;
+    background-color: lightgrey;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    position: fixed;
+    opacity: 0.7;
+    display: none;
+}
+
+div#volverarriba > a {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid grey;
+    padding: 0.2rem 1rem;
+}
+
+/** ---------------------------------------
+ * Slider 
+ ----------------------------------------*/
+
+ .contenedor-slider {
+    width: 1000px;
+    height: 800px;
+    margin: 40px auto 0;
+    position: relative;
+  }
+  
+  .slider-wrapper {
+    z-index: 50;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: #FFF;
+    border: 5px solid #4b5973;
+    overflow: hidden;
+  }
+  
+  .slider-wrapper li {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 100%;
+  }
+  
+  .slider-wrapper li:first-child{
+    left: 0;
+  }
+  
+  .slider-wrapper .current-slide {
+    display: block;
+  }
+  
+  .slider-shadow {
+    width: 100%;
+    height: 15px;
+    position: relative;
+  }
+  
+  .slider-shadow:after,
+  .slider-shadow:before {
+    content: '';
+    position: absolute;
+    background: #171c24;
+    height: 100%;
+    width: 50%;
+    left: 10px;
+    top: -20px;
+    -webkit-transform: rotate(-4deg);
+    -ms-transform: rotate(-4deg);
+    -o-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+    -webkit-box-shadow: 0 0 15px 8px #171c24;
+    box-shadow: 0 0 15px 8px #171c24;
+  }
+  
+  .slider-shadow:before {
+    right: 10px;
+    left: auto;
+    -webkit-transform: rotate(4deg);
+    -ms-transform: rotate(4deg);
+    -o-transform: rotate(4deg);
+    transform: rotate(4deg);
+  }
+  
+  .slider-wrapper img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+  }
+  
+  /**
+   * ---[Caption] ---------------------- 
+   **/
+  
+  .slider-wrapper .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.65);
+    width: 100%;
+    z-index: 9999999;
+    padding: 10px;
+    color: #FFF;
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+    opacity: 0;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  
+  .slider-wrapper li:hover .caption {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .slider-wrapper h2 {
+    color: #00c5b9;
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom: 6px;
+  }
+  
+  .slider-wrapper p {
+    font-size: 1.6em;
+    font-weight: 300;
+    line-height: 1.4em;
+  }
+  
+  
+  /**
+   * ---[Botones-Control] ---------------------- 
+   **/
+  #control-view {
+    position: relative;
+    display: flex;
+    justify-content: center;    
+  }
+  
+  #foto-enter {
+    position: absolute;
+    width: 100px;
+    height: 75px;
+    background-color: #4b5973;
+    display: none;
+    z-index: 1000;
+  }
+  
+  #foto-enter img {
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    object-position: center center;
+    padding: .2rem;
+  }
+  
+  .controles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    position: relative;
+  }
+  
+  .control {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .control svg { 
+    width: 100%;
+    height: auto;
+    margin-top: 7rem;
+  }
+  
+  #izq {
+    position: absolute;
+    left: -120px;
+    top: 130px;
+  }
+  
+  #der {
+    position: absolute;
+    right: -120px;
+    top: 130px;
+  }
+  
+  .control-buttons {
+    text-align: center;
+    padding-top: 1rem;
+  }
+  
+  .control-buttons li {
+    cursor: pointer;
+    display: inline-block;  
+    height: 40px;
+    width: 40px;
+    margin: 0 6px;
+  }
+  
+  .control-buttons li img {
+    width: 100%;
+    height: 100%;  
+    filter: grayscale(90%); /* Ponemos en blanco y negro la imagen en la que no estemos */
+  }
+  
+  .control-buttons li.active img{    
+    filter: grayscale(0); /* Le quitamos el blanco y negro sobre el que estamos */
+  }
+  
+  .authors {
+    text-align: center;
+    color: #7a8699;
+    display: block;
+    font-size: 1.6em;
+    font-weight: 300;
+    margin-top: 80px;
+    font-size: 300;
+  }
