@@ -65,19 +65,27 @@ div#contenido-principal > header.cabecera-general{
     display: flex;
     flex-flow: row wrap;
     flex: 100%;    
-    background-color: #1b1b1b;    
+    background-color: #1b1b1b;
+    z-index: 101;
 }
 
 div#contenido-principal > header.cabecera-general > nav#menu-principal{
     display: flex;
-    justify-content: space-around;
+    padding-inline: 1rem;
+    justify-content: space-between;
     flex: 100%;
     align-items: center;    
+    z-index: 11;
 }
 
 /* El icono de menú (luego tenemos que hacer que se despliegue) */
 div#contenido-principal > header.cabecera-general > nav#menu-principal > svg:nth-child(1){
     cursor: pointer;
+}
+
+div#contenido-principal > header.cabecera-general > nav#menu-principal > svg:nth-child(2){
+    cursor: pointer;
+    display: none;
 }
 
 div#contenido-principal > header.cabecera-general > nav#menu-principal > picture{
@@ -92,9 +100,31 @@ div#contenido-principal > header.cabecera-general > nav#menu-principal > a > svg
     max-width: 90px;
 }
 
+/* El menú */
 div#contenido-principal > header.cabecera-general > nav#menu-principal > ul#ul-menu{
     list-style: none;
-    display: none;
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    top: 4.9rem;
+    left: -58vw;
+    background-color: #1b1b1b;
+    z-index: 3;
+    width: 35%;
+    max-width: 30rem;
+    height: 55rem;
+}
+
+div#contenido-principal > header.cabecera-general > nav#menu-principal > ul#ul-menu > li{
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+div#contenido-principal > header.cabecera-general > nav#menu-principal > ul#ul-menu > li:nth-child(2),
+div#contenido-principal > header.cabecera-general > nav#menu-principal > ul#ul-menu > li:nth-child(3){
+    font-size: 1.5rem;
+    margin-top: 3rem;
 }
 
 /* FOOTER */
@@ -172,6 +202,7 @@ div#contenido-principal > footer.footer-general > nav#menu-adicional2 > a:hover{
     color: #D9701E;
 }
 
+/* VERSIÓN DE TABLET Y ORDENADOR */
 @media (min-width:850px) {
     /* Le damos un tamaño fijo a los svg */
     div#contenido-principal > footer.footer-general svg{
@@ -197,6 +228,15 @@ div#contenido-principal > footer.footer-general > nav#menu-adicional2 > a:hover{
     }
 }
 
+@media (min-width:1024px){
+
+    /* Ponemos 3 días por línea */
+    div#contenido-principal > main.main-principales > section#section-horario > div#horas > div.dia-horario{
+        width: 30%;
+    }
+
+}
+
 
 /* Estilos específicos */
 
@@ -217,6 +257,14 @@ div#contenido-principal > .main-principales{
     flex: 100%;
 }
 
+div#contenido-principal > .main-principales > h2#quienes-somos{
+    display: none;
+}
+
+div#contenido-principal > .main-principales > h2#galeria{
+    display: none;
+}
+
 div#contenido-principal > .main-principales > picture#ima-fondo{
     display: flex;
     opacity: 60%;
@@ -234,33 +282,46 @@ div#contenido-principal > .main-principales > div#cuadro-info{
     background-color: #D9701E;
     position: absolute;
     width: 100%;
-    margin-top: 2rem;    
+    margin-top: 2rem;
     z-index: 2;
     opacity: 90%;
+}
+
+div#contenido-principal > .main-principales > div#cuadro-info > h1{
+    margin-left: 1rem;
 }
 
 div#contenido-principal > .main-principales > div#cuadro-info-reserva{
     background-color: #D9701E;
 }
 
+div#contenido-principal > .main-principales > #flechita-arriba{
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
 div#contenido-principal > .main-principales > div#mensaje-cookies{
-    display: flex;
+    display: none;
     align-items: center;
     position: fixed;
-    top: 45rem;
+    top: 35rem;
     width: 100%;
     padding-block: 1rem;
     background-color: #1b1b1b;
     z-index: 10;
 }
 
-div#contenido-principal > .main-principales > div#mensaje-cookies > span{    
+div#contenido-principal > .main-principales > div#mensaje-cookies > span:nth-child(1){    
     flex: 40%;
     margin-left: 1rem;
 }
 
-div#contenido-principal > .main-principales > div#mensaje-cookies > a{   
-    background-color: #D9701E;
+div#contenido-principal > .main-principales > div#mensaje-cookies > span.botones-cookies{
+    background-color: #ac5a19;
     color: white;
     border: none;
     padding: .5rem;
@@ -268,7 +329,7 @@ div#contenido-principal > .main-principales > div#mensaje-cookies > a{
     margin-right: 1rem;
 }
 
-div#contenido-principal > .main-principales > div#mensaje-cookies > a:hover{
+div#contenido-principal > .main-principales > div#mensaje-cookies > span.botones-cookies:hover{
     background-color: #FFBF8D;
 }
 
@@ -279,8 +340,8 @@ div#contenido-principal > .main-principales > div#mensaje-reserva-completa{
     width: 100%;
     padding-block: 1rem;
     background-color: #D9701E;
-    opacity: 80%;
-    z-index: 10;
+    opacity: 0;
+    z-index: 10;  
 }
 
 div#contenido-principal > .main-principales > div#mensaje-reserva-completa > span{    
@@ -380,6 +441,31 @@ div#contenido-principal > .main-principales > section#section-horario > div#hora
     width: 100%;
 }
 
+/* Vídeo (solo lo mostramos en la versión de escritorio) */
+div#contenido-principal > .main-principales > section#section-video{
+    display: none;
+}
+
+/* Slider (solo lo mostramos en la versión de escritorio) */
+div#contenido-principal > .main-principales > .flexslider{
+    display: none;
+    margin-top: 4rem;
+    flex: 80%;
+    margin-bottom: 4rem;
+    background-color: #1b1b1b;
+    border: none;
+}
+
+div#contenido-principal > .main-principales > .flexslider > ul.slides{
+    width: 50%;
+    margin: 0 auto;    
+}
+
+div#contenido-principal > .main-principales > .flexslider > ul.slides img{
+    
+}
+
+/* VERSIÓN DE TABLET Y ORDENADOR */
 @media (min-width:850px) {
 
     div#contenido-principal > .main-principales > section#section-precios{
@@ -396,6 +482,40 @@ div#contenido-principal > .main-principales > section#section-horario > div#hora
         flex: 10%;        
         width: 150px;
     }
+}
+
+@media (min-width:1124px) {
+
+    /* Vídeo */
+    div#contenido-principal > .main-principales > section#section-video{
+        display: flex;
+        flex-flow: row wrap;
+        flex: 100%;
+        margin: 0 auto;
+    }
+
+    div#contenido-principal > .main-principales > h2#quienes-somos{
+        display: block;
+        font-size: 2.5rem;
+        margin-top: 5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Slider */
+    div#contenido-principal > .main-principales > .flexslider{
+        display: flex;        
+    }
+
+    div#contenido-principal > .main-principales > h2#galeria{
+        display: block;
+        font-size: 2.5rem;
+        margin-top: 5rem;
+        margin-bottom: -2rem;
+        width: 100%;
+        text-align: center;
+    }
+
 }
 
 
@@ -755,6 +875,7 @@ main#main-reserva > article.peluquero-reserva > div.nombre-reserva > a:hover{
     background-color: #FFBF8D;
 }
 
+/* VERSIÓN DE TABLET Y ORDENADOR */
 @media (min-width:850px) {
     main#main-reserva > article.peluquero-reserva > picture{
         margin-right: 10rem;
@@ -839,6 +960,7 @@ main#main-formulario-reserva > div#fondo-formulario > form > a:hover{
     background-color: #FFBF8D;
 }
 
+/* VERSIÓN DE TABLET Y ORDENADOR */
 @media (min-width:850px) {
     main#main-formulario-reserva > div#fondo-formulario > form {        
         max-width: 50rem;
@@ -947,6 +1069,7 @@ main#main-formulario-reserva-fallido > div#fondo-formulario > form > a:hover{
     background-color: #FFBF8D;
 }
 
+/* VERSIÓN DE TABLET Y ORDENADOR */
 @media (min-width:850px) {
     main#main-formulario-reserva-fallido > div#fondo-formulario > form {
         max-width: 50rem;        
@@ -992,6 +1115,7 @@ main#main-detalles-reserva > div#confirmar-y-volver > a:nth-child(2){
     margin-bottom: 1rem
 }
 
+/* VERSIÓN DE TABLET Y ORDENADOR */
 @media (min-width:850px) {
     main#main-detalles-reserva > div#confirmar-y-volver > a{     
         width: 30rem;
