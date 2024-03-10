@@ -163,12 +163,9 @@ $(function(){
     // Cuando en detalles-reserva se le de click al botón de confirmar
     // vamos a la página que nos muestra un mensaje
     $("#mensaje-reserva-completa").animate({"opacity":"80%"}, 1500).delay(2000).fadeOut()
+    
 
     // V)
-    // Llamamos al plugin del slider
-    $('.flexslider').flexslider();
-
-    // VI)
     // Añadimos otro efecto de cambio de color esta vez en el footer
     $("#menu-adicional2 a").on({
         mouseenter:function(){
@@ -224,5 +221,8 @@ $(function(){
             }
         }
     })
+
+    // Llamamos al plugin del slider al final para que no de problemas
+    $('.flexslider').flexslider();
 
 })

@@ -1,11 +1,17 @@
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("../fuente/JosefinSans-VariableFont_wght.ttf");
+}
+
 *{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-family: "Josefin Sans", 'sans-serif';
 }
 
 body{    
     margin: 0;
-    color: white;    
+    color: white;
 }
 
 /* Colores principales
@@ -42,7 +48,9 @@ a{
 }
 
 .puntitos-deco{
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     overflow: hidden;
     background:repeat url("../images/punto.svg");
     min-height: 3px;
@@ -53,7 +61,9 @@ a{
     color: white;
     background-color: #D9701E;
     text-align: center;
-    flex: 100%;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
 }
 
 .error{
@@ -62,19 +72,34 @@ a{
 
 /* CABECERA */
 div#contenido-principal > header.cabecera-general{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    flex: 100%;    
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;    
     background-color: #1b1b1b;
     z-index: 101;
 }
 
 div#contenido-principal > header.cabecera-general > nav#menu-principal{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-inline: 1rem;
-    justify-content: space-between;
-    flex: 100%;
-    align-items: center;    
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;    
     z-index: 11;
 }
 
@@ -89,9 +114,15 @@ div#contenido-principal > header.cabecera-general > nav#menu-principal > svg:nth
 }
 
 div#contenido-principal > header.cabecera-general > nav#menu-principal > picture{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex: 1;
-    justify-content: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 div#contenido-principal > header.cabecera-general > nav#menu-principal > a > svg#e0ZmoJGp8Tu1{
@@ -103,8 +134,13 @@ div#contenido-principal > header.cabecera-general > nav#menu-principal > a > svg
 /* El menú */
 div#contenido-principal > header.cabecera-general > nav#menu-principal > ul#ul-menu{
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
     position: absolute;
     top: 4.9rem;
     left: -58vw;
@@ -142,9 +178,16 @@ div#contenido-principal > header.cabecera-general > nav#menu-principal >  div#me
 
 /* FOOTER */
 div#contenido-principal > footer.footer-general{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    flex: 100%;    
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;    
     margin-top: 1rem;
 }
 
@@ -155,59 +198,105 @@ div#contenido-principal > footer.footer-general svg{
 }
 
 div#contenido-principal > footer.footer-general > div#footer-info{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    flex: 100%;        
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;        
+    -webkit-box-align: center;        
+        -ms-flex-align: center;        
+            align-items: center;
     border-bottom: 1px solid white;    
 }
 
 div#contenido-principal > footer.footer-general > div#footer-info > div{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    flex: 100%;
-    align-items: center;    
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;    
 }
 
 div#contenido-principal > footer.footer-general > div#footer-info > div > svg{
-    flex: 0 15%; 
+    -webkit-box-flex: 0;
+        -ms-flex: 0 15%;
+            flex: 0 15%; 
 }
 
 div#contenido-principal > footer.footer-general > div#footer-info > div > span{
-    flex: 0 70%; 
+    -webkit-box-flex: 0;
+        -ms-flex: 0 70%;
+            flex: 0 70%; 
 }
 
 div#contenido-principal > footer.footer-general > nav#menu-adicional{    
+    display: -webkit-box;    
+    display: -ms-flexbox;    
     display: flex;
-    flex-flow: row wrap;
-    flex: 100%;    
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;    
     border-bottom: 1px solid white;
     font-size: 3rem;
 }
 
 div#contenido-principal > footer.footer-general > nav#menu-adicional > p{
-    flex: 100%;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
     font-size: 2rem;
     margin-left: 1rem;
 }
 
 div#contenido-principal > footer.footer-general > nav#menu-adicional > a{    
-    flex: 0 12.5%;
+    -webkit-box-flex: 0;    
+        -ms-flex: 0 12.5%;    
+            flex: 0 12.5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-left: 1rem;    
 }
 
 div#contenido-principal > footer.footer-general > nav#menu-adicional2{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     padding: 1rem;
-    flex: 100%;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
     margin-top: 1rem;
 }
 
 div#contenido-principal > footer.footer-general > nav#menu-adicional2 > a{    
-    flex: 50%;
+    -webkit-box-flex: 50%;    
+        -ms-flex: 50%;    
+            flex: 50%;
     margin-top: 1rem;
     text-align: center;
 }
@@ -225,16 +314,22 @@ div#contenido-principal > footer.footer-general > nav#menu-adicional2 > a{
     }
 
     div#contenido-principal > footer.footer-general > nav#menu-adicional{
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     div#contenido-principal > footer.footer-general > nav#menu-adicional > p{
         margin-left: 2rem;
-        flex: 25%;
+        -webkit-box-flex: 25%;
+            -ms-flex: 25%;
+                flex: 25%;
     }
     
     div#contenido-principal > footer.footer-general > nav#menu-adicional2 > a{    
-        flex: 25%;
+        -webkit-box-flex: 25%;    
+            -ms-flex: 25%;    
+                flex: 25%;
     }
 }
 
@@ -245,8 +340,14 @@ div#contenido-principal > footer.footer-general > nav#menu-adicional2 > a{
         width: 30%;
     }
 
+    div#contenido-principal > footer.footer-general > nav#menu-adicional > p{
+        margin-left: calc(10% - 70px);
+    }
+
     div#contenido-principal > footer.footer-general > nav#menu-adicional > a{
-        flex: 0;
+        -webkit-box-flex: 0;
+            -ms-flex: 0;
+                flex: 0;
     }
 
     div#contenido-principal > footer.footer-general > nav#menu-adicional2{
@@ -259,10 +360,15 @@ div#contenido-principal > footer.footer-general > nav#menu-adicional2 > a{
 
 /* Estilos específicos */
 
-/* MAIN PRINCIPAL (incluye cosas del principal con reserva completa y el principal sin cookies) */
+/* MAIN PRINCIPAL */
 div#contenido-principal{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     width: 100%;
     max-width: 100%;
     overflow: hidden;
@@ -271,9 +377,16 @@ div#contenido-principal{
 
 div#contenido-principal > .main-principales{
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    flex: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
 }
 
 div#contenido-principal > .main-principales > h2#quienes-somos{
@@ -285,9 +398,13 @@ div#contenido-principal > .main-principales > h2#galeria{
 }
 
 div#contenido-principal > .main-principales > picture#ima-fondo{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     opacity: 60%;
-    flex: 100%;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
     max-width: 100%;
     max-height: 100%;
 }
@@ -325,9 +442,11 @@ div#contenido-principal > .main-principales > #flechita-arriba{
 
 div#contenido-principal > .main-principales > div#mensaje-cookies{
     display: none;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: fixed;
-    top: 35rem;
+    top: calc(70% + 10px);
     width: 100%;
     padding-block: 1rem;
     background-color: #1b1b1b;
@@ -335,7 +454,9 @@ div#contenido-principal > .main-principales > div#mensaje-cookies{
 }
 
 div#contenido-principal > .main-principales > div#mensaje-cookies > span:nth-child(1){    
-    flex: 40%;
+    -webkit-box-flex: 40%;    
+        -ms-flex: 40%;    
+            flex: 40%;
     margin-left: 1rem;
 }
 
@@ -353,6 +474,8 @@ div#contenido-principal > .main-principales > div#mensaje-cookies > span.botones
 }
 
 div#contenido-principal > .main-principales > div#mensaje-reserva-completa{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: fixed;
     top: 45rem;
@@ -370,10 +493,19 @@ div#contenido-principal > .main-principales > div#mensaje-reserva-completa > spa
 
 /* Sección precios */
 div#contenido-principal > .main-principales > section#section-precios{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;    
-    align-items: center;
-    flex: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;    
+    -webkit-box-align: center;    
+        -ms-flex-align: center;    
+            align-items: center;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
 }
 
 div#contenido-principal > .main-principales > section#section-precios > picture{
@@ -382,25 +514,50 @@ div#contenido-principal > .main-principales > section#section-precios > picture{
 
 
 div#contenido-principal > .main-principales > section#section-precios > div#tit-sec-precios{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 100%;
 }
 
 div#contenido-principal > .main-principales > section#section-precios > article{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;
-    flex: 1 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 100%;
+            flex: 1 100%;
     width: 100%;
-    align-items: center;    
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;    
+}
+
+div#contenido-principal > .main-principales > section#section-precios > article > h2{
+    display: none;
 }
 
 div#contenido-principal > .main-principales > section#section-precios > article > p{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 100%;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-inline: 1rem;
 }
 
@@ -410,37 +567,72 @@ div#contenido-principal > .main-principales > section#section-precios > article 
 
 /* Sección horarios */
 div#contenido-principal > .main-principales > section#section-horario{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    flex: 100%;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 div#contenido-principal > .main-principales > section#section-horario > div#tit-sec-horario{    
+    display: -webkit-box;    
+    display: -ms-flexbox;    
     display: flex;
-    flex: 100%;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 div#contenido-principal > .main-principales > section#section-horario > div#horas{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 2rem;        
 }
 
 div#contenido-principal > .main-principales > section#section-horario > p{
     font-size: 1.7rem;
-    flex: 100%;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
     text-align: center;
 }
 
 div#contenido-principal > .main-principales > section#section-horario > div#horas > div.dia-horario{    
+    display: -webkit-box;    
+    display: -ms-flexbox;    
     display: flex;
-    flex-flow: column;
-    justify-content: center;    
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;    
+    -webkit-box-align: center;    
+        -ms-flex-align: center;    
+            align-items: center;
     min-width: 150px;
     width: 35%;
     padding-bottom: 1rem;
@@ -465,11 +657,17 @@ div#contenido-principal > .main-principales > section#section-video{
     display: none;
 }
 
+div#contenido-principal > .main-principales > section#section-video > h2{
+    display: none;
+}
+
 /* Slider (solo lo mostramos en la versión de escritorio) */
 div#contenido-principal > .main-principales > .flexslider{
     display: none;
     margin-top: 4rem;
-    flex: 80%;
+    -webkit-box-flex: 80%;
+        -ms-flex: 80%;
+            flex: 80%;
     margin-bottom: 4rem;
     background-color: #1b1b1b;
     border: none;
@@ -484,17 +682,28 @@ div#contenido-principal > .main-principales > .flexslider > ul.slides{
 @media (min-width:850px) {
 
     div#contenido-principal > .main-principales > section#section-precios{
-        flex-flow: row wrap;
-        flex: 100%;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+        -webkit-box-flex: 100%;
+            -ms-flex: 100%;
+                flex: 100%;
     }
 
     div#contenido-principal > .main-principales > section#section-precios > article{
-        flex: 80%;
+        -webkit-box-flex: 80%;
+            -ms-flex: 80%;
+                flex: 80%;
     }
     div#contenido-principal > .main-principales > section#section-precios > picture{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         margin-left: 1rem;
-        flex: 10%;        
+        -webkit-box-flex: 10%;
+            -ms-flex: 10%;
+                flex: 10%;        
         width: 150px;
     }
 }
@@ -503,9 +712,16 @@ div#contenido-principal > .main-principales > .flexslider > ul.slides{
 
     /* Vídeo */
     div#contenido-principal > .main-principales > section#section-video{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-flow: row wrap;
-        flex: 100%;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+        -webkit-box-flex: 100%;
+            -ms-flex: 100%;
+                flex: 100%;
         margin: 0 auto;
     }
 
@@ -519,6 +735,8 @@ div#contenido-principal > .main-principales > .flexslider > ul.slides{
 
     /* Slider */
     div#contenido-principal > .main-principales > .flexslider{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;        
     }
 
@@ -535,9 +753,16 @@ div#contenido-principal > .main-principales > .flexslider > ul.slides{
 
 /* MAIN DE LOS ENLACES DE AVISO LEGAL, POLÍTICA DE COOKIES... */
 main.main-avisos{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     color: #1b1b1b;
     background-color: white;
     border-bottom: 40px solid #D9701E;
@@ -574,10 +799,19 @@ main.main-avisos > p{
 
 /* MAIN INICIO SESIÓN */
 main#main-inicio-sesion{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    flex: 100%;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     color: #1b1b1b;
     background-color: white;
     border-bottom: 40px solid #D9701E;
@@ -590,11 +824,20 @@ main#main-inicio-sesion a{
 }
 
 main#main-inicio-sesion > form{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;
-    flex: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
     padding: 1rem;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 main#main-inicio-sesion > form > span{
@@ -648,10 +891,19 @@ main#main-inicio-sesion > form > a:hover{
 
 /* MAIN CREAR CUENTA */
 main#main-crear-cuenta{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    flex: 100%;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     color: #1b1b1b;
     background-color: white;
     border-bottom: 40px solid #D9701E;
@@ -664,11 +916,20 @@ main#main-crear-cuenta a{
 }
 
 main#main-crear-cuenta > form{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;
-    flex: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
     padding: 1rem;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 
@@ -726,30 +987,57 @@ main#main-crear-cuenta > form > a:hover{
 
 /* MAIN RESERVA */
 main#main-reserva{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    flex: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
     background-color: white;
 }
 
 main#main-reserva > article.peluquero-reserva{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    flex: 100%;    
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;    
     padding: 1rem;
 }
 
 main#main-reserva > article.peluquero-reserva > picture{
-    flex: 40%;
+    -webkit-box-flex: 40%;
+        -ms-flex: 40%;
+            flex: 40%;
     max-width: 500px;
 }
 
 main#main-reserva > article.peluquero-reserva > div.nombre-reserva{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-left: 1rem;
 }
 
@@ -782,18 +1070,34 @@ main#main-reserva > article.peluquero-reserva > div.nombre-reserva > a:hover{
 
 /* MAIN FORMULARIO RESERVA */
 main#main-formulario-reserva{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    flex: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
     color: white;
     background-color: white;
 }
 
 main#main-formulario-reserva > div#fondo-formulario{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    flex: 100%;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-color: #1b1b1b;
     padding: 1rem;
     margin-top: 2rem;
@@ -801,15 +1105,29 @@ main#main-formulario-reserva > div#fondo-formulario{
 }
 
 main#main-formulario-reserva > div#fondo-formulario > form{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    flex: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
 }
 
 main#main-formulario-reserva > div#fondo-formulario > form > div.contenedor-inp {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    flex: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
     position:relative;
 }
 
@@ -840,35 +1158,47 @@ main#main-formulario-reserva > div#fondo-formulario > form > div.contenedor-inp 
 
 /* Nombre */
 main#main-formulario-reserva > div#fondo-formulario > form > div.contenedor-inp > input#nom-form {
-    flex: 40%;
+    -webkit-box-flex: 40%;
+        -ms-flex: 40%;
+            flex: 40%;
 }
 
 /* Apellidos */
 main#main-formulario-reserva > div#fondo-formulario > form > div.contenedor-inp > input#ape-form {
-    flex: 0 55%;    
+    -webkit-box-flex: 0;
+        -ms-flex: 0 55%;
+            flex: 0 55%;    
     margin-left: 1rem;
 }
 
 /* Email */
 main#main-formulario-reserva > div#fondo-formulario > form > div.contenedor-inp > input[type="email"] {
-    flex: 100%;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
 }
 
 /* Prefijo */
 main#main-formulario-reserva > div#fondo-formulario > form > div.contenedor-inp > input[type="number"] {    
     max-width: 6rem;
-    flex: 1 30%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 30%;
+            flex: 1 30%;
 }
 
 /* Número de teléfono */
 main#main-formulario-reserva > div#fondo-formulario > form > div.contenedor-inp > input[type="tel"] {
     margin-left: 1rem;
-    flex: 1 60%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 60%;
+            flex: 1 60%;
 }
 
 /* Los dos select */
 main#main-formulario-reserva > div#fondo-formulario > form > div.contenedor-inp > select{
-    flex: 100%;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
 }
 
 main#main-formulario-reserva > div#fondo-formulario > form > a{    
@@ -903,17 +1233,28 @@ main#main-formulario-reserva > div#fondo-formulario > form > a:hover{
 
 /* MAIN DETALLES RESERVA */
 main#main-detalles-reserva{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    flex: 100%;
-    justify-content: center;    
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;    
     color: black;
     background-color: white;    
 }
 
 main#main-detalles-reserva > p{
     padding: 1rem;
-    flex: 100%;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
     text-align: center;
 }
 
@@ -922,8 +1263,13 @@ main#main-detalles-reserva > p:nth-child(4){
 }
 
 main#main-detalles-reserva > div#confirmar-y-volver{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;    
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;    
 }
 
 main#main-detalles-reserva > div#confirmar-y-volver > a{     
