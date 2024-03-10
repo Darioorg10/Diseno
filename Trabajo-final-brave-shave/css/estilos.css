@@ -110,7 +110,7 @@ div#contenido-principal > header.cabecera-general > nav#menu-principal > ul#ul-m
     left: -58vw;
     background-color: #1b1b1b;
     z-index: 3;
-    width: 35%;
+    width: 41%;
     max-width: 30rem;
     height: 55rem;
 }
@@ -125,6 +125,19 @@ div#contenido-principal > header.cabecera-general > nav#menu-principal > ul#ul-m
 div#contenido-principal > header.cabecera-general > nav#menu-principal > ul#ul-menu > li:nth-child(3){
     font-size: 1.5rem;
     margin-top: 3rem;
+}
+
+div#contenido-principal > header.cabecera-general > nav#menu-principal >  div#menu-nav{
+    position: fixed;
+    left: -58vw;
+    bottom: 0;
+    z-index: 3;
+    font-size: 1.5rem;
+}
+
+div#contenido-principal > header.cabecera-general > nav#menu-principal >  div#menu-nav svg{
+    width: 30px;
+    height: 30px;
 }
 
 /* FOOTER */
@@ -164,23 +177,24 @@ div#contenido-principal > footer.footer-general > div#footer-info > div > span{
     flex: 0 70%; 
 }
 
-div#contenido-principal > footer.footer-general > nav#menu-adicional{
-    margin-left: 1rem;
+div#contenido-principal > footer.footer-general > nav#menu-adicional{    
     display: flex;
     flex-flow: row wrap;
     flex: 100%;    
-    
+    border-bottom: 1px solid white;
 }
 
 div#contenido-principal > footer.footer-general > nav#menu-adicional > p{
-    flex: 100%;    
+    flex: 100%;
     font-size: 2rem;
+    margin-left: 1rem;
 }
 
 div#contenido-principal > footer.footer-general > nav#menu-adicional > a{    
     flex: 0 12.5%;
     display: flex;
     justify-content: center;
+    margin-left: 1rem;
 }
 
 div#contenido-principal > footer.footer-general > nav#menu-adicional2{
@@ -188,8 +202,7 @@ div#contenido-principal > footer.footer-general > nav#menu-adicional2{
     flex-flow: row wrap;
     padding: 1rem;
     flex: 100%;
-    margin-top: 1rem;
-    border-top: 1px solid white;
+    margin-top: 1rem;    
 }
 
 div#contenido-principal > footer.footer-general > nav#menu-adicional2 > a{    
@@ -459,10 +472,6 @@ div#contenido-principal > .main-principales > .flexslider{
 div#contenido-principal > .main-principales > .flexslider > ul.slides{
     width: 50%;
     margin: 0 auto;    
-}
-
-div#contenido-principal > .main-principales > .flexslider > ul.slides img{
-    
 }
 
 /* VERSIÓN DE TABLET Y ORDENADOR */

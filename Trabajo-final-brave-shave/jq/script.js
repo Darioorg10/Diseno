@@ -10,7 +10,8 @@ $(function(){
             $(this).stop(false, true)
             $(this).siblings("svg").stop(false, true)
             $(this).siblings("#ul-menu").stop(false, true)
-            $("main.main-principales").stop(false, true)
+            $(this).siblings("#menu-nav").stop(false, true)
+            $("main.main-principales").stop(false, true)            
 
             $(this).fadeOut({
                 "complete":function(){
@@ -18,6 +19,7 @@ $(function(){
                 }
             })            
             $(this).siblings("#ul-menu").animate({"left":"0"}, 400)
+            $(this).siblings("#menu-nav").animate({"left":"5px"}, 400)
             $("main.main-principales").css("opacity","40%")
 
         }
@@ -30,6 +32,7 @@ $(function(){
             $(this).stop(false, true)
             $(this).siblings("svg").stop(false, true)
             $(this).siblings("#ul-menu").stop(false, true)
+            $(this).siblings("#menu-nav").stop(false, true)
             $("main.main-principales").stop(false, true)
 
             $(this).fadeOut({
@@ -38,6 +41,7 @@ $(function(){
                 }
             })            
             $(this).siblings("#ul-menu").animate({"left":"-58vw"}, 400)
+            $(this).siblings("#menu-nav").animate({"left":"-58vw"}, 400)
             $("main.main-principales").css("opacity","100%")
             
         }
@@ -49,12 +53,14 @@ $(function(){
             $("#menu-principal > svg:nth-child(2)").stop(false, true)
             $("#menu-principal > svg:nth-child(2)").siblings("svg").stop(false, true)
             $("#menu-principal > svg:nth-child(2)").siblings("#ul-menu").stop(false, true)
+            $("#menu-principal > svg:nth-child(2)").siblings("#menu-nav").stop(false, true)
             $("main.main-principales").stop(false, true)
 
             // Ocultamos el menú
             $("#menu-principal > svg:nth-child(2)").fadeOut()
             $("#menu-principal > svg:nth-child(2)").siblings("svg").delay(400).fadeIn()
             $("#menu-principal > svg:nth-child(2)").siblings("#ul-menu").animate({"left":"-58vw"}, 400)
+            $("#menu-principal > svg:nth-child(2)").siblings("#menu-nav").animate({"left":"-58vw"}, 400)
             $("main.main-principales").css("opacity","100%")
 
             // La cabecera la ponemos fixed si se hace scroll y le bajamos la opacidad
@@ -80,11 +86,13 @@ $(function(){
             $("#menu-principal > svg:nth-child(2)").stop(false, true)
             $("#menu-principal > svg:nth-child(2)").siblings("svg").stop(false, true)
             $("#menu-principal > svg:nth-child(2)").siblings("#ul-menu").stop(false, true)
+            $("#menu-principal > svg:nth-child(2)").siblings("#menu-nav").stop(false, true)
             $("main.main-principales").stop(false, true)
 
             $("#menu-principal > svg:nth-child(2)").fadeOut()
             $("#menu-principal > svg:nth-child(2)").siblings("svg").delay(400).fadeIn()
             $("#menu-principal > svg:nth-child(2)").siblings("#ul-menu").animate({"left":"-58vw"}, 400)
+            $("#menu-principal > svg:nth-child(2)").siblings("#menu-nav").animate({"left":"-58vw"}, 400)
             $("main.main-principales").css("opacity","100%")
         }
     })
