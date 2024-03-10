@@ -159,7 +159,7 @@ div#contenido-principal > footer.footer-general > div#footer-info{
     flex-flow: row wrap;
     flex: 100%;        
     align-items: center;
-    border-bottom: 1px solid white; 
+    border-bottom: 1px solid white;    
 }
 
 div#contenido-principal > footer.footer-general > div#footer-info > div{
@@ -182,6 +182,7 @@ div#contenido-principal > footer.footer-general > nav#menu-adicional{
     flex-flow: row wrap;
     flex: 100%;    
     border-bottom: 1px solid white;
+    font-size: 3rem;
 }
 
 div#contenido-principal > footer.footer-general > nav#menu-adicional > p{
@@ -194,7 +195,7 @@ div#contenido-principal > footer.footer-general > nav#menu-adicional > a{
     flex: 0 12.5%;
     display: flex;
     justify-content: center;
-    margin-left: 1rem;
+    margin-left: 1rem;    
 }
 
 div#contenido-principal > footer.footer-general > nav#menu-adicional2{
@@ -202,17 +203,13 @@ div#contenido-principal > footer.footer-general > nav#menu-adicional2{
     flex-flow: row wrap;
     padding: 1rem;
     flex: 100%;
-    margin-top: 1rem;    
+    margin-top: 1rem;
 }
 
 div#contenido-principal > footer.footer-general > nav#menu-adicional2 > a{    
     flex: 50%;
     margin-top: 1rem;
     text-align: center;
-}
-
-div#contenido-principal > footer.footer-general > nav#menu-adicional2 > a:hover{
-    color: #D9701E;
 }
 
 /* VERSIÓN DE TABLET Y ORDENADOR */
@@ -235,7 +232,7 @@ div#contenido-principal > footer.footer-general > nav#menu-adicional2 > a:hover{
         margin-left: 2rem;
         flex: 25%;
     }
-
+    
     div#contenido-principal > footer.footer-general > nav#menu-adicional2 > a{    
         flex: 25%;
     }
@@ -247,6 +244,15 @@ div#contenido-principal > footer.footer-general > nav#menu-adicional2 > a:hover{
     div#contenido-principal > main.main-principales > section#section-horario > div#horas > div.dia-horario{
         width: 30%;
     }
+
+    div#contenido-principal > footer.footer-general > nav#menu-adicional > a{
+        flex: 0;
+    }
+
+    div#contenido-principal > footer.footer-general > nav#menu-adicional2{
+        font-size: 1.4rem;
+    }
+
 
 }
 
@@ -527,8 +533,6 @@ div#contenido-principal > .main-principales > .flexslider > ul.slides{
 
 }
 
-
-
 /* MAIN DE LOS ENLACES DE AVISO LEGAL, POLÍTICA DE COOKIES... */
 main.main-avisos{
     display: flex;
@@ -548,7 +552,27 @@ main.main-avisos > p{
     padding: 1rem;
 }
 
-/* MAIN INICIO DE SESIÓN */
+/* Versión ordenador */
+@media (min-width:1124px) {
+
+    main.main-avisos{
+        height: 600px;
+    }
+
+    main.main-avisos > h1{
+        width: 100%;
+        text-align: center;
+    }
+
+    main.main-avisos > p{
+        padding: 0.9rem;
+        width: 60%;
+        text-align: center;
+    }
+
+}
+
+/* MAIN INICIO SESIÓN */
 main#main-inicio-sesion{
     display: flex;
     flex-flow: row wrap;
@@ -573,11 +597,17 @@ main#main-inicio-sesion > form{
     align-items: center;
 }
 
-main#main-inicio-sesion > form > input[type="email"], 
+main#main-inicio-sesion > form > span{
+    width: 80%;
+    max-width: 40rem;
+    margin-top: 0.5rem;
+    opacity: 0;
+}
+
+main#main-inicio-sesion > form > input[type="email"],
 main#main-inicio-sesion > form > input[type="password"]{
     width: 80%;
-    height: 2rem;
-    border: 1px solid #1b1b1b;
+    height: 2rem;    
     max-width: 40rem;
 }
 
@@ -586,7 +616,7 @@ main#main-inicio-sesion > form > label:nth-child(1){
     max-width: 40rem;
 }
 
-main#main-inicio-sesion > form > label:nth-child(3){
+main#main-inicio-sesion > form > label:nth-child(4){
     margin-top: 1.5rem;
     width: 80%;
     max-width: 40rem;
@@ -616,80 +646,6 @@ main#main-inicio-sesion > form > a:hover{
     background-color: #606060;
 }
 
-/* MAIN INICIO SESIÓN FALLIDA (con jquery se haría en el mismo) */
-main#main-inicio-sesion-fallido{
-    display: flex;
-    flex-flow: row wrap;
-    flex: 100%;
-    justify-content: center;
-    color: #1b1b1b;
-    background-color: white;
-    border-bottom: 40px solid #D9701E;
-    padding-bottom: 3rem;
-}
-
-main#main-inicio-sesion-fallido a{
-    color: black;
-    text-decoration: underline;
-}
-
-main#main-inicio-sesion-fallido > form{
-    display: flex;
-    flex-flow: column;
-    flex: 100%;
-    padding: 1rem;
-    align-items: center;
-}
-
-main#main-inicio-sesion-fallido > form > span{
-    width: 80%;
-    max-width: 40rem;
-    margin-top: 0.5rem;
-}
-
-main#main-inicio-sesion-fallido > form > input[type="email"],
-main#main-inicio-sesion-fallido > form > input[type="password"]{
-    width: 80%;
-    height: 2rem;
-    border: 1px solid red;
-    max-width: 40rem;
-}
-
-main#main-inicio-sesion-fallido > form > label:nth-child(1){    
-    width: 80%;
-    max-width: 40rem;
-}
-
-main#main-inicio-sesion-fallido > form > label:nth-child(4){
-    margin-top: 1.5rem;
-    width: 80%;
-    max-width: 40rem;
-}
-
-main#main-inicio-sesion-fallido > form > div#mantener-sesion input[type="checkbox"]{
-    margin-top: 2rem;
-}
-
-main#main-inicio-sesion-fallido > form > a{
-    background-color: #1b1b1b;
-    text-align: center;
-    color: white;    
-    padding: 1rem;
-    font-size: 1.5rem;
-    text-decoration: none;
-    width: 80%;
-    max-width: 30rem;
-    margin-top: 2rem;
-}
-
-main#main-inicio-sesion-fallido > form > p{
-    margin-top: 2rem;
-}
-
-main#main-inicio-sesion-fallido > form > a:hover{
-    background-color: #606060;
-}
-
 /* MAIN CREAR CUENTA */
 main#main-crear-cuenta{
     display: flex;
@@ -715,12 +671,19 @@ main#main-crear-cuenta > form{
     align-items: center;
 }
 
+
+main#main-crear-cuenta > form > span{
+    width: 80%;
+    max-width: 40rem;
+    margin-top: 0.5rem;
+    opacity: 0;
+}
+
 main#main-crear-cuenta > form > input[type="email"], 
 main#main-crear-cuenta > form > input[type="password"],
 main#main-crear-cuenta > form > input[type="text"]{
     width: 80%;
     height: 2rem;
-    border: 1px solid #1b1b1b;
     max-width: 40rem;
 }
 
@@ -729,9 +692,9 @@ main#main-crear-cuenta > form > label:nth-child(1){
     max-width: 40rem;
 }
 
-main#main-crear-cuenta > form > label:nth-child(3),
-main#main-crear-cuenta > form > label:nth-child(5),
-main#main-crear-cuenta > form > label:nth-child(7){
+main#main-crear-cuenta > form > label:nth-child(4),
+main#main-crear-cuenta > form > label:nth-child(7),
+main#main-crear-cuenta > form > label:nth-child(10){
     margin-top: 1.5rem;
     width: 80%;
     max-width: 40rem;
@@ -758,84 +721,6 @@ main#main-crear-cuenta > form > p{
 }
 
 main#main-crear-cuenta > form > a:hover{
-    background-color: #606060;
-}
-
-/* MAIN CREAR CUENTA FALLIDO */
-main#main-crear-cuenta-fallido{
-    display: flex;
-    flex-flow: row wrap;
-    flex: 100%;
-    justify-content: center;
-    color: #1b1b1b;
-    background-color: white;
-    border-bottom: 40px solid #D9701E;
-    padding-bottom: 3rem;
-}
-
-main#main-crear-cuenta-fallido a{
-    color: black;
-    text-decoration: underline;
-}
-
-main#main-crear-cuenta-fallido > form{
-    display: flex;
-    flex-flow: column;
-    flex: 100%;
-    padding: 1rem;
-    align-items: center;
-}
-
-
-main#main-crear-cuenta-fallido > form > span{
-    width: 80%;
-    max-width: 40rem;
-    margin-top: 0.5rem;
-}
-
-main#main-crear-cuenta-fallido > form > input[type="email"], 
-main#main-crear-cuenta-fallido > form > input[type="password"],
-main#main-crear-cuenta-fallido > form > input[type="text"]{
-    width: 80%;
-    height: 2rem;
-    border: 1px solid red;
-    max-width: 40rem;
-}
-
-main#main-crear-cuenta-fallido > form > label:nth-child(1){    
-    width: 80%;
-    max-width: 40rem;
-}
-
-main#main-crear-cuenta-fallido > form > label:nth-child(4),
-main#main-crear-cuenta-fallido > form > label:nth-child(7),
-main#main-crear-cuenta-fallido > form > label:nth-child(10){
-    margin-top: 1.5rem;
-    width: 80%;
-    max-width: 40rem;
-}
-
-main#main-crear-cuenta-fallido > form > div#recibir-promociones > input[type="checkbox"]{
-    margin-top: 2rem;
-}
-
-main#main-crear-cuenta-fallido > form > a{
-    background-color: #1b1b1b;
-    text-align: center;
-    color: white;    
-    padding: 1rem;
-    font-size: 1.5rem;
-    text-decoration: none;
-    width: 80%;
-    max-width: 30rem;
-    margin-top: 2rem;
-}
-
-main#main-crear-cuenta-fallido > form > p{
-    margin-top: 2rem;
-}
-
-main#main-crear-cuenta-fallido > form > a:hover{
     background-color: #606060;
 }
 
@@ -908,11 +793,11 @@ main#main-formulario-reserva > div#fondo-formulario{
     display: flex;
     flex-flow: row wrap;
     flex: 100%;
+    justify-content: center;
     background-color: #1b1b1b;
     padding: 1rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    justify-content: center;
 }
 
 main#main-formulario-reserva > div#fondo-formulario > form{
@@ -921,40 +806,68 @@ main#main-formulario-reserva > div#fondo-formulario > form{
     flex: 100%;
 }
 
-main#main-formulario-reserva > div#fondo-formulario > form > input,
-main#main-formulario-reserva > div#fondo-formulario > form > select {
+main#main-formulario-reserva > div#fondo-formulario > form > div.contenedor-inp {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    position:relative;
+}
+
+main#main-formulario-reserva > div#fondo-formulario > form > div.contenedor-inp > span{
+    position: absolute;
+    top: 3.95rem;
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    opacity: 0;
+}
+
+main#main-formulario-reserva > div#fondo-formulario > form > div.contenedor-inp > span#span-apellido-mov{
+    right: calc(55% - 105px);
+    margin-left: 1rem;
+}
+
+main#main-formulario-reserva > div#fondo-formulario > form > div.contenedor-inp > span#span-tel-mov{
+    left: 6rem;
+    margin-left: 1rem;
+    right: calc(60% - 105px);    
+}
+
+main#main-formulario-reserva > div#fondo-formulario > form >  div.contenedor-inp > input,
+main#main-formulario-reserva > div#fondo-formulario > form > div.contenedor-inp > select {
     height: 2.25rem;
-    margin-top: 1rem;    
+    margin-top: 2rem;    
 }
 
 /* Nombre */
-main#main-formulario-reserva > div#fondo-formulario > form > input:nth-child(1) {    
+main#main-formulario-reserva > div#fondo-formulario > form > div.contenedor-inp > input#nom-form {
     flex: 40%;
 }
 
 /* Apellidos */
-main#main-formulario-reserva > div#fondo-formulario > form > input:nth-child(2) {
-    flex: 55%;    
+main#main-formulario-reserva > div#fondo-formulario > form > div.contenedor-inp > input#ape-form {
+    flex: 0 55%;    
     margin-left: 1rem;
 }
 
 /* Email */
-main#main-formulario-reserva > div#fondo-formulario > form > input:nth-child(3) {
+main#main-formulario-reserva > div#fondo-formulario > form > div.contenedor-inp > input[type="email"] {
     flex: 100%;
 }
 
 /* Prefijo */
-main#main-formulario-reserva > div#fondo-formulario > form > input:nth-child(4) {
-    flex: 30%;
+main#main-formulario-reserva > div#fondo-formulario > form > div.contenedor-inp > input[type="number"] {    
+    max-width: 6rem;
+    flex: 1 30%;
 }
 
 /* Número de teléfono */
-main#main-formulario-reserva > div#fondo-formulario > form > input:nth-child(5) {
+main#main-formulario-reserva > div#fondo-formulario > form > div.contenedor-inp > input[type="tel"] {
     margin-left: 1rem;
-    flex: 65%;
+    flex: 1 60%;
 }
 
-main#main-formulario-reserva > div#fondo-formulario > form > select{
+/* Los dos select */
+main#main-formulario-reserva > div#fondo-formulario > form > div.contenedor-inp > select{
     flex: 100%;
 }
 
@@ -971,117 +884,20 @@ main#main-formulario-reserva > div#fondo-formulario > form > a:hover{
 
 /* VERSIÓN DE TABLET Y ORDENADOR */
 @media (min-width:850px) {
-    main#main-formulario-reserva > div#fondo-formulario > form {        
-        max-width: 50rem;
+    main#main-formulario-reserva > div#fondo-formulario > form {
+        max-width: 50rem;        
     }
 }
 
-/* MAIN FORMULARIO RESERVA FALLIDO */
-main#main-formulario-reserva-fallido{
-    display: flex;
-    flex-flow: row wrap;
-    flex: 100%;
-    color: white;
-    background-color: white;
-}
+@media (min-width:1124px) {
 
-main#main-formulario-reserva-fallido > div#fondo-formulario{
-    display: flex;
-    flex-flow: row wrap;
-    flex: 100%;
-    justify-content: center;
-    background-color: #1b1b1b;
-    padding: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
+    main#main-formulario-reserva > div#fondo-formulario > form > div.contenedor-inp > span{
+        top: 5rem;   
+    }
 
-main#main-formulario-reserva-fallido > div#fondo-formulario > form{
-    display: flex;
-    flex-flow: row wrap;
-    flex: 100%;
-}
-
-main#main-formulario-reserva-fallido > div#fondo-formulario > form > div.contenedor-inp {
-    display: flex;
-    flex-flow: row wrap;
-    flex: 100%;
-    position:relative;
-}
-
-main#main-formulario-reserva-fallido > div#fondo-formulario > form > div.contenedor-inp > span{
-    position: absolute;
-    top: 3.95rem;
-    font-size: 0.75rem;
-    margin-top: 0.5rem;
-}
-
-main#main-formulario-reserva-fallido > div#fondo-formulario > form > div.contenedor-inp > span#span-apellido-mov{
-    right: calc(55% - 105px);
-    margin-left: 1rem;
-}
-
-main#main-formulario-reserva-fallido > div#fondo-formulario > form > div.contenedor-inp > span#span-tel-mov{
-    left: 6rem;
-    margin-left: 1rem;
-    right: calc(60% - 105px);    
-}
-
-main#main-formulario-reserva-fallido > div#fondo-formulario > form >  div.contenedor-inp > input,
-main#main-formulario-reserva-fallido > div#fondo-formulario > form > div.contenedor-inp > select {
-    height: 2.25rem;
-    margin-top: 2rem;    
-    border: 1px solid red;
-}
-
-/* Nombre */
-main#main-formulario-reserva-fallido > div#fondo-formulario > form > div.contenedor-inp > input#nom-form {
-    flex: 40%;
-}
-
-/* Apellidos */
-main#main-formulario-reserva-fallido > div#fondo-formulario > form > div.contenedor-inp > input#ape-form {
-    flex: 0 55%;    
-    margin-left: 1rem;
-}
-
-/* Email */
-main#main-formulario-reserva-fallido > div#fondo-formulario > form > div.contenedor-inp > input[type="email"] {
-    flex: 100%;
-}
-
-/* Prefijo */
-main#main-formulario-reserva-fallido > div#fondo-formulario > form > div.contenedor-inp > input[type="number"] {    
-    max-width: 6rem;
-    flex: 1 30%;
-}
-
-/* Número de teléfono */
-main#main-formulario-reserva-fallido > div#fondo-formulario > form > div.contenedor-inp > input[type="tel"] {
-    margin-left: 1rem;
-    flex: 1 60%;
-}
-
-/* Los dos select */
-main#main-formulario-reserva-fallido > div#fondo-formulario > form > div.contenedor-inp > select{
-    flex: 100%;
-}
-
-main#main-formulario-reserva-fallido > div#fondo-formulario > form > a{    
-    background-color: #D9701E;
-    padding: 1rem;
-    margin: 0 auto;
-    margin-top: 2rem;
-}
-
-main#main-formulario-reserva-fallido > div#fondo-formulario > form > a:hover{
-    background-color: #FFBF8D;
-}
-
-/* VERSIÓN DE TABLET Y ORDENADOR */
-@media (min-width:850px) {
-    main#main-formulario-reserva-fallido > div#fondo-formulario > form {
-        max-width: 50rem;        
+    main#main-formulario-reserva > div#fondo-formulario > form >  div.contenedor-inp > input,
+    main#main-formulario-reserva > div#fondo-formulario > form > div.contenedor-inp > select {
+        height: 3rem;        
     }
 }
 

@@ -1,6 +1,4 @@
-$(function(){
-
-    // PÁGINA PRINCIPAL
+$(function(){    
 
     // I) MENÚ
     // Mostramos el menú al darle click
@@ -11,7 +9,7 @@ $(function(){
             $(this).siblings("svg").stop(false, true)
             $(this).siblings("#ul-menu").stop(false, true)
             $(this).siblings("#menu-nav").stop(false, true)
-            $("main.main-principales").stop(false, true)            
+            $("main").stop(false, true)
 
             $(this).fadeOut({
                 "complete":function(){
@@ -20,7 +18,7 @@ $(function(){
             })            
             $(this).siblings("#ul-menu").animate({"left":"0"}, 400)
             $(this).siblings("#menu-nav").animate({"left":"5px"}, 400)
-            $("main.main-principales").css("opacity","40%")
+            $("main").css("opacity","40%")
 
         }
     })
@@ -33,7 +31,7 @@ $(function(){
             $(this).siblings("svg").stop(false, true)
             $(this).siblings("#ul-menu").stop(false, true)
             $(this).siblings("#menu-nav").stop(false, true)
-            $("main.main-principales").stop(false, true)
+            $("main").stop(false, true)
 
             $(this).fadeOut({
                 "complete":function(){
@@ -42,7 +40,7 @@ $(function(){
             })            
             $(this).siblings("#ul-menu").animate({"left":"-58vw"}, 400)
             $(this).siblings("#menu-nav").animate({"left":"-58vw"}, 400)
-            $("main.main-principales").css("opacity","100%")
+            $("main").css("opacity","100%")
             
         }
     })
@@ -54,14 +52,14 @@ $(function(){
             $("#menu-principal > svg:nth-child(2)").siblings("svg").stop(false, true)
             $("#menu-principal > svg:nth-child(2)").siblings("#ul-menu").stop(false, true)
             $("#menu-principal > svg:nth-child(2)").siblings("#menu-nav").stop(false, true)
-            $("main.main-principales").stop(false, true)
+            $("main").stop(false, true)
 
             // Ocultamos el menú
             $("#menu-principal > svg:nth-child(2)").fadeOut()
             $("#menu-principal > svg:nth-child(2)").siblings("svg").delay(400).fadeIn()
             $("#menu-principal > svg:nth-child(2)").siblings("#ul-menu").animate({"left":"-58vw"}, 400)
             $("#menu-principal > svg:nth-child(2)").siblings("#menu-nav").animate({"left":"-58vw"}, 400)
-            $("main.main-principales").css("opacity","100%")
+            $("main").css("opacity","100%")
 
             // La cabecera la ponemos fixed si se hace scroll y le bajamos la opacidad
             if ($(document).scrollTop() == 0) {
@@ -87,28 +85,30 @@ $(function(){
             $("#menu-principal > svg:nth-child(2)").siblings("svg").stop(false, true)
             $("#menu-principal > svg:nth-child(2)").siblings("#ul-menu").stop(false, true)
             $("#menu-principal > svg:nth-child(2)").siblings("#menu-nav").stop(false, true)
-            $("main.main-principales").stop(false, true)
+            $("main").stop(false, true)
 
             $("#menu-principal > svg:nth-child(2)").fadeOut()
             $("#menu-principal > svg:nth-child(2)").siblings("svg").delay(400).fadeIn()
             $("#menu-principal > svg:nth-child(2)").siblings("#ul-menu").animate({"left":"-58vw"}, 400)
             $("#menu-principal > svg:nth-child(2)").siblings("#menu-nav").animate({"left":"-58vw"}, 400)
-            $("main.main-principales").css("opacity","100%")
+            $("main").css("opacity","100%")
         }
     })
 
     // Cuando le demos click al main también se oculta
-    $("main.main-principales").on({
+    $("main").on({
         click:function(){
             $("#menu-principal > svg:nth-child(2)").stop(false, true)
             $("#menu-principal > svg:nth-child(2)").siblings("svg").stop(false, true)
             $("#menu-principal > svg:nth-child(2)").siblings("#ul-menu").stop(false, true)
-            $("main.main-principales").stop(false, true)
+            $("#menu-principal > svg:nth-child(2)").siblings("#menu-nav").stop(false, true)
+            $("main").stop(false, true)
 
             $("#menu-principal > svg:nth-child(2)").fadeOut()
             $("#menu-principal > svg:nth-child(2)").siblings("svg").delay(400).fadeIn()
             $("#menu-principal > svg:nth-child(2)").siblings("#ul-menu").animate({"left":"-58vw"}, 400)
-            $("main.main-principales").css("opacity","100%")
+            $("#menu-principal > svg:nth-child(2)").siblings("#menu-nav").animate({"left":"-58vw"}, 400)
+            $("main").css("opacity","100%")
         }
     })
 
@@ -167,5 +167,62 @@ $(function(){
     // V)
     // Llamamos al plugin del slider
     $('.flexslider').flexslider();
+
+    // VI)
+    // Añadimos otro efecto de cambio de color esta vez en el footer
+    $("#menu-adicional2 a").on({
+        mouseenter:function(){
+            $(this).stop(false, true)
+            $(this).animate({"color":"#D9701E"})
+        },
+
+        mouseleave:function(){
+            $(this).stop(false, true)
+            $(this).animate({"color":"white"})
+        }
+    })
+
+
+    // FORMULARIOS
+    // I) Cuando alguno de los campos required esté vacío mostramos un mensaje de error
+
+    // INICIO DE SESIÓN    
+    $("#main-inicio-sesion form input[required]").on({
+        focusout:function(){
+            if ($(this).val().length == 0) {
+                $(this).next("span").animate({"opacity":"100%"})
+                $(this).css("border", "2px solid red")
+            } else {
+                $(this).next("span").animate({"opacity":"0%"})
+                $(this).css("border", "2px solid black")
+            }
+        }
+    })
+
+    // CREAR CUENTA
+    $("#main-crear-cuenta form input[required]").on({
+        focusout:function(){
+            if ($(this).val().length == 0) {
+                $(this).next("span").animate({"opacity":"100%"})
+                $(this).css("border", "2px solid red")
+            } else {
+                $(this).next("span").animate({"opacity":"0%"})
+                $(this).css("border", "2px solid black")
+            }
+        }
+    })
+
+    // FORMULARIO RESERVA
+    $("#main-formulario-reserva form input[required]").on({
+        focusout:function(){
+            if ($(this).val().length == 0) {
+                $(this).next("span").animate({"opacity":"100%"})
+                $(this).css("border", "2px solid red")
+            } else {
+                $(this).next("span").animate({"opacity":"0%"})
+                $(this).css("border", "2px solid black")
+            }
+        }
+    })
 
 })
